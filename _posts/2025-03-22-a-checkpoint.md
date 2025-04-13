@@ -54,7 +54,7 @@ Realizing you need to always adapt when you've spent so much time growing is not
 
 ## After the checkpoint
 
-My musings and astonishment at seeing people who I consider as being my role-models dealing with people that I measure to be lacking in skill with so much patience have finally reached a conclusion.
+My musings and astonishment at seeing people who I consider as being my role-models being so patient with people that I measure to be lacking in skill have finally reached a conclusion.
 
 > I might be good, but I'll never be good enough.
 
