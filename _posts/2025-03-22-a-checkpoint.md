@@ -58,7 +58,7 @@ My musings and astonishment at seeing people who I consider as being my role-mod
 
 > I might be good, but I'll never be good enough.
 
-I'd like to think that wisdom and patience go hand in hand, and the inherent patience is a sign of wisdom inherited from learnings instantiated by my empathy.
+I'd like to think that wisdom and patience go hand in hand, and that inherent patience is a sign of wisdom inherited from learnings instantiated by my empathy.
 
 > It is a necessary condition to be empathetic, the sufficient condition is to ask the right questions and challenge the right things.
 
