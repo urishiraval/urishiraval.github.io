@@ -9,5 +9,5 @@ published: false
 
 This quote is simple enough. Or so I thought.
 
-Consider a micro-service $M_1$ bounded with Do
+Consider a micro-service $M_1$ bounded with Domain $D$
 

@@ -2,6 +2,7 @@
 layout: post
 title: Commentry - The Architecture Elevator
 tags: ["Commentry", "Architecture"]
+published: false
 ---
 
 This article serves as my own personal personal commentry on the talk given by [Gregor Hohpe](https://www.linkedin.com/in/ghohpe/) in this [Youtube Video](https://youtu.be/Zq2VcRZmz78).

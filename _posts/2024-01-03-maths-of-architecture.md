@@ -5,7 +5,7 @@ tags: ["Maths", "Architecture", "Understanding"]
 published: false
 ---
 
-Let us define an architectural entity as a single functional unit **definitly bounded** by several domains.
+Let us define an architectural entity as a single functional unit **definitely bounded** by several domains.
 
 These domains are:
 - Functional Scope: $S_n$
