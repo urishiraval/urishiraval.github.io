@@ -28,13 +28,13 @@ I promise too, that i said this with a polite tone (mostly, i think).  So what m
 
 Good question. There's a simple answer here. which for at least some individuals my age and younger, won't make a lot of sense (fallacy of youth and all) and some my age (but wiser) and older will look at as a simple obvious fact.
 
-It doesn't matter how noble your intentions are. how aligned your goals are with other people. how close your relationship is with them. if you say something that they find distasteful, they're going to have a bad taste in their mouth. They simply will not like you.
+It doesn't matter how noble your intentions are, how aligned your goals are with other people or how close your relationship is with them. If you say something that they find distasteful or disagree with, they're going to have a bad taste in their mouth. They simply will not like you.
 
 Or so you will feel.
 
-(Okay, there will be a good few that definitely will not like you)
+(Okay, there will be a good few that definitely will not like you, but let's ignore those).
 
-If you're anything like me, this won't sit well with you and you'll feel really bad. Additionally, if you're anything like me, you won't really give a fuck. You have a high standard for how things need to be done. You hold yourself to it, so what gives others' the excuse?
+If you're anything like me, this won't sit well with you and you'll feel really bad. Additionally, if you're anything like me, you won't really give a fuck. You have a high standard for how things need to be done. You hold yourself to it, so what gives others' the excuse not to?
 
 I'll tell you. Nothing.
 
