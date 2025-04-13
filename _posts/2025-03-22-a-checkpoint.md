@@ -44,7 +44,7 @@ Why does this sound so petulant, even though I know these are the right question
 
 ## The checkpoint
 
-**Civility and humbleness, and most importantly, empathy are not things that need an excuse or reason to have. They should be the starting point. The necessary condition.**
+> Civility and humbleness, and most importantly, empathy are not things that you need an excuse or reason to have. They should be the starting point. The necessary condition.
 
 Humans are not binary. Its an obvious statement but not any less useful because of it. The person you're dealing with now is not the person you dealt with yesterday, or even a couple of hours ago.
 
