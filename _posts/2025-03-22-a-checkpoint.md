@@ -34,7 +34,7 @@ Or so you will feel.
 
 (Okay, there will be a good few that definitely will not like you, but let's ignore those).
 
-If you're anything like me, this won't sit well with you and you'll feel really bad. Additionally, if you're anything like me, you won't really give a fuck. You have a high standard for how things need to be done. You hold yourself to it, so what gives others' the excuse not to?
+If you're anything like me, this won't sit well with you and you'll feel really bad. Additionally, if you're anything like me, you won't really give a fuck (which will make you feel more horrible). You have a high standard for how things need to be done. You hold yourself to it, so what gives others' the excuse not to?
 
 I'll tell you. Nothing.
 
