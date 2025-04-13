@@ -5,9 +5,9 @@ tags: ["Thoughts", "Personal Growth", "Checkpoint"]
 published: true
 ---
 
-## Tl;dr
+Tl;dr:
 
-> It is a necessary condition to be empathetic, the sufficient condition is to ask the right questions and challenge the right things.
+It is a necessary condition to be empathetic, the sufficient condition is to ask the right questions and challenge the right things.
 
 ## Growing Up in Engineering - A checkpoint on the way to being a 'grown-up' engineer
 
