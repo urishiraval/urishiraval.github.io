@@ -1,11 +1,9 @@
 ---
 layout: post
 title: Growing Up in Engineering - A checkpoint on the way to being a 'grown-up' engineer
-tags: ["Thoughts", "Personal Growth"]
-published: false
+tags: ["Thoughts", "Personal Growth", "Checkpoint"]
+published: true
 ---
-
-# Growing Up in Engineering - A checkpoint on the way to being a 'grown-up' engineer
 
 Becoming Senior.
 
