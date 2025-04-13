@@ -5,6 +5,9 @@ tags: ["Thoughts", "Personal Growth", "Checkpoint"]
 published: true
 ---
 
+> It is a necessary condition to be empathetic, the sufficient condition is to ask the right questions and challenge the right things.
+---
+
 Becoming Senior.
 
 One of the Software Engineering proclivity (and I'm sure many other proclivities beyond) forever looks at this path with (albeit many many other emotions, but) great longing and excitement and an additional massive helping of impatience. However, akin to the other fallacies of youth, the path to growing and becoming more senior is one filled with truths un-learnable from the places of youth.
