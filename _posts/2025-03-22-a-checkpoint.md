@@ -64,6 +64,6 @@ I'd like to think that wisdom and patience go hand in hand, and that inherent pa
 
 > It is a necessary condition to be empathetic, the sufficient condition is to ask the right questions and challenge the right things.
 
-So it follows, if my empathy could lead to this much needed growth, why can it not be utilized in my pursuit to not come across as a dick to people when asking hard questions?
+So it follows, if my empathy could lead to this much needed growth, what's stopping it from being utilized in my pursuit to not come across as a dick when asking hard questions?
 
 I'll tell you. Nothing.
