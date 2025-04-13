@@ -22,7 +22,7 @@ I did not *want* to learn hard lessons. (who ~tf~ does?)
 Alas, here we are, a sprinkling of poorly worded criticism and a dash of apathetic comments such as:
 - Exhibit A: "Why did you do <X> like this? It doesn't really make sense to me."
 - Exhibit B: "What makes what you've shown me now *a platform*?"
-- Exhibit C: "I'm pretty sure the way you're proposing to do this violates <principle z>"
+- Exhibit C: "I'm pretty sure the way you're proposing to do this violates *{principle z}*"
 
 I promise too, that I said this with a polite tone (mostly, I think). So what makes these seemingly inconspicuous sentences a *checkpoint*? What do I need to change here?
 
