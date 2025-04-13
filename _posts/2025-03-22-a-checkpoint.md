@@ -26,7 +26,7 @@ Alas, here we are, a sprinkling of poorly worded criticism and a dash of apathet
 
 I promise too, that I said this with a polite tone (mostly, I think). So what makes these seemingly inconspicuous sentences a *checkpoint*? What do I need to change here?
 
-Good question. There's a simple answer here. which for at least some individuals my age and younger, won't make a lot of sense (fallacy of youth and all) and some my age (but wiser) and older will look at as a simple obvious fact.
+A good question with a simple answer. which for at least some individuals my age and younger, won't make a lot of sense (fallacy of youth and all) and some my age (but wiser) and older will look at as a simple obvious fact.
 
 It doesn't matter how noble your intentions are, how aligned your goals are with other people or how close your relationship is with them. If you say something that they find distasteful or disagree with, they're going to have a bad taste in their mouth. They simply will not like you.
 
