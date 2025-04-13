@@ -17,7 +17,7 @@ There have been a series of unfortunate events.
 
 That's correct. None of this was my doing.
 
-i did not *want* to learn hard lessons. (who ~tf~ does?)
+I did not *want* to learn hard lessons. (who ~tf~ does?)
 
 Alas, here we are, a sprinkling of poorly worded criticism and a dash of apathetic comments such as:
 - Exhibit A: "Why did you do <X> like this? It doesn't really make sense to me."
