@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thoughts On - Utilising Web Components in Modular, Micro-service Systems
+title: Thoughts On - Modular, Micro-service/frontend Systems
 tags: ["Thoughts", "WIP", "Web Components", "Software Design", "Design Thinking", "Micro-services"]
 published: false
 ---
