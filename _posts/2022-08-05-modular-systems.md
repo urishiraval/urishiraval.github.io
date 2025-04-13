@@ -2,7 +2,7 @@
 layout: post
 title: Thoughts On - Modular, Micro-service/frontend Systems
 tags: ["Thoughts", "WIP", "Web Components", "Software Design", "Design Thinking", "Micro-services"]
-published: false
+published: true
 ---
 
 > [!NOTE]
