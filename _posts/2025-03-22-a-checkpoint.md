@@ -7,7 +7,7 @@ published: true
 
 Becoming Senior.
 
-One of the Software Engineering proclivity (and I'm sure many other proclivities beyond) forever looks at this path with (albeit many many other emotions, but) great longing and excitement, and, dare i say it, an additional massive helping of impatience. However, akin to the other fallacies of youth, the path to growing and becoming more senior is one filled with truths un-learnable from the places of youth.
+One of the Software Engineering proclivity (and I'm sure many other proclivities beyond) forever looks at this path with (albeit many many other emotions, but) great longing and excitement and an additional massive helping of impatience. However, akin to the other fallacies of youth, the path to growing and becoming more senior is one filled with truths un-learnable from the places of youth.
 
 It follows then, that I have inevitably learned a little and with the obnoxious tendencies that make up my personality, I write this article with a force for you, the reader, to choke down with contempt.
 
