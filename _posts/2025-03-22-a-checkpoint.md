@@ -24,7 +24,7 @@ Alas, here we are, a sprinkling of poorly worded criticism and a dash of apathet
 - Exhibit B: "What makes what you've shown me now *a platform*?"
 - Exhibit C: "I'm pretty sure the way you're proposing to do this violates <principle z>"
 
-I promise too, that i said this with a polite tone (mostly, i think).  So what makes these seemingly inconspicuous sentences a ~checkpoint~?
+I promise too, that i said this with a polite tone (mostly, i think).  So what makes these seemingly inconspicuous sentences a *checkpoint*?
 
 Good question. There's a simple answer here. which for at least some individuals my age and younger, won't make a lot of sense (fallacy of youth and all) and some my age (but wiser) and older will look at as a simple obvious fact.
 
@@ -38,7 +38,7 @@ If you're anything like me, this won't sit well with you and you'll feel really 
 
 I'll tell you. Nothing.
 
-~But wait...~
+*But wait...*
 
 Why does this sound so petulant, even though I know these are the right questions to ask as an engineer?
 
