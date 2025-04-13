@@ -7,8 +7,6 @@ published: true
 
 Tl;dr - It is a necessary condition to be empathetic, the sufficient condition is to ask the right questions and challenge the right things.
 
-## Growing Up in Engineering - A checkpoint on the way to being a 'grown-up' engineer
-
 Becoming Senior.
 
 One of the Software Engineering proclivity (and I'm sure many other proclivities beyond) forever looks at this path with (albeit many many other emotions, but) great longing and excitement and an additional massive helping of impatience. However, akin to the other fallacies of youth, the path to growing and becoming more senior is one filled with truths un-learnable from the places of youth.
