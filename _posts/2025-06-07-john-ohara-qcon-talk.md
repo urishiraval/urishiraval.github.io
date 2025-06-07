@@ -1,6 +1,6 @@
 ---
 layout: post
-title: John O’Hara’s QCon Keynote - Thoughts about my favourite QCon talk
+title: John O’Hara’s QCon Keynote - Thoughts about my favourite talk
 tags: ['Conference', 'Opinion', 'Leadership']
 published: true
 --- 
