@@ -33,4 +33,4 @@ This put into perspective my junior days and interactions with otherwise amazing
 
 As a technologist, taking point on projects is dangerous not because you might not be up to the task, but because you have an impact beyond the technology. Anyone can learn to write code and build stuff, and yes, I also believe that over time anyone can learn to build stuff well. However, it takes a deep fundamental change in oneself to take on the mantel of leading humans. As a person who is deeply passionate in what I do, deeply interested in learning how to improve and deeply invested in becoming excellent, I have so so much to learn and grow in this area and I can’t fathom ever perfecting it.
 
-- FIN -
+Although - I now know where to start.
