@@ -53,7 +53,7 @@ Sounds a bit sci-fi but that seems to be the direction of travel and we're in a 
 
 ![Generated Image 3]({{ site.url }}/public/assets/2025-06-15-generated-image-3.png)
 
-Maximizing value is tranding to be enriching the interaction with content while simultaneously removing the number of operations a human has to do to achieve the same result - which was previously a hard tradeoff between one and the other. Now, AI is making this possible seemingly without compromising either (with varying results imo).
+Maximizing value is trending to be enriching the interaction with content while simultaneously removing the number of operations a human has to do to achieve the same result - which was previously a hard tradeoff between one and the other. Now, AI is making this possible seemingly without compromising either (with varying results imo).
 
 As someone that loves the aesthetics of Apple and has bought into the design language and philosophy - I can only hope they don’t fuck it up.
 
