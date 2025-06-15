@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Apple Liquid Glass - I get it but I don’t think it will work. Yet.
+title: Apple Liquid Glass - I get it but I don’t think it will work - yet
 tags: ['UX', 'Opinions', 'Design Philosophy']
 published: true
 --- 
