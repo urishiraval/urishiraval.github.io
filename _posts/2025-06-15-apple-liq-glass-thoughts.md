@@ -17,11 +17,13 @@ In their words it allows engineers to [“embrace design principles of Apple pla
 
 Apple could have called it “plastic” but I suppose it doesn’t fit the pretension they’re going for. Apple be apple-ing I guess.
 
+![Generated Image 0]({{ site.url }}/public/assets/2025-06-15-generated-image-0.png)
+
 # No but, what is it really?
 
 Apple (and a lot of other companies) is seeing a revolution in how content is being interacted with.
 
-In the good old days, we all had buttons. Physical ones. Buttons everywhere. Blackberry was the epitome of buttons on buttons sporting a 60% keyboard that - especially as someone with stubby fingers - were a nightmare to press until you get weirdly good at pressing the right tiny button on instinct (# UselessSkillAlert).
+In the good old days, we all had buttons. Physical ones. Buttons everywhere. Blackberry was the epitome of buttons on buttons sporting a 60% keyboard that - especially as someone with stubby fingers - were a nightmare to press until you get weirdly good at pressing the right tiny button on instinct (#UselessSkillAlert).
 
 In the previous world where physical buttons were the only method of interaction, the content was always front and centre. In a word where bigger, better and more powerful screens have killed physical buttons, screen space has to be sacrificed to keep the device usable.
 
