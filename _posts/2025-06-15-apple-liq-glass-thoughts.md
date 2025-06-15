@@ -39,7 +39,7 @@ My experience using Apple products w.r.t. it’s design is that, at it’s best,
 
 As someone that loves the aesthetics of Apple and has bought into the design language and philosophy - I can only hope they don’t fuck it up.
 
-- FIN
+\- FIN
 
 # References and Asides
 
