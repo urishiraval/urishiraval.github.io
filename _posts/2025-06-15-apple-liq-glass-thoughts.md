@@ -50,7 +50,7 @@ I'm not just tenuously trying to link something to AI for the sake of it, trust 
 The age of (let's call it) Natural Interaction with digital content requires content being front and center. I foresee "review" being a more common interaction then "operate". Lets imagine a world where the kinks in AI are ironed out - what then will be the main thing on the screen? The content. What would be the controls? Natural Interaction mechanisms like voice, gestures and touch (but not in a way that recreates a physical button). We're already seeing this with Agentic AI and Prompting right? The artifact you're working with gains "intelligence"[2] in a sense that it can tell you things about itself and can do things you command it to. Asking a "document" questions rather then copying and pasting text into a chatbot and asking it to summarize for example. Or telling your image to animate itself. 
 
 Sounds a bit sci-fi but that seems to be the direction of travel and we're in a world where machines can more easily have autonomy to execute operations today, they're just not that good at the big and long stuff in my opinion and experience. In this new world, the company that figures out how to get the content to "live" on the screen in a way that the controls are secondary would definitely have an easier time with the way the industry is going.
-§
+
 ![Generated Image 3]({{ site.url }}/public/assets/2025-06-15-generated-image-3.png)
 
 Maximizing value is tranding to be enriching the interaction with content while simultaneously removing the number of operations a human has to do to achieve the same result - which was previously a hard tradeoff between one and the other. Now, AI is making this possible seemingly without compromising either (with varying results imo).
