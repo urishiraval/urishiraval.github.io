@@ -5,7 +5,7 @@ tags: ['UX', 'Opinions', 'Design Philosophy']
 published: true
 --- 
 
-Yet. At least in the short term. This title is slightly click bait, but my thoughts are more philosophical and boring here so I need to at least make it seam controversial to hold you through this article. Although, calling it out probably defeated the purpose.
+Yet. At least in the short term. This title is slightly click bait, but my thoughts are more scattered and boring here so I need to at least make it seam controversial to hold you through this article. Although, calling it out probably defeated the purpose.
 
 Herewith my thoughts.
 
