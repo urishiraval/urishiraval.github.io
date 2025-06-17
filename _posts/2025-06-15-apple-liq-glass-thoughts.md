@@ -33,27 +33,27 @@ Essentially, Apple Designers are trying to get rid of the need to sacrifice expe
 
 # Sure, but will it work?
 
-I don’t think it will be well received in the short term. My empirical evidence is the release of AirPods and removing the headphone jack being super controversial and, in the case of AirPods, outright mocked and people would be ashamed/embarrassed to like it in some cases. This is obviously taking for granted that the execution of “Liquid Glass” is done well and that the ergonomics are not compromised like what happened with the Magic Mouse. I distinctly remember getting that “leak meme” from colleagues when I first “rocked” my first AirPods and I daily drive a Magic Mouse and I have a deep disdain for it (I can’t find a better left handed mouse and so the touch pad-like features make up for this shitty ergonomics imo - if you know of a good left-handed mouse please contact me, you will change my life forever).
+I don’t think it will be well received in the short term. My empirical evidence is the release of AirPods and removing the headphone jack being super controversial and, in the case of AirPods, outright mocked and people would be ashamed/embarrassed to like it in some cases. This is obviously taking for granted that the execution of “Liquid Glass” is done well and that the ergonomics are not compromised like what happened with the Magic Mouse. I distinctly remember getting that “leek meme” from colleagues when I “rocked” my first AirPods and I daily drive a Magic Mouse and have a deep disdain for it (I can’t find a better left handed mouse and so the touch pad-like features make up for this shitty ergonomics imo - if you know of a good left-handed mouse please contact me, you will change my life forever).
 
 ![Generated Image 2]({{ site.url }}/public/assets/2025-06-15-generated-image-2.png)
 
-My experience using Apple products w.r.t. it’s design is that, at it’s best, the product is either such a pleasure to use that all flaws are forgiven or at it’s worst, the utility of using it outweighs the terrible UX decisions. “Liquid Glass” from that perspective doesn’t feel far off from their philosophies.
+My experience using Apple products w.r.t. it’s design is that - at it’s best - the product is either such a pleasure to use that all flaws are forgiven or - at it’s worst - the utility of using it outweighs the terrible UX decisions. “Liquid Glass” from that perspective doesn’t feel far off from their philosophies.
 
 # But I think it might work later
 
-AI.
+Because we'll supposedly have AI.
 
 Yes, seriously.
 
 I'm not just tenuously trying to link something to AI for the sake of it, trust me.
 
-The age of (let's call it) Natural Interaction with digital content requires content being front and center. I foresee "review" being a more common interaction then "operate". Lets imagine a world where the kinks in AI are ironed out - what then will be the main thing on the screen? The content. What would be the controls? Natural Interaction mechanisms like voice, gestures and touch (but not in a way that recreates a physical button). We're already seeing this with Agentic AI and Prompting right? The artifact you're working with gains "intelligence"[2] in a sense that it can tell you things about itself and can do things you command it to. Asking a "document" questions rather then copying and pasting text into a chatbot and asking it to summarize for example. Or telling your image to animate itself. 
+The age of (let's call it) Natural Interaction with digital content requires content being front and center. I foresee "review" being a more common interaction then "operate". Lets imagine a world where the kinks in AI are ironed out - what then will be the main thing on the screen? The content. What would be the controls? Natural Interaction mechanisms like voice, gestures and touch (but not in a way that recreates a physical button). We're already seeing this with Agentic AI and Prompting right? The artifact you're working with gains "intelligence"[2] in a sense that it can tell you things about itself and can do things you command it to. Asking a "document" questions rather then manually highlighting or copying and pasting text into ChatGPT and asking it to summarize for example. Or telling your image to animate itself. The goal of Apple (and many other companies) is to seamlessly integrate AI into the process. As someone now helping to build AI into our business processes, I can personally agree with this strategy and feel that this is a superior way to do it from a "business value" perspective.
 
-Sounds a bit sci-fi but that seems to be the direction of travel and we're in a world where machines can more easily have autonomy to execute operations today, they're just not that good at the big and long stuff in my opinion and experience. In this new world, the company that figures out how to get the content to "live" on the screen in a way that the controls are secondary would definitely have an easier time with the way the industry is going.
+Sounds a bit sci-fi but that seems to be the direction of travel and we're in a world where machines can more easily have autonomy to execute operations already, they're just not that good at the big and long stuff in my opinion and experience. In this new world, the company that figures out how to get the content to "live" on the screen in a way that the controls are secondary and unobtrusive would definitely have an easier time with the way the industry is going.
 
 ![Generated Image 3]({{ site.url }}/public/assets/2025-06-15-generated-image-3.png)
 
-Maximizing value is trending to be enriching the interaction with content while simultaneously removing the number of operations a human has to do to achieve the same result - which was previously a hard tradeoff between one and the other. Now, AI is making this possible seemingly without compromising either (with varying results imo).
+Maximizing value is tending towards "enriching the interaction with content while simultaneously removing the number of operations a human has to do to achieve the same result" - which was previously a hard tradeoff. Now, AI is making this possible seemingly without compromising either (with varying results imo).
 
 As someone that loves the aesthetics of Apple and has bought into the design language and philosophy - I can only hope they don’t fuck it up.
 
