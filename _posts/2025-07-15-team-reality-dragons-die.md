@@ -9,7 +9,7 @@ TL;DR - Good engineers deal with reality. We bring concrete, practical, and real
 
 Imagine a dragon (can’t be that hard, they’re imaginary) blowing through a fantasy town. Often times, being a part of an engineering team can feel like you’re one of those houses on fire. The dragon, of course, is not a singular thing - alas, nothing is ever that straightforward - but rather multiple problems stacked on top of each other in such a perfect way that it feels like some sort of dark alchemical conspiracy. 
 
-Really tight deadlines meet misaligned business stakeholders married to a straightforward product. On top of that, the product is only straightforward to the product owners’ heads because in actual fact, the whole state of the union is built on shaky and oftentimes neglected legacy that creates its own magic circle and Bermuda Triangle-like experience where time, focus, and effort disappear into and die. No rhyme or reason necessary or even involved. 
+Really tight deadlines meet misaligned business stakeholders married to a straightforward product. On top of that, the product is only straightforward in the product owners’ heads because in actual fact, the whole state of the union is built on shaky and oftentimes neglected legacy that creates its own magic circle and Bermuda Triangle-like experience where time, focus, and effort disappear into and die. No rhyme or reason necessary or even involved. 
 
 In the world of “enterprise” - more often than not - things just happen and no one is around to explain how and why anymore. Those people have been immortalised in stories about bringing down prod or running an entire enterprise application with stored procs on SQL - and if you’re lucky - their glorious names would be forever sung in the git history.
 
