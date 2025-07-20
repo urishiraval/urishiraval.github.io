@@ -27,9 +27,9 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <section>
+      <!-- <section>
         <img src="{{ site.baseurl }}/public/assets/avatar.jpg" alt="avatar" class="sidebar-avatar">
-      </section>
+      </section> -->
       <h1>
         <a href="{{ site.baseurl }}">
           {{ site.title }}
@@ -78,12 +78,6 @@
   const sidebar = document.querySelectorAll('.sidebar');
   sidebar.forEach(sb => {
     sb.style.borderRight = "0.4rem solid";
-    sb.style.borderImage = `linear-gradient(to bottom, rgb(156, 95, 178) ${first}%, rgb(255, 77, 0) ${second}%) 1`;
-  });
-
-  const avatar = document.querySelectorAll('.sidebar-avatar');
-  avatar.forEach(sb => {
-    sb.style.border = "0.2rem solid";
     sb.style.borderImage = `linear-gradient(to bottom, rgb(156, 95, 178) ${first}%, rgb(255, 77, 0) ${second}%) 1`;
   });
 </script>
