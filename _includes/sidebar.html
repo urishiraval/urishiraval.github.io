@@ -1,7 +1,7 @@
 <style>
   .sidebar {
     /* border-left: 0.3rem solid rgb(255, 77, 0); */
-    border-left: 0.4rem solid;
+    /* border-left: 0.4rem solid; */
     /* border-image: linear-gradient(to bottom, rgb(156, 95, 178) 90%, rgb(255, 77, 0) 10%) 1; */
   }
 
@@ -63,10 +63,13 @@
 
   console.log(`Border color split: ${first}% - ${second}%`);
 
-  document.onload = () => {
-    const sidebar = document.querySelectorAll('.sidebar');
-    sidebar.forEach(sb => {
-      sb.style.borderImage = `linear-gradient(to bottom, rgb(156, 95, 178) ${first}%, rgb(255, 77, 0) ${second}%)`;
-    });
-  }
+  // document.onload = () => {
+  const sidebar = document.querySelectorAll('.sidebar');
+  sidebar.forEach(sb => {
+    console.log({sb});
+    
+    sb.style.borderLeft = "0.4rem solid";
+    sb.style.borderImage = `linear-gradient(to bottom, rgb(156, 95, 178) ${first}%, rgb(255, 77, 0) ${second}%)`;
+  });
+  // }
 </script>
