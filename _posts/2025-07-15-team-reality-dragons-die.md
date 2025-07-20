@@ -40,7 +40,7 @@ Alas, you also can’t talk of “slaying” when there is no beast to slay….
 Sorry to bust this fairytale but there’s no such thing as dragons. These mythical beasts in our field, dear reader, are just optical illusions that only appear so at a distance. 
 
 
-![The dragon is paper]({{ site.url }}/public/assets/2025-07-15/DragonConfrontationInAVortex.png)
+![The dragon is paper]({{ site.url }}/public/assets/2025-07-15/the_dragon_is_paper.png)
 
 
 Don’t get it twisted. I’m not saying that your problems aren’t real - I’m just saying that the reason they seem so insurmountable is possibly because you’re looking at it from too far a distance. Dijkstra once said that “abstraction allows us to converse about things with precision”. I’m a huge believer and fan of this personally - but it does not lend well to situations where you as an engineer or engineering team have to deal with other engineers or engineering teams that may be further behind or ahead on the maturity scale than you and yours for example. What is the use of precision if you can’t even “converse”?
