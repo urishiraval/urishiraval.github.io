@@ -60,7 +60,9 @@ A way to take the dark and sinister magic away from these seemingly large and pe
 ![Confronting the paper dragon]({{ site.url }}/public/assets/2025-07-15/ConfrontingThePaperDragon.png)
 
 
-This is hard. It’s counterintuitive and feels scary. I’m basically telling you to move closer to something that really looks like a horrible beast of mythology - instead of telling you to stay safe and keep your distance. I can appreciate if that feels like bullshit, but - ye bit of faith. You won’t be able to understand what’s really going on until you lean in and until you really understand what’s going on - and I mean really, truly understand the nuances of the issues and strategies where the business and tech form that chaotic vortex - things will look like indecipherable magic. Understanding brings with it a clarity and comfort, and these seemingly unsolvable problems start to become opportunities to apply your training and craft as an engineer. 
+This is hard. It’s counterintuitive and feels scary. I’m basically telling you to move closer to something that really looks like a horrible beast of mythology - instead of telling you to stay safe and keep your distance. I can appreciate if that feels like bullshit, but - ye bit of faith. You won’t be able to understand what’s really going on until you lean in and until you really understand what’s going on - and I mean really, truly understand the nuances of the issues and strategies where the business and tech form that chaotic vortex - things will look like indecipherable magic. 
+
+> Understanding brings with it a clarity and comfort, and these seemingly unsolvable problems start to become opportunities to apply your training and craft as an engineer. 
 
 Isn’t that all we want as creatives and builders of cool things?
 
