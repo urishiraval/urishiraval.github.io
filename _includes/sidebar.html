@@ -13,11 +13,23 @@
   .mr-2 {
     margin-right: 0.35rem;
   }
+
+  .sidebar-avatar {
+    padding: 2rem;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;  /* Ensures the image fills the shape evenly */
+    width: 100%;        /* Adjust width as needed */
+    height: auto;
+    box-sizing: border-box; /* Includes padding in dimensions */
+  }
 </style>
 
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
+      <section>
+        <img src="{{ site.baseurl }}/public/avatar.png" alt="avatar" class="sidebar-avatar">
+      </section>
       <h1>
         <a href="{{ site.baseurl }}">
           {{ site.title }}
@@ -63,11 +75,15 @@
 
   console.log(`Border color split: ${first}% - ${second}%`);
 
-  // document.onload = () => {
   const sidebar = document.querySelectorAll('.sidebar');
   sidebar.forEach(sb => {
     sb.style.borderRight = "0.4rem solid";
     sb.style.borderImage = `linear-gradient(to bottom, rgb(156, 95, 178) ${first}%, rgb(255, 77, 0) ${second}%) 1`;
   });
-  // }
+
+  const avatar = document.querySelectorAll('.sidebar-avatar');
+  sidebar.forEach(sb => {
+    sb.style.borderRight = "0.2rem solid";
+    sb.style.borderImage = `linear-gradient(to bottom, rgb(156, 95, 178) ${first}%, rgb(255, 77, 0) ${second}%) 1`;
+  });
 </script>
