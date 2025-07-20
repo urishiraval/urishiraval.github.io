@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A team grounded in reality is where dragons go to die.
-tags: ['Opinions', 'Teams', 'Philosophy', 'Software Engineering', 'Growth']
+tags: ['Opinions', 'Teams', 'Philosophy', 'Software Engineering', 'Growth', 'Checkpoint']
 published: true
 ---
 
