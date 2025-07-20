@@ -6,6 +6,7 @@ published: true
 ---
 
 TL;DR - Good engineers deal with reality. We bring concrete, practical, and real implementation to precisely architected solutions that solve for value. We need to remember that this doesn’t change no matter what gets thrown our way. We are a sect of craftsman/woman of the reality in our business - and reality is where dragons go to die.
+---
 
 Imagine a dragon [2] blowing through a fantasy town. Often times, being a part of an engineering team can feel like you’re one of those houses on fire. The dragon, of course, is not a singular thing - alas, nothing is ever that straightforward - but rather multiple problems stacked on top of each other in such a perfect way that it feels like some sort of dark alchemical conspiracy. 
 
