@@ -54,3 +54,19 @@
 
   </div>
 </div>
+
+<script lang="js">
+  //Random border color split every time the page loads
+  let random1 = Math.floor(Math.random() * 100) + 1;
+  let first = random1;
+  let second = 100-random1;
+
+  console.log(`Border color split: ${first}% - ${second}%`);
+
+  document.onload = () => {
+    const sidebar = document.querySelectorAll('.sidebar');
+    sidebar.forEach(sb => {
+      sb.style.borderImage = `linear-gradient(to bottom, rgb(156, 95, 178) ${first}%, rgb(255, 77, 0) ${second}%)`;
+    });
+  }
+</script>
