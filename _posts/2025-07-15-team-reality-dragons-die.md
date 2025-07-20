@@ -38,7 +38,7 @@ Let’s look at this logically: your entire journey, you would have to have all 
 
 All of this is bullshit [3].
 
-While this may be an epic pursuit, we are not the heroes in this story of business value and the reality is - we don’t live in a Tolkien novel [4]. The harsh truth in the corporate world is that the lessons we learn are only valuable if we can use them to increase efficiency, efficacy and importantly to enhance the value of the product that the software is servicing. Unless you build OS’s or comparable things where the software itself is the product - the software is not the primary artefact. It is the realisation of business value.
+While this may be an epic pursuit, we are not the heroes in this story of business value and the reality is - we don’t live in a Tolkien novel [4]. The harsh truth in the corporate world is that the lessons we learn are only valuable if we can use them to increase efficiency, efficacy and importantly to enhance the value of the product that the software is servicing. Unless you build OS’s or comparable things where the software itself is the product - the software is not the primary artefact. A bit harsh but it is the modus of business value rather than the value itself.
 
 Alas, you also can’t talk of “slaying” when there is no beast to slay….
 
