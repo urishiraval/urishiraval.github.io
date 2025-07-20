@@ -26,7 +26,7 @@ We’re right as well. This feels like a magical beast that keeps on getting up 
 
 Although….
 
-# Slay? Please...
+# Slay? Psht...
 
 We hear stories about “slaying the dragon” - but is “slaying” really a good strategy?
 
