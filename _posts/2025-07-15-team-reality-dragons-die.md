@@ -19,11 +19,15 @@ We’re right as well. This feels like a magical beast that keeps on getting up 
 
 Although….
 
-# Slay? I suppose not...
+# Slay? Please...
 
 We hear stories about “slaying the dragon” - but is “slaying” really a good strategy?
 
 Let’s look at this logically: your entire journey, you would have to have all of these magical things line up in the perfect way for you to accomplish this. You need - for example - a magical blade or weapon, a party of adventurer companions that are each uniquely and coincidentally perfectly gifted for the task at hand, and a good storyline where the protagonist learns a good lesson or moral.
+
+
+![Going on an adventure]({{ site.url }}/public/assets/2025-07-15/going_on_an_adventure.png)
+
 
 All of this is bullshit.
 
@@ -35,14 +39,23 @@ Alas, you also can’t talk of “slaying” when there is no beast to slay….
 
 Sorry to bust this fairytale but there’s no such thing as dragons. These mythical beasts in our field, dear reader, are just optical illusions that only appear so at a distance. 
 
+
+![The dragon is paper]({{ site.url }}/public/assets/2025-07-15/DragonConfrontationInAVortex.png)
+
+
 Don’t get it twisted. I’m not saying that your problems aren’t real - I’m just saying that the reason they seem so insurmountable is possibly because you’re looking at it from too far a distance. Dijkstra once said that “abstraction allows us to converse about things with precision”. I’m a huge believer and fan of this personally - but it does not lend well to situations where you as an engineer or engineering team have to deal with other engineers or engineering teams that may be further behind or ahead on the maturity scale than you and yours for example. What is the use of precision if you can’t even “converse”?
 
 # A scary solution
 
 A way to take the dark and sinister magic away from these seemingly large and pervasive issues is to simply get closer to it. 
 
+
+![Confronting the paper dragon]({{ site.url }}/public/assets/2025-07-15/ConfrontingThePaperDragon.png)
+
+
 This is hard. It’s counterintuitive and feels scary. I’m basically telling you to move closer to something that really looks like a horrible beast of mythology - instead of telling you to stay safe and keep your distance. I can appreciate if that feels like bullshit, but - ye bit of faith. You won’t be able to understand what’s really going on until you lean in and until you really understand what’s going on - and I mean really, truly understand the nuances of the issues and strategies of where the business and tech form that chaotic vortex - things will look like indecipherable magic. Understanding brings with it a clarity and comfort, and these seemingly unsolvable problems start to become opportunities to apply your training and craft as an engineer. Isn’t that all we want as creatives and builders of cool things?
 
 Good engineers deal with reality. We bring concrete, practical, and real implementation to precisely architected solutions that solve for value. We need to remember that this doesn’t change no matter what gets thrown our way.
 
 We are a sect of crafters of the reality in our business - and reality is where dragons go to die
+
