@@ -11,6 +11,10 @@ Imagine a dragon (can’t be that hard, they’re imaginary) blowing through a f
 
 Really tight deadlines meet misaligned business stakeholders married to a straightforward product. On top of that, the product is only straightforward in the product owners’ heads because in actual fact, the whole state of the union is built on shaky and oftentimes neglected legacy that creates its own magic circle and Bermuda Triangle-like experience where time, focus, and effort disappear into and die. No rhyme or reason necessary or even involved. 
 
+
+![Dragon Vortex]({{ site.url }}/public/assets/2025-07-15/DragonConfrontationVortex.png)
+
+
 In the world of “enterprise” - more often than not - things just happen and no one is around to explain how and why anymore. Those people have been immortalised in stories about bringing down prod or running an entire enterprise application with stored procs on SQL - and if you’re lucky - their glorious names would be forever sung in the git history.
 
 “Here be dragons”.
@@ -57,5 +61,7 @@ This is hard. It’s counterintuitive and feels scary. I’m basically telling y
 
 Good engineers deal with reality. We bring concrete, practical, and real implementation to precisely architected solutions that solve for value. We need to remember that this doesn’t change no matter what gets thrown our way.
 
-We are a sect of crafters of the reality in our business - and reality is where dragons go to die
+We are a sect of craftsman/woman of the reality in our business - and reality is where dragons go to die.
 
+
+![Dragon wasn't real after all]({{ site.url }}/public/assets/2025-07-15/dragon_is_not_real.png)
