@@ -25,8 +25,6 @@ We struggle to articulate exactly what it is that makes a senior “senior” ye
 
 For the longest time these questions haunted me. I tried and tried and struggled to get to that point where I could intuitively navigate things just like my seniors.
 
-“Age is just a number!” I’d say. “Experience is important, but not indicative of a senior”. 
-
 # Then I got over it
 
 “Fuck it” - I said.
