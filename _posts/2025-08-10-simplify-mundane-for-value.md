@@ -9,11 +9,11 @@ TL;DR: Let’s invest in simplifying mundane things to enable us to deliver more
 
 —-
 
-A god awful number of years ago, I remember doing chemistry and learning about something called a [redox](https://en.m.wikipedia.org/wiki/Redox) [1] reaction. I found it pretty cool at the time - but then break came around (some might now this as “recess”) and it was immediately forgotten (I was but a wee lad). Now a god awful amount of years later - I find myself thinking about the poetry of it. Especially as an engineer.
+A god awful number of years ago, I remember doing chemistry im highschool and learning about something called a [redox](https://en.m.wikipedia.org/wiki/Redox) [1] reaction. I found it pretty cool at the time - but then break came around (some might now this as “recess”) and it was immediately forgotten (I was but a wee lad). Now a god awful amount of years later - I find myself thinking about the poetry of it. Especially as an engineer.
 
 # Redox Reactions
 
-Redox stands for “Reduction and Oxidation”. This is more involved but the simple explanation is that - there are 2 things happening simultaneously, such that the overall quantity does change. A reduction in something with a simultaneous increase in another. The overall thing from the outside might look the same but there is an inherent change within the system and so, there is a completely different end effect.
+Redox stands for “Reduction and Oxidation”. This is more involved but the simple explanation is that - there are 2 things happening simultaneously, such that the overall quantity doesn't change. A reduction in something with a simultaneous increase in another. The overall thing from the outside might look the same but there is an inherent change within the system and so, there is a completely different end effect.
 
 # Bringing it into Engineering
 
