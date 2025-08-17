@@ -24,7 +24,7 @@ config=TeX-AMS-MML_HTMLorMML"></script>
 
   <title>
     
-      Novel Techniques - Curriculum Learning &middot; Ushir (Rishi) Raval
+      AI/NLP. Evolution of Compilers? - Part 1.1 - Interesting questions and my thoughts &middot; Ushir (Rishi) Raval
     
   </title>
 
@@ -163,78 +163,70 @@ config=TeX-AMS-MML_HTMLorMML"></script>
 </style>
 
 <div class="post">
-  <h1 class="post-title">Novel Techniques - Curriculum Learning</h1>
-  <span class="post-date">02 Dec 2021</span>
+  <h1 class="post-title">AI/NLP. Evolution of Compilers? - Part 1.1 - Interesting questions and my thoughts</h1>
+  <span class="post-date">16 May 2025</span>
   <div class="post-tags">
     
-      <small><code>#NovelTechniques</code></small>
+      <small><code>#Artificial Thoughts</code></small>
     
       <small><code>#AI</code></small>
+    
+      <small><code>#NLP</code></small>
+    
+      <small><code>#Compilers</code></small>
     
   </div>
   <small>
     <b>Table of Contents</b>
-    <ul><li><a href="#brief">Brief</a></li><li><a href="#understanding-the-basics">Understanding the Basics</a><ul><li><a href="#the-curriculum">The ‘Curriculum’</a></li><li><a href="#downsides">Downsides</a></li></ul></li><li><a href="#in-conclusion">In Conclusion</a></li><li><a href="#references">References</a></li></ul>
+    <ul><li><a href="#the-questions">The Questions</a></li><li><a href="#my-thoughts">My Thoughts</a><ul><li><a href="#part-1---language-and-humans">Part 1 - Language and humans</a></li><li><a href="#part-2---cognition-and-how-little-we-actually-know-about-it">Part 2 - Cognition and how little we actually know about it</a></li></ul></li></ul>
 
   </small>
   <div>
-    <p>In Neural Network Optimization, most academics have moved on to more novel methods such as Deep Neural Nets and Cascading Networks. However, some techniques can be used to optimise more basic Simple Neural Networks that fall in line with Occam’s Razor. One of them is Curriculum Learning.</p>
+    <p>I posted an <a href="https://urishiraval.github.io/2025/04/13/nlp-as-nlc/">article from my blog</a> on my LinkedIn a little while back (see <a href="https://www.linkedin.com/posts/unraval_ainlp-evolution-of-compilers-activity-7325047885618728961-Wea4?utm_source=share&amp;utm_medium=member_ios&amp;rcm=ACoAAB04-pQBG71QN0lBL1-Xc9g0jZiFmpBVbwM">the post here</a>) and I had a colleague ask <a href="https://www.linkedin.com/feed/update/urn:li:activity:7325047885618728961?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7325047885618728961%2C7328871553272561666%29&amp;dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287328871553272561666%2Curn%3Ali%3Aactivity%3A7325047885618728961%29">2 super interesting questions</a>. Herewith my attempt to answer them.</p>
 
-<h2 id="brief">Brief</h2>
+<h1 id="the-questions">The Questions</h1>
 
 <blockquote>
-  <p>Occam’s razor, Ockham’s razor, Ocham’s razor (Latin: novacula Occami), also known as the principle of parsimony or the law of parsimony (Latin: lex parsimoniae), is the problem-solving principle that “entities should not be multiplied beyond necessity” - Our trusty pal <a href="https://en.wikipedia.org/wiki/Occam's_razor">Wikipedia</a></p>
+  <ol>
+    <li>What does it really mean to “understand” language - and can a machine ever truly do that</li>
+    <li>How do we teach a machine not just to process the structure of our language, but to grasp the intention behind it - when even humans struggle to agree on meaning.</li>
+  </ol>
 </blockquote>
 
-<p>Tl;dr, Occam’s Razor basically says that creating complexity is usually unnecessary and sometimes detrimental to the performance of your system.</p>
+<h1 id="my-thoughts">My Thoughts</h1>
 
-<p>Tl;dr the Tl;dr: Simple is usually best.</p>
+<p>These are super interesting questions and require talking about very dense topics 😂 I’ll try not to ramble. My short answers to this (with no claims of being right) are:</p>
 
-<p>In this case, Curriculum learning aims to improve model performance through a novel training technique that requires an empirical grading of your training data. After all, throwing things at a model and just expecting is to work seems like a very maddening way to get it to perform better (at least to me). This post will by no means be an exhaustive explication of the technique, for that please read one of the papers referenced at the end.</p>
-
-<h2 id="understanding-the-basics">Understanding the Basics</h2>
-
-<p>Training a Neural Network usually involves:</p>
 <ol>
-  <li>Data Preparation</li>
-  <li>Training</li>
-  <li>Evaluation</li>
+  <li>I think so, but not language fully from a human.</li>
+  <li>I’m not actually sure we can because I don’t believe it’s possible to get this 100% right. Although I do think we can get really close.</li>
 </ol>
 
-<p>The latter 2 usually occurring over multiple iterations of the network with different hyperparameters. Curriculum Learning adds a step between 1 and 2 where the data is ‘graded’. There are many formulae that this grading system can use, but I’ll just be mentioning the simplest one here, what I call ‘student’ evaluations, where each set of inputs are graded based on how accurate the model is on it’s first or second pass.</p>
+<p>I’m not qualified enough to give you an academically good answer for them, but I can try to give my thoughts in 2 parts.</p>
 
-<h3 id="the-curriculum">The ‘Curriculum’</h3>
+<h2 id="part-1---language-and-humans">Part 1 - Language and humans</h2>
 
-<p>This excellent conceptual model of a the training process is from Kwon’s ‘Artificial Neural Networks’ book:</p>
+<p>The theory that I love the most (which might very well be outdated by now) for how to describe how and why language has become useful for humans to understand one another is probably those coming out of the <a href="https://en.wikipedia.org/wiki/Minimalist_program">Minimalist Program</a> (Chomsky), though there are many competing and more modern theories. Definitely worth a read if you’re interested in this stuff.</p>
 
-<p><img src="http://localhost:4000/public/assets/kwon-learning-scheme.png" alt="Supervised Learning Scheme" /></p>
+<p>Chomsky and others talk about the difference between communication using “signal encoding” and that which can be classified as using an  “unbound discrete infinity”-based language, so to speak. Another interesting fact is that most of the ‘language mechanism’ is actually used internally by humans to process data more than to externally communicate (but this is more relevant in part 2).</p>
 
-<p>This process flow, while very basic, models the portion of the code that feeds in training data as a <em>professor</em> or teacher and the model is the <em>student</em>.</p>
+<p>Basically, a computer currently uses a sophisticated form of signal coding, and in my mind, there’s not much difference today in how other animals process communication and machines do using NLP (and I’m not suggesting that machines and other animals are the same, merely that the processing mechanism is similar in my opinion).</p>
 
-<p>In Curriculum Learning, the <em>professor</em> simply creates a structured progression of ‘questions’ (essentially just sets of inputs) and ranks these into blocks segregated by difficulty. Difficulty can be determined by how well the model does on each input after a single (or negligibly few) run(s) with over formulae being proposed across various papers. Easy questions are asked first and after the student ‘gets the hang of those’, it moves on to progressively more difficult problems to solve.</p>
+<p>I don’t think a computer would ever be able to fully “understand” language as we humans do. My main reason is because I believe language and thus the cognition of it has as one of its components an inherent biological factor, which computers obviously don’t. For example, if I tell you “I feel like having tiramisu,” you might understand that as a coffee lover I’m probably craving it, whereas a computer might process that and match it to a mechanical thing like me being “hungry” because that’s the best pattern it can match that phrase to.</p>
 
-<p>This is basically a ‘path of least resistance’ and from my experiments, demonstrates a favorable and dramatic increase in performance. For a University Assignment, I had to create a classifier and demonstrate the affects of different training methods on performance, the full report can be seen <a href="https://github.com/urishiraval/cos711-a2/blob/master/report/output/main.pdf">here</a> but long story short,</p>
-<blockquote>
-  <p>performance was boosted from an average a little above <strong>86% to a steady mean of 97%</strong> (with a low standard deviation across runs for both models) <strong>even reaching 99% accuracy</strong> boasting very impressive lack of loss with (what I perceived to be) very little over-fitting.</p>
-</blockquote>
+<h2 id="part-2---cognition-and-how-little-we-actually-know-about-it">Part 2 - Cognition and how little we actually know about it</h2>
 
-<h3 id="downsides">Downsides</h3>
+<p><a href="https://en.wikipedia.org/wiki/Chinese_room">The Chinese room thought experiment</a> gives a clear mental model to avoid being fooled into thinking good answers from an AI equals cognition.</p>
 
-<p>The first issue is the matter of grading. This requires some form of intimacy with the data before training and if the data is graded poorly or not properly split up, or if the training speed is too fast or too slow, it may have no effect. Thus we’ve introduced even more annoying hyperparameters to the mix.</p>
+<p>We don’t fully comprehend how we “comprehend” (which I call out in the article albeit in an attempt to be humorous), so my question to myself would be “how would we even know if a computer comprehends” in the first place. Because of these reasons, I don’t really have an objectively good answer.</p>
 
-<p>The second issue makes the first one even more annoying. This method increases learning time significantly (and here ‘significantly’ is an understatement), which might not be feasible for larger models and make tuning much more tedious.</p>
+<p>To your point, we struggle to understand someone’s communication even while being part of the same species. I truly think we will only see pale imitations of “true cognition” in a computer unless we figure this out, and that’s very much a hard problem that we don’t even know is possible to solve yet.</p>
 
-<h2 id="in-conclusion">In Conclusion</h2>
+<p>Another really hard problem to solve is data entropy when moving through a medium. Think broken telephone game, right? We haven’t found a way to “perfectly” send data from 1 thing to another.</p>
 
-<p>This is a cool way (at least to me) to train NN’s and it has a lot of benefits, especially with smaller models. This might also give you a way to get out of a plateau that you may be facing with your model and we all know how annoying those can be. If you’re reading this, hope it helps!</p>
+<p>Although, deriving 0’s and 1’s from ‘intention’ might be a little easier. If we say semantic meaning is like a complex molecule made up of different parts to the n-th degree, then understanding the semantic meaning might be easier than understanding the component parts, just like how you can see plastic and know it’s plastic without understanding complex organic chemistry.</p>
 
-<h2 id="references">References</h2>
-
-<ul>
-  <li>G. Hacohen and D. Weinshall, “On the power of curriculum learning in
-training deep networks,” 2019.</li>
-  <li>Kwon SJ. Artificial Neural Networks. Nova Science Publishers, Inc; 2011. Accessed December 2, 2021.</li>
-</ul>
+<p>It’s for that reason I sidestep the topic of “how do we grasp intention” in my article. Currently, we can create something that can “compile” natural language into 1’s and 0’s while preserving enough semantic information (intent) that the structure of the machine’s instructions is similar to the intended natural instructions that a human has communicated. We’ve created plastic without knowing what plastic is actually made of, essentially. The “plastic” is low quality and absolute dog sht for the environment, but it’s plastic nevertheless, right?</p>
 
   </div>
 </div>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<script type="text/javascript" async 
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?
+config=TeX-AMS-MML_HTMLorMML"></script>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTB3VMREDK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RTB3VMREDK');
+  </script>
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      AI/NLP. Evolution of Compilers? &middot; Ushir (Rishi) Raval
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <script src="https://kit.fontawesome.com/943e35d59f.js" crossorigin="anonymous"></script>
+
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/unalome.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-dark.min.css" integrity="sha512-Njdz7T/p6Ud1FiTMqH87bzDxaZBsVNebOWmacBjMdgWyeIhUSFU4V52oGwo3sT+ud+lyIE98sS291/zxBfozKw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <link rel="stylesheet" href="/public/css/atom-dark.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-bash.min.js" integrity="sha512-/xr8BBHgclic5pEsdspPqQS8ne+X8QbYRK22c1WRDj8zERTBJDH+Ic/3o8vnrdz5yeGzlzMfp8k33tGgDaAh6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-ycl7dIZ0VJ5535/dzskAMTwOI6OoTNZ3PeD+tfckvYqMmAzaEwQfJHqJTSqcV2iQeJnp5XxnFy5jKotibstp7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/toolbar/prism-toolbar.min.js" integrity="sha512-YrvgEHAi5/3o2OT+/vh1z19oJXk/Kk0qdVKbjEFl9VRmcLTaWRYzVziZCvoGpJ2TrnV7rB8pnJcz1ioVJjgw2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha512-pUNGXbOrc+Y3dm5z2ZN7JYQ/2Tq0jppMDOUsN4sQHVJ9AUQpaeERCUfYYBAnaRB9r8d4gtPKMWICNhm3tRr4Fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <style>
+    @font-face {
+      font-family: 'Victor Mono';
+      src: url("/public/assets/VictorMono/WOFF/VictorMono-Medium.woff?raw=true");
+    }
+
+    code {
+      font-family: 'Victor Mono', monospace !important;
+    }
+  </style>
+</head>
+
+
+  <body class="layout-reverse">
+
+    <style>
+  .sidebar {
+    /* border-left: 0.3rem solid rgb(255, 77, 0); */
+    /* border-left: 0.4rem solid; */
+    /* border-image: linear-gradient(to bottom, rgb(156, 95, 178) 90%, rgb(255, 77, 0) 10%) 1; */
+  }
+
+  .my-2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .mr-2 {
+    margin-right: 0.35rem;
+  }
+</style>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          Ushir (Rishi) Raval
+        </a>
+      </h1>
+      <p class="lead">Computer Scientist</p>
+    </div>
+
+    <div class="my-2">
+      <a class="mr-2" target="_blank" href="https://github.com/urishiraval"><i class="fab fa-sm fa-github"></i></a>
+      <a class="mr-2" target="_blank" href="https://www.linkedin.com/in/unraval/"><i class="fab fa-sm fa-linkedin-in"></i></a>
+      <a class="" target="_blank" href="https://www.instagram.com/rishi_raval7/"><i class="fab fa-sm fa-instagram"></i></a>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/">Home</a>
+          
+        
+      
+        
+          
+        
+      
+
+      <a class="sidebar-nav-item" href="/blog">Blog</a>
+
+    </nav>
+
+  </div>
+</div>
+
+<script lang="js">
+  //Random border color split every time the page loads
+  let random1 = Math.floor(Math.random() * 100) + 1;
+  let first = random1;
+  let second = 100-random1;
+
+  console.log(`Border color split: ${first}% - ${second}%`);
+
+  const sidebar = document.querySelectorAll('.sidebar');
+  sidebar.forEach(sb => {
+    sb.style.borderRight = "0.4rem solid";
+    sb.style.borderImage = `linear-gradient(to bottom, rgb(156, 95, 178) ${first}%, rgb(255, 77, 0) ${second}%) 1`;
+  });
+</script>
+
+
+    <div class="content container">
+      <style>
+  ::selection {
+    background: rgba(156, 95, 178, 0.7);
+    color: #fff;
+  }
+</style>
+
+<div class="post">
+  <h1 class="post-title">AI/NLP. Evolution of Compilers?</h1>
+  <span class="post-date">13 Apr 2025</span>
+  <div class="post-tags">
+    
+      <small><code>#Artificial Thoughts</code></small>
+    
+      <small><code>#AI</code></small>
+    
+      <small><code>#NLP</code></small>
+    
+      <small><code>#Compilers</code></small>
+    
+  </div>
+  <small>
+    <b>Table of Contents</b>
+    <ul><li><a href="#how-we-excrete-information-out-of-our-brains-one-of-the-ways-at-least">How we excrete information out of our brains (one of the ways, at least)</a></li><li><a href="#wth-is-information-anyways">WTH is Information anyways!?</a></li><li><a href="#taking-all-that-sweet-sweet-information-in">Taking all that sweet, sweet information in…</a><ul><li><a href="#compilers">Compilers</a></li></ul></li><li><a href="#the-point-of-this-whole-long-af-article">The point of this whole long af article</a></li><li><a href="#remarks">Remarks</a></li></ul>
+
+  </small>
+  <div>
+    <p>Considering recent trends like so-called “vibe-coding” and the amount of tension around these seemingly “hands-off” exercises in creating solutions, I have some naive and simplistic thoughts (as usual). In this article I attempt to break down the wild and complex ways us humans share information and, with many a stretch, compare us humans to computers (hah! what a funny comparison, but bear with me). As a side effect to me very happily nerding out on foundational computer science concepts, hopefully, I can somewhat convince you that we’re seeing an evolution of what we know as a ‘Compiler’.</p>
+
+<h1 id="how-we-excrete-information-out-of-our-brains-one-of-the-ways-at-least">How we excrete information out of our brains (one of the ways, at least)</h1>
+
+<p>Let’s start at the root of all our troubles in a sense.</p>
+
+<p>Language.</p>
+
+<p>It’s the way humans send information wirelessly <sup><a href="#remarks">1</a></sup> right?</p>
+
+<p>Language is quite complicated (and bizarre) for a thing that almost everyone everywhere intuitively does. The objective description of a conversation is when a human makes a series of vibrational waves (sound) or hand-signs of a certain type, tone, pitch, cadence and rhythm etc. and another human picks up those waves (sound) or hand-signs through specialized bones and organs (squishy bits) and mostly understands the intention of that first human (we’ll talk about this “understanding” stuff in a later section).</p>
+
+<p>Even more weird is that if you change one of those variables, like for example the tone, but leave everything else the same, the entire bloody meaning changes.</p>
+
+<p>Even crazier, is that we have specific symbols that we draw (with sticks and ink on dead trees <sup><a href="#remarks">2</a></sup>) in a specific order that (to a large extent) can convey the same intention as these series of noises and or <del>gang</del> hand-signs.</p>
+
+<p>F**king bizarre.</p>
+
+<p>Let’s add some reason to this rhyme…</p>
+
+<p>My first personal hero <sup><a href="#remarks">3</a></sup>, <a href="https://chomsky.info/about/">Noam Chomsky</a>, in his seminal body of work on formal language <sup><a href="#remarks">4</a></sup> describes something that would eventually be called the <em>Chomsky hierarchy</em> of formal grammars. A complicated sounding thing, but at it’s core (and this is a super simplistic explanation <sup><a href="#remarks">5</a></sup>) the aspect I’d like to highlight is - you’re limited in the amount of information you can convey depending on how you communicate:</p>
+<ul>
+  <li>A random <strong>unstructured</strong> bunch of letters isn’t necessarily a word (believe me, with my <del>attroucious</del> atrocious spelling, I can attest)</li>
+  <li>Going a level higher once you solve the structure of the letters, is to make words</li>
+  <li>A random <strong>unstructured</strong> series of words doesn’t give you a sentence <em>clause</em> <sup><a href="#remarks">6</a></sup></li>
+  <li>Then a level up, a random <strong>unstructured</strong> series of clauses can’t convey meaning intentionally.</li>
+</ul>
+
+<p>And so on and so forth, up the chain of more and more intentional structure being correlated to the accuracy of conveying meaning or <strong>information</strong> (again, I can’t stress how simplistically reductive this explanation is, but it will serve my purpose for now).</p>
+
+<p><img src="http://localhost:4000/public/assets/Chomsky-hierarchy.svg" alt="By J. Finkelstein - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=9405226" /></p>
+
+<h1 id="wth-is-information-anyways">WTH is Information anyways!?</h1>
+
+<p>Okay, we’ve spoke about how we excrete information, but what is this information? “Everyone keeps using the bloody word!”</p>
+
+<p>Let’s do a very rough thought experiment. I’m going to write something and I need you to keep track of your initial understanding of each.</p>
+
+<blockquote>
+  <p>Exhibit A: “the cow was mean”</p>
+</blockquote>
+
+<p>This would mean very little to you. It would merely describe some cow that may or may not exist somewhere in my world that may or may not have been mean. How would you know with those 4 words?</p>
+
+<blockquote>
+  <p>Exhibit B: “my Afrikaans teacher was a cow and was mean to me”.</p>
+</blockquote>
+
+<p>This means something different right? At face value, you get the ‘sense’ that I had a teacher that was mean to me and that they taught me Afrikaans. OR, you could interpret this to mean that the Afrikaans-speaking teacher was mean to me. Notice that the ‘cow’ as an animal has disappeared from your mental modal of what I wrote here and that depending on who’s reading this, the meaning changes.</p>
+
+<p>Let’s go a final step further.</p>
+
+<blockquote>
+  <p>Exhibit C: “If you knew me, you’d know that I (ironically) was naturally a piss-poor language student and that I gave my Afrikaans teachers a hard time by never doing my homework because maybe deep down, I hated that learning Afrikaans wasn’t intuitive to me, and probably as a result of not doing said homework, I had horrible marks. So it’s probably not fair to say my Afrikaans Teacher was a cow and was mean to me.”</p>
+</blockquote>
+
+<p>Let’s break this one down in more detail.</p>
+
+<p>Hopefully you’ve picked up that in each of the exhibits above, there were different levels and types of information that could be taken from each scenario, despite there being more or less the same words, and even further, the same letters used.</p>
+
+<p>To simplify what I’m trying to get to, there are 2 types of information I’m going to focus on that I feel are the most relevant here. Those are:</p>
+<ol>
+  <li>Syntactic Information</li>
+  <li>Semantic Information</li>
+</ol>
+
+<p>Without going into detail of this, because trust me it would take all day and I’m not an expert by any stretch of the word anyways, let’s focus on my sob story about my relationship with my Afrikaans teacher an ungodly number of years ago <sup><a href="#remarks">7</a></sup>.</p>
+
+<p>Exhibit A has structure but little in the way of context. Exhibit B had structure and a little bit more in the way of objective information, but still barely any more context. Exhibit C had structure, objective information and context.</p>
+
+<p>More importantly, Exhibit C had more <em>meaning</em>. Meaning is a type of information. Information that our human brains have the ability to <em>interpret</em> and <em>understand</em> (to varying degrees).</p>
+
+<p>What we most apparently have in Exhibit C that makes it stand out, amongst other things, is <strong>Semantic Information</strong>.</p>
+
+<p>I’ve given  <em>Syntactic Information</em> - that is, a structured set of letters, words and sentences - information of a form that we call “meaning” or <em>Semantic Information</em>.</p>
+
+<p><img src="http://localhost:4000/public/assets/syntactic-vs-semantic.drawio.png" alt="Semantic vs Syntactic" /></p>
+
+<p>(Note: For the sake of simplicity, I’m going to omit things like <a href="https://en.wikipedia.org/wiki/Lexical_semantics">Lexical Information</a> and <a href="https://en.wikipedia.org/wiki/Information_theory">Information Theory</a> merely because it adds nothing useful in this context)</p>
+
+<h1 id="taking-all-that-sweet-sweet-information-in">Taking all that sweet, sweet information in…</h1>
+
+<p>Okay, we can hopefully say that we understand:</p>
+<ol>
+  <li>A way in which we send this thing called “Information” and</li>
+  <li>We know some of the basic components of this “Information” we’re sending</li>
+</ol>
+
+<p>Now what?</p>
+
+<p>Well, now we have to recursively “understand” how we “understand” something<sup><a href="#remarks">8</a></sup> (I did say to bear with me…).</p>
+
+<p>Though, understanding how humans “understand” is a subject that people much smarter then me would have to explain and is itself a subject for many an academic paper. So I’m going to shamelessly pivot to something that I understand much better then humans - Computers.</p>
+
+<p>Specifically, the aspect of computers that allows us geeky engineers to create programs and software that benefits a profitably large group of people. In my opinion, the next biggest game changer in modern computing after the transistor and micro-chips isn’t AI, it’s the Compiler.</p>
+
+<h2 id="compilers">Compilers</h2>
+
+<p>In very simple and high-level terms…a compiler is something that every computing device uses and it has 2 very basic functions:</p>
+<ol>
+  <li>allows a human to write instructions in a language that said human can easily understand</li>
+  <li>Enables the computer to take those instructions and translate (but actually, compile) it to something that itself can easily understand and follow</li>
+</ol>
+
+<p><img src="http://localhost:4000/public/assets/compiler.drawio.png" alt="Happy/Unhappy Compiler" /></p>
+
+<p>Don’t take my word for it though…Merriam-Webster defines a compiler as:</p>
+
+<blockquote>
+  <ol>
+    <li>one that compiles</li>
+    <li>a computer program that translates an entire set of instructions written in a higher-level symbolic language (such as C) into machine language before the instructions can be executed</li>
+  </ol>
+</blockquote>
+
+<p>Good we checked with dears Merriam and Webster because both definitions are actually relevant here.</p>
+
+<h1 id="the-point-of-this-whole-long-af-article">The point of this whole long af article</h1>
+
+<p>Arguably, humans are compilers. We can read words and have thoughts and execute actions based on them.</p>
+
+<p>Similar to a computer right?</p>
+
+<p>Yes, but there has been a huge difference, seemingly until now (apart from, you know, humans being messy bags of flesh and bones and…gag…emotions) <sup><a href="#remarks">9</a></sup>.</p>
+
+<p>Computers - with the use of compilers - have been fabulous at understanding <em>Syntactic Information</em>.
+Computers - so far - haven’t been able to understand <em>Semantic Information</em>. <sup><a href="#remarks">10</a></sup></p>
+
+<p>AI, and specifically Natural Language Processing, changes this.</p>
+
+<p>Natural Language to a human can convey meaning in the sense we’ve outlined above. Computers can now understand (to a certain extent) <em>Semantic Information</em>.</p>
+
+<p>Don’t get it twisted. I’m not saying that Computers are going to be more like humans. I’m not qualified nor am i confident in my understanding of Computers or Humans to definitively make such a statement.</p>
+
+<p>However, I do believe that we’re seeing an evolution of the Compiler in the sense that I can now tell a computer to write me a Python application that writes a letter that says “I am sorry I was such a difficult Afrikaans student” in an email 100 words long with the primary emotion of “chagrin” and send it to all my old Afrikaans teachers from High-school <sup><a href="#remarks">11</a></sup> and it will more or less do it.</p>
+
+<p>This, in my (possibly naive) view, is a <em>compilation</em> of my natural language (with varying degrees of accuracy) into a <em>higher-level</em> programming language which then already gets compiled down to machine code and eventually that gets compiled to 1’s and 0’s that the chips and chocs within the computer can happily process and execute.</p>
+
+<p>Anxieties and hype-cycles aside (I’ll probably write about those some other time, cause believe me, I am anxious in light of this supposed AI revolution) I find it hard to disagree with the thought that NLP is a natural (pun intended) evolution of the compiler, and I can’t help but wonder if this was how the old guard felt when punch-card systems were starting to become obsolete.</p>
+
+<p>So in summation…</p>
+
+<p>Glory to the Compiler gods. We’re all f***ed either way, so this makes little difference in the grand scheme of things. We’ll probably be okay though when the hype-cycle is done. If we’re not, at least we have our health.</p>
+
+<p><strong>- FIN -</strong></p>
+
+<hr />
+
+<h1 id="remarks">Remarks</h1>
+
+<ol>
+  <li>If you’re curious as to what the non-wireless/point-to-point transfer of information is, the next time you see a person you have beef with, punch them and ask after if they got any information from that interaction <sup><a href="#remarks">1.1</a></sup>
+    <ul>
+      <li>1.1. I don’t condone violence….this is just a thought experiment <sup><a href="#remarks">1.2</a></sup></li>
+      <li>1.2. I don’t condone lying either…</li>
+    </ul>
+  </li>
+  <li>At least I do…I’m still very much what they now call “an analog guy”</li>
+  <li>Second is Edsger Dijkstra. Just google “quotes by dijkstra” to see the absolute badassery this guy got up to.</li>
+  <li>Amongst many many more papers, this is the one I’m most familiar with so I’m just going to point you, dear unhealthily interested reader, to  - Chomsky, N., The Logical Structure of Linguistic Theory</li>
+  <li>As someone who briefly studied this, believe me, this sh*t gets complicated. I’m actually doing its coolness a disservice by simplifying it like this. But alas, abstractions and precision right?<sup><a href="#remarks">5.1</a></sup>
+    <ul>
+      <li>5.1. “The purpose of abstracting is not to be vague, but to create a new semantic level in which one can be absolutely precise.”― Edsger W. Dijkstra (yeah, he was a complete badass)</li>
+    </ul>
+  </li>
+  <li>Remember English Class in primary school with all those definite and indefinite clauses bullshit? Yeah, it finally came in handy!</li>
+  <li>F**k, I’m old now. Oh what a cruel mistress is time.</li>
+  <li>All the programmers/math geeks reading this, for 20 marks, if $Understand(x) = Understanding(x)$ is a function that derives understanding from a topic $x$ prove $Understand(Understanding) = Understanding(Understand)$. I dare you.</li>
+  <li>Relax, I’m not a machine or an AI bot writing this….yet…</li>
+  <li>Things like Fuzzy Logic and such don’t count in my view. Heuristics are approximations and this, for me, doesn’t mean that the computer <em>understands</em> or <em>interprets</em> semantic meaning. Though an argument can be made that even with NLP, the computer doesn’t truly <em>understand</em> and I’d concede the point<sup><a href="#remarks">10.1</a></sup>, but it says nothing of <em>interpretation</em> and compilation of <em>semantic</em> meaning, which is what I’m trying to opine about. Hit me up if you disagree…I’m always up for a nerdatious debate and, more importantly, to learn more.
+    <ul>
+      <li>10.1. Yes, I know about the so called <a href="https://en.wikipedia.org/wiki/Chinese_room">Chinese Room Thought Exercise</a>.</li>
+    </ul>
+  </li>
+  <li>Not the Primary school ones, cause they’ve definitely forgotten about me by now. See <sup><a href="#remarks">7</a></sup></li>
+</ol>
+
+  </div>
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/2025/08/17/science-and-value/">
+          The Scientific Method and Value-based Software Engineering - A novice take
+          <small>17 Aug 2025</small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2025/08/10/simplify-mundane-for-value/">
+          Simplify mundane thing A if you want to do valuable thing B
+          <small>10 Aug 2025</small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2025/08/04/igloos-and-sculpts/">
+          Of Igloos and Ice-sculptures
+          <small>04 Aug 2025</small>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+
+  </body>
+
+
+</html>

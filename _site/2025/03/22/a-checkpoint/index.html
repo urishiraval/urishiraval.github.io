@@ -24,7 +24,7 @@ config=TeX-AMS-MML_HTMLorMML"></script>
 
   <title>
     
-      Novel Techniques - Curriculum Learning &middot; Ushir (Rishi) Raval
+      Growing Up in Engineering - A checkpoint on the way to being a 'grown-up' engineer &middot; Ushir (Rishi) Raval
     
   </title>
 
@@ -163,78 +163,93 @@ config=TeX-AMS-MML_HTMLorMML"></script>
 </style>
 
 <div class="post">
-  <h1 class="post-title">Novel Techniques - Curriculum Learning</h1>
-  <span class="post-date">02 Dec 2021</span>
+  <h1 class="post-title">Growing Up in Engineering - A checkpoint on the way to being a 'grown-up' engineer</h1>
+  <span class="post-date">22 Mar 2025</span>
   <div class="post-tags">
     
-      <small><code>#NovelTechniques</code></small>
+      <small><code>#Thoughts</code></small>
     
-      <small><code>#AI</code></small>
+      <small><code>#Personal Growth</code></small>
+    
+      <small><code>#Checkpoint</code></small>
     
   </div>
   <small>
     <b>Table of Contents</b>
-    <ul><li><a href="#brief">Brief</a></li><li><a href="#understanding-the-basics">Understanding the Basics</a><ul><li><a href="#the-curriculum">The ‘Curriculum’</a></li><li><a href="#downsides">Downsides</a></li></ul></li><li><a href="#in-conclusion">In Conclusion</a></li><li><a href="#references">References</a></li></ul>
+    <ul><li><a href="#before-the-checkpoint">Before the checkpoint</a></li><li><a href="#the-checkpoint">The checkpoint</a></li><li><a href="#after-the-checkpoint">After the checkpoint</a></li></ul>
 
   </small>
   <div>
-    <p>In Neural Network Optimization, most academics have moved on to more novel methods such as Deep Neural Nets and Cascading Networks. However, some techniques can be used to optimise more basic Simple Neural Networks that fall in line with Occam’s Razor. One of them is Curriculum Learning.</p>
+    <p>Tl;dr - It is a necessary condition to be empathetic, the sufficient condition is to ask the right questions and challenge the right things.</p>
 
-<h2 id="brief">Brief</h2>
+<p>Becoming Senior.</p>
 
-<blockquote>
-  <p>Occam’s razor, Ockham’s razor, Ocham’s razor (Latin: novacula Occami), also known as the principle of parsimony or the law of parsimony (Latin: lex parsimoniae), is the problem-solving principle that “entities should not be multiplied beyond necessity” - Our trusty pal <a href="https://en.wikipedia.org/wiki/Occam's_razor">Wikipedia</a></p>
-</blockquote>
+<p>One of the Software Engineering proclivity (and I’m sure many other proclivities beyond) forever looks at this path with (albeit many many other emotions, but) great longing and excitement and an additional massive helping of impatience. However, akin to the other fallacies of youth, the path to growing and becoming more senior is one filled with truths un-learnable from the places of youth.</p>
 
-<p>Tl;dr, Occam’s Razor basically says that creating complexity is usually unnecessary and sometimes detrimental to the performance of your system.</p>
+<p>It follows then, that I have inevitably learned a little and with the obnoxious tendencies that make up my personality, I write this article with a force for you, the reader, to choke down with contempt.</p>
 
-<p>Tl;dr the Tl;dr: Simple is usually best.</p>
+<h2 id="before-the-checkpoint">Before the checkpoint</h2>
 
-<p>In this case, Curriculum learning aims to improve model performance through a novel training technique that requires an empirical grading of your training data. After all, throwing things at a model and just expecting is to work seems like a very maddening way to get it to perform better (at least to me). This post will by no means be an exhaustive explication of the technique, for that please read one of the papers referenced at the end.</p>
+<p>There have been a series of unfortunate events.</p>
 
-<h2 id="understanding-the-basics">Understanding the Basics</h2>
+<p>That’s correct. None of this was my doing.</p>
 
-<p>Training a Neural Network usually involves:</p>
-<ol>
-  <li>Data Preparation</li>
-  <li>Training</li>
-  <li>Evaluation</li>
-</ol>
+<p>I did not <em>want</em> to learn hard lessons. (who the fuck does?)</p>
 
-<p>The latter 2 usually occurring over multiple iterations of the network with different hyperparameters. Curriculum Learning adds a step between 1 and 2 where the data is ‘graded’. There are many formulae that this grading system can use, but I’ll just be mentioning the simplest one here, what I call ‘student’ evaluations, where each set of inputs are graded based on how accurate the model is on it’s first or second pass.</p>
-
-<h3 id="the-curriculum">The ‘Curriculum’</h3>
-
-<p>This excellent conceptual model of a the training process is from Kwon’s ‘Artificial Neural Networks’ book:</p>
-
-<p><img src="http://localhost:4000/public/assets/kwon-learning-scheme.png" alt="Supervised Learning Scheme" /></p>
-
-<p>This process flow, while very basic, models the portion of the code that feeds in training data as a <em>professor</em> or teacher and the model is the <em>student</em>.</p>
-
-<p>In Curriculum Learning, the <em>professor</em> simply creates a structured progression of ‘questions’ (essentially just sets of inputs) and ranks these into blocks segregated by difficulty. Difficulty can be determined by how well the model does on each input after a single (or negligibly few) run(s) with over formulae being proposed across various papers. Easy questions are asked first and after the student ‘gets the hang of those’, it moves on to progressively more difficult problems to solve.</p>
-
-<p>This is basically a ‘path of least resistance’ and from my experiments, demonstrates a favorable and dramatic increase in performance. For a University Assignment, I had to create a classifier and demonstrate the affects of different training methods on performance, the full report can be seen <a href="https://github.com/urishiraval/cos711-a2/blob/master/report/output/main.pdf">here</a> but long story short,</p>
-<blockquote>
-  <p>performance was boosted from an average a little above <strong>86% to a steady mean of 97%</strong> (with a low standard deviation across runs for both models) <strong>even reaching 99% accuracy</strong> boasting very impressive lack of loss with (what I perceived to be) very little over-fitting.</p>
-</blockquote>
-
-<h3 id="downsides">Downsides</h3>
-
-<p>The first issue is the matter of grading. This requires some form of intimacy with the data before training and if the data is graded poorly or not properly split up, or if the training speed is too fast or too slow, it may have no effect. Thus we’ve introduced even more annoying hyperparameters to the mix.</p>
-
-<p>The second issue makes the first one even more annoying. This method increases learning time significantly (and here ‘significantly’ is an understatement), which might not be feasible for larger models and make tuning much more tedious.</p>
-
-<h2 id="in-conclusion">In Conclusion</h2>
-
-<p>This is a cool way (at least to me) to train NN’s and it has a lot of benefits, especially with smaller models. This might also give you a way to get out of a plateau that you may be facing with your model and we all know how annoying those can be. If you’re reading this, hope it helps!</p>
-
-<h2 id="references">References</h2>
-
+<p>Alas, here we are, a sprinkling of poorly worded criticism and a dash of apathetic comments such as:</p>
 <ul>
-  <li>G. Hacohen and D. Weinshall, “On the power of curriculum learning in
-training deep networks,” 2019.</li>
-  <li>Kwon SJ. Artificial Neural Networks. Nova Science Publishers, Inc; 2011. Accessed December 2, 2021.</li>
+  <li>Exhibit A: “Why did you do <X> like this? It doesn't really make sense to me."</X></li>
+  <li>Exhibit B: “What makes what you’ve shown me now <em>a platform</em>?”</li>
+  <li>Exhibit C: “I’m pretty sure the way you’re proposing to do this violates <em>{principle z}</em>”</li>
 </ul>
+
+<p>I promise too, that I said this with a polite tone (mostly, I think). So what makes these seemingly inconspicuous sentences a <em>checkpoint</em>? What do I need to change here?</p>
+
+<p>A good question with a simple answer. which for at least some individuals my age and younger, won’t make a lot of sense (fallacy of youth and all) and some my age (but wiser) and older will look at as a simple obvious fact.</p>
+
+<p>It doesn’t matter how noble your intentions are, how aligned your goals are with other people or how close your relationship is with them. If you say something that they find distasteful or disagree with, they’re going to have a bad taste in their mouth. They simply will not like you.</p>
+
+<p>Or so you will feel.</p>
+
+<p>(Okay, there will be a good few that definitely will not like you, but let’s ignore those).</p>
+
+<p>If you’re anything like me, this won’t sit well with you and you’ll feel really bad. Additionally, if you’re anything like me, you won’t really give a fuck (which will make you feel more horrible). You have a high standard for how things need to be done. You hold yourself to it, so what gives others’ the excuse not to?</p>
+
+<p>I’ll tell you. Nothing.</p>
+
+<p><em>But wait…</em></p>
+
+<p>Why does this sound so petulant, even though I know these are the right questions to ask as an engineer?</p>
+
+<h2 id="the-checkpoint">The checkpoint</h2>
+
+<blockquote>
+  <p>Civility and humbleness, and most importantly, empathy are not things that you need an excuse or reason to have. They should be the starting point. The necessary condition.</p>
+</blockquote>
+
+<p>Humans are not binary. Its an obvious statement but not any less useful because of it. The person you’re dealing with now is not the person you dealt with yesterday, or even a couple of hours ago.</p>
+
+<p>The jokes that worked with your peers might not work with your juniors. Your juniors become other juniors’ seniors. Things evolve. The only thing constant is change. We get caught up in a river paradox where your label of something implies that it’s one thing (like how we can call it a river, but if you look at any point in that river at any time, by definition, the water you’re seeing is not the same as you’ve seen before).</p>
+
+<p>Realizing you need to always adapt when you’ve spent so much time growing is not easy. You do feel a lot more self-assured when you finally get there though.</p>
+
+<h2 id="after-the-checkpoint">After the checkpoint</h2>
+
+<p>My musings and astonishment at seeing people who I consider as being my role-models being so patient with people that I measure to be lacking in skill have finally reached a conclusion.</p>
+
+<blockquote>
+  <p>I might be good, but I’ll never be good enough.</p>
+</blockquote>
+
+<p>I’d like to think that wisdom and patience go hand in hand, and that inherent patience is a sign of wisdom inherited from learnings instantiated by my empathy.</p>
+
+<blockquote>
+  <p>It is a necessary condition to be empathetic, the sufficient condition is to ask the right questions and challenge the right things.</p>
+</blockquote>
+
+<p>So it follows, if my empathy could lead to this much needed growth, what’s stopping it from being utilized in my pursuit to not come across as a dick when asking hard questions?</p>
+
+<p>I’ll tell you. Nothing.</p>
 
   </div>
 </div>

@@ -24,7 +24,7 @@ config=TeX-AMS-MML_HTMLorMML"></script>
 
   <title>
     
-      Ushir (Rishi) Raval &middot; Computer Scientist
+      Inversion of Control, by any other name... &middot; Ushir (Rishi) Raval
     
   </title>
 
@@ -122,7 +122,7 @@ config=TeX-AMS-MML_HTMLorMML"></script>
       
         
           
-            <a class="sidebar-nav-item active" href="/">Home</a>
+            <a class="sidebar-nav-item" href="/">Home</a>
           
         
       
@@ -155,20 +155,95 @@ config=TeX-AMS-MML_HTMLorMML"></script>
 
 
     <div class="content container">
-      <div class="page">
-  <h1 class="page-title">Home</h1>
-  <blockquote class="message">
-  Perfection is the simplest form of something with the most substantial outcome. <br /> <small> - Liebniz</small>
+      <style>
+  ::selection {
+    background: rgba(156, 95, 178, 0.7);
+    color: #fff;
+  }
+</style>
+
+<div class="post">
+  <h1 class="post-title">Inversion of Control, by any other name...</h1>
+  <span class="post-date">18 Aug 2024</span>
+  <div class="post-tags">
+    
+      <small><code>#SOLID</code></small>
+    
+      <small><code>#Software Design</code></small>
+    
+      <small><code>#OpEd</code></small>
+    
+  </div>
+  <small>
+    <b>Table of Contents</b>
+    <ul><li><a href="#the-d-in-solid">The D in SOLID</a></li><li><a href="#by-any-other-name">By any other name…</a></li><li><a href="#yet-another-explanation-of-ioc">Yet Another Explanation of IoC</a></li></ul>
+
+  </small>
+  <div>
+    <p>We often hear (at every bloody interview) about the SOLID Principles. It’s regarded by some as the major driving force of good software. But why do so many engineers get (at the very least) 1/5 of the principles wrong at a fairly consistent rate?</p>
+
+<h1 id="the-d-in-solid">The D in SOLID</h1>
+
+<p>SOLID stands for:</p>
+<ul>
+  <li>Single Responsibility</li>
+  <li>Open/Closed Principle</li>
+  <li>Lisckov Substitution Principle</li>
+  <li>Interface Segregation</li>
+  <li>Dependency Inversion</li>
+</ul>
+
+<p>If I had a coin for every instance an engineer has told me that the last “D” in SOLID stands for Dependency Injection, I’d have 20 coins (I’m young, sue me).</p>
+
+<h1 id="by-any-other-name">By any other name…</h1>
+
+<p>Enter the other name for Dependency Inversion…Inversion Of Control.</p>
+
+<p>I lie here a bit. Rather than a synonymic term, Inversion of Control is to Dependency Inversion, what the ocean is to a sea. A bit of history, <a href="https://martinfowler.com/articles/injection.html">Martin Fowler popularized the term in his blog</a> around 2004, along with outlining the <strong>Dependency Injection PATTERN</strong>. He ‘concretised’ the IoC principle by making it tangible to a real use case - the management of dependencies.</p>
+
+<p>Re-enter <em>Dependency Inversion</em>. This became a semi-concrete term for inverting control of dependencies. Since Dependency Management is where the IoC principle is (arguably) the most useful and tangible, the name has become popularized into a synonym for IoC (I suspect to complete the acronym ‘SOLID’, which I actually appreciate tbh. The word ‘SOLII’ sounds a bit flimsy imo).</p>
+
+<h1 id="yet-another-explanation-of-ioc">Yet Another Explanation of IoC</h1>
+
+<p>The net is ripe with much much much better explanations and definitions of IoC. Here is yet another one:</p>
+
+<blockquote>
+  <p>Inversion of Control outlines where ownership of execution should live within the design of a system. It advises that implementation details be isolated to the implementor and hidden from the driver, with the implementor accepting a command to do something from a driver, rather than exact instructions detailing how to do it.</p>
 </blockquote>
 
-<p>A Computer Scientist employed as an Engineer in the Finance sector.</p>
+<p>Basically, to quote Jedi Master Fowler, its the “hollywood principle”. “Don’t call us, we’ll call you”.</p>
 
-<p>My approach to my craft is characterized by thoughtful consideration, whether I am working on a minor plugin or contributing to expansive and intricate enterprise software stacks.</p>
+<p>Where the term “Dependency Inversion” shines at a software implementation level, the term “Inversion of Control” shines at the “integration between software” level. I’ve personally found the most use (not that other implementations are not useful) in integrations between multiple systems, particularly where these systems are owned by different teams. The principle can help direct questions where there might be 2 good answers.</p>
 
-<p>Known for making up stupid metaphors that are, most of the time, only amusing to me, I possess an intense interest in software architecture, design and engineering, deriving satisfaction from actively contributing to, and steering ambitious visions that extend beyond individual pursuits.</p>
+  </div>
+</div>
 
-<p>I also talk and write a bit like I was a nerd in the middle ages, but I attribute that to my immense interest in philosophy and the many books and podcasts I’ve subsequently read and listened to in my short time here on earth (it appears that it will only get worse in the future and for that, I can only apologize).</p>
-
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/2025/08/17/science-and-value/">
+          The Scientific Method and Value-based Software Engineering - A novice take
+          <small>17 Aug 2025</small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2025/08/10/simplify-mundane-for-value/">
+          Simplify mundane thing A if you want to do valuable thing B
+          <small>10 Aug 2025</small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2025/08/04/igloos-and-sculpts/">
+          Of Igloos and Ice-sculptures
+          <small>04 Aug 2025</small>
+        </a>
+      </li>
+    
+  </ul>
 </div>
 
     </div>

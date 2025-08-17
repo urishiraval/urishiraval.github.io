@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<script type="text/javascript" async 
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?
+config=TeX-AMS-MML_HTMLorMML"></script>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTB3VMREDK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RTB3VMREDK');
+  </script>
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Some Rules of Thumb for Complex Solutions and its' Management - Ideal Cone of Software &middot; Ushir (Rishi) Raval
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <script src="https://kit.fontawesome.com/943e35d59f.js" crossorigin="anonymous"></script>
+
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/unalome.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-dark.min.css" integrity="sha512-Njdz7T/p6Ud1FiTMqH87bzDxaZBsVNebOWmacBjMdgWyeIhUSFU4V52oGwo3sT+ud+lyIE98sS291/zxBfozKw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <link rel="stylesheet" href="/public/css/atom-dark.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-bash.min.js" integrity="sha512-/xr8BBHgclic5pEsdspPqQS8ne+X8QbYRK22c1WRDj8zERTBJDH+Ic/3o8vnrdz5yeGzlzMfp8k33tGgDaAh6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-ycl7dIZ0VJ5535/dzskAMTwOI6OoTNZ3PeD+tfckvYqMmAzaEwQfJHqJTSqcV2iQeJnp5XxnFy5jKotibstp7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/toolbar/prism-toolbar.min.js" integrity="sha512-YrvgEHAi5/3o2OT+/vh1z19oJXk/Kk0qdVKbjEFl9VRmcLTaWRYzVziZCvoGpJ2TrnV7rB8pnJcz1ioVJjgw2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha512-pUNGXbOrc+Y3dm5z2ZN7JYQ/2Tq0jppMDOUsN4sQHVJ9AUQpaeERCUfYYBAnaRB9r8d4gtPKMWICNhm3tRr4Fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <style>
+    @font-face {
+      font-family: 'Victor Mono';
+      src: url("/public/assets/VictorMono/WOFF/VictorMono-Medium.woff?raw=true");
+    }
+
+    code {
+      font-family: 'Victor Mono', monospace !important;
+    }
+  </style>
+</head>
+
+
+  <body class="layout-reverse">
+
+    <style>
+  .sidebar {
+    /* border-left: 0.3rem solid rgb(255, 77, 0); */
+    /* border-left: 0.4rem solid; */
+    /* border-image: linear-gradient(to bottom, rgb(156, 95, 178) 90%, rgb(255, 77, 0) 10%) 1; */
+  }
+
+  .my-2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .mr-2 {
+    margin-right: 0.35rem;
+  }
+</style>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          Ushir (Rishi) Raval
+        </a>
+      </h1>
+      <p class="lead">Computer Scientist</p>
+    </div>
+
+    <div class="my-2">
+      <a class="mr-2" target="_blank" href="https://github.com/urishiraval"><i class="fab fa-sm fa-github"></i></a>
+      <a class="mr-2" target="_blank" href="https://www.linkedin.com/in/unraval/"><i class="fab fa-sm fa-linkedin-in"></i></a>
+      <a class="" target="_blank" href="https://www.instagram.com/rishi_raval7/"><i class="fab fa-sm fa-instagram"></i></a>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/">Home</a>
+          
+        
+      
+        
+          
+        
+      
+
+      <a class="sidebar-nav-item" href="/blog">Blog</a>
+
+    </nav>
+
+  </div>
+</div>
+
+<script lang="js">
+  //Random border color split every time the page loads
+  let random1 = Math.floor(Math.random() * 100) + 1;
+  let first = random1;
+  let second = 100-random1;
+
+  console.log(`Border color split: ${first}% - ${second}%`);
+
+  const sidebar = document.querySelectorAll('.sidebar');
+  sidebar.forEach(sb => {
+    sb.style.borderRight = "0.4rem solid";
+    sb.style.borderImage = `linear-gradient(to bottom, rgb(156, 95, 178) ${first}%, rgb(255, 77, 0) ${second}%) 1`;
+  });
+</script>
+
+
+    <div class="content container">
+      <style>
+  ::selection {
+    background: rgba(156, 95, 178, 0.7);
+    color: #fff;
+  }
+</style>
+
+<div class="post">
+  <h1 class="post-title">Some Rules of Thumb for Complex Solutions and its' Management - Ideal Cone of Software</h1>
+  <span class="post-date">13 Sep 2024</span>
+  <div class="post-tags">
+    
+      <small><code>#SoftwareClassification</code></small>
+    
+      <small><code>#OpEd</code></small>
+    
+      <small><code>#Thoughts</code></small>
+    
+      <small><code>#Complexity</code></small>
+    
+      <small><code>#SoftwareMaintainability</code></small>
+    
+      <small><code>#RuleOfThumb</code></small>
+    
+  </div>
+  <small>
+    <b>Table of Contents</b>
+    <ul><li><a href="#to-be-or-not-to-becomplex">To be, or not to be…“complex”</a></li><li><a href="#a-personal-glossary-of-theoretical-relationships-around-maintainability-and-efficiency">A Personal Glossary of Theoretical Relationships around Maintainability and Efficiency</a><ul><li><a href="#theoretical-relationship-a---maintainability-vs-complexity">Theoretical Relationship A - Maintainability vs Complexity</a></li><li><a href="#theoretical-relationship-b---number-of-units-vs-change-frequency">Theoretical Relationship B - Number of Units vs Change Frequency</a></li><li><a href="#theoretical-relationship-c---complexity-vs-number-of-units">Theoretical Relationship C - Complexity vs Number of Units</a></li><li><a href="#theoretical-relationship-d---efficiency-vs-complexity">Theoretical Relationship D - Efficiency vs Complexity</a></li><li><a href="#theory---efficiency-vs-maintainability-coming-full-circle">Theory - Efficiency vs Maintainability (coming full circle)</a></li></ul></li><li><a href="#enter-pseudo-geometry---rishis-ideal-cone-of-software3">Enter Pseudo-Geometry - Rishi’s Ideal Cone of Software<sup><a href="#asides-and-references">3</a></sup></a></li><li><a href="#tldr">TL;DR</a><ul><li><a href="#asides-and-references">Asides and References</a></li></ul></li></ul></li></ul>
+
+  </small>
+  <div>
+    <p>Over my relatively short tenure as a software engineer so far, I’ve had a few thoughts on how to deal with “efficiency” and “maintainability” across multiple facets within my teams’ estate. It’s lead to a useful<sup><a href="#asides-and-references">4</a></sup> rule-of-thumb<sup><a href="#asides-and-references">1</a></sup> when trying to design/make decisions about systems in a way that balances efficiency and maintainability.</p>
+
+<h1 id="to-be-or-not-to-becomplex">To be, or not to be…“complex”</h1>
+
+<p>The kick here, is that software is a team sport. You want things to be maintainable across the lifespan of the <em>team</em> not necessarily the individuals that happen to be within the team at the time of a decision.</p>
+
+<p>Teams change over time. Knowledge gets lost with people. The solution never lies, but you might not be able to speak its language if you’ve lost the meaning of the words.</p>
+
+<p>This is obviously a tall ask. If an answer to a design question seems apparent, I look at it with the utmost suspicion<sup><a href="#asides-and-references">7</a></sup>. Maturing<sup><a href="#asides-and-references">2</a></sup> as an engineer has given me a couple of questions that I feel I need to consistently ask when thinking/planning the implementation details of the stack. One of them is:</p>
+
+<blockquote>
+  <p>What things do we want to be efficient and what are we comfortable compromising for the stack to be maintainable?</p>
+</blockquote>
+
+<p>Efficiency here speaks to how efficiently the system executes. Maintainability here speaks to the teams ability to keep it running.</p>
+
+<p>I suspect that efficiency often times (if not always) comes at a cost of less-maintainable solutions by virtue of adding complexity to cater for non-functional things like performance and scalability or solving complex domain problems. Examples on the non-functional side include adding caching to increase speed, or at an even lower level, using something like memoization to reduce a computationally rigorous piece of logic.</p>
+
+<p>If you agree with the above, the corollary is that designing specifically for maintainability could result in compromised efficiency. If you don’t agree, I’m always open to a socratic debate on it, but I’m going to work under the assumption of the former scenario.</p>
+
+<p>I am of the opinion that a “maintainable” solution and an “efficient” one are contrasting. Finding the right balance between the two is one of my personal goals when I assist with designing/”solutioning” software.</p>
+
+<h1 id="a-personal-glossary-of-theoretical-relationships-around-maintainability-and-efficiency">A Personal Glossary of Theoretical Relationships around Maintainability and Efficiency</h1>
+
+<p>I have a few ‘theoretical relationships’ that I like to think about and use when in design conversations but before we get into it, I need to note a few definitions to make my life easier:</p>
+
+<blockquote>
+  <p>Maintainability Factor (m) - a quantitative measure that denotes how maintainable something is.</p>
+</blockquote>
+
+<p>This can be subjective, or an effort could be made to create an objective measurement of this, but that’s going to be “de-scoped” in this read cause I don’t feel like doing that today<sup><a href="#asides-and-references">6</a></sup>.</p>
+
+<blockquote>
+  <p>‘Distant’ is used to mean that something is not immediately reachable from wherever you are at that time.</p>
+</blockquote>
+
+<p>An example of “distance” is if you have a <a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends">BFF service</a> and a corresponding frontend application, these two units are distant from each other.</p>
+
+<p><img src="http://localhost:4000/public/assets/rishis-idea-of-distance-in-software.drawio.png" alt="Rishi's idea of distance in software" /></p>
+
+<h2 id="theoretical-relationship-a---maintainability-vs-complexity">Theoretical Relationship A - Maintainability vs Complexity</h2>
+
+<blockquote>
+  <p>The more complex a solution, the less maintainable it is over time.</p>
+</blockquote>
+
+<p>I feel like this might be obvious, but for the sake of brevity…the more complex a solution is, the more knowledge about its mechanism is required. This could be domain knowledge, knowledge about how a particular technology works or even something as simple as the “why”, i.e. situational knowledge gained by being there when the decision to do something a particular way was made.</p>
+
+<p>For the more mathematically inclined, this is an inverse relationship and here is the formula using what I like to refer to as my own brand of pseudo-mathematical notation<sup><a href="#asides-and-references">8</a></sup>:</p>
+
+\[m = \frac{1}{complexity}\]
+
+<h2 id="theoretical-relationship-b---number-of-units-vs-change-frequency">Theoretical Relationship B - Number of Units vs Change Frequency</h2>
+
+<p>This is pretty straight-forward:</p>
+
+<blockquote>
+  <p>The more related units of ‘distant’ software you have, the more complex it becomes to maintain it.</p>
+</blockquote>
+
+<p>If you have related software that necessitates frequent change, the multiplicity of effort to enact that change is inversely proportional to the maintainability factor.</p>
+
+<p>Basically, having two BFF’s that you need to update is going to be more work then having a monolithic-esque MVC setup. We know that the front-office applications have a relatively higher frequency of change. This is a good example where you might want to compromise on the maintainability factor in favor of the non-functional, i.e. having BFF’s and following that pattern<sup><a href="#asides-and-references">4</a></sup>.</p>
+
+<p>Pseudo-mathematically:</p>
+
+\[m = \frac{1}{\sum units*frequency\ of\ change}\]
+
+<h2 id="theoretical-relationship-c---complexity-vs-number-of-units">Theoretical Relationship C - Complexity vs Number of Units</h2>
+
+<p>This is a bit more abstract. I’ve observed that in my lived-experience:</p>
+
+<blockquote>
+  <p>The more complex each individual unit, the less units you tend to have in total.</p>
+</blockquote>
+
+<p>Not really sure how to reword this so instead I’m just going to make a haphazard attempt at an example.</p>
+
+<p>If you design a complex function that caters for multiple scenarios, you have increased the complexity of an individual unit and decreased the need for multiple functions.</p>
+
+<p>In pseudo-math:</p>
+
+\[\sum units = \frac{1}{complexity\ per\ unit}\]
+
+<h2 id="theoretical-relationship-d---efficiency-vs-complexity">Theoretical Relationship D - Efficiency vs Complexity</h2>
+
+<p>This is arguably even more abstract:</p>
+
+<blockquote>
+  <p>Efficient solutions tend to be more complex</p>
+</blockquote>
+
+<p>Note that this is drastically different from saying that complex solutions are always more efficient. <strong>Which I am not saying.</strong></p>
+
+<p>I’ve just found that the more efficient you make something, the more complex the overall solution. A perfect example is caching from earlier in this read. I’m sure many, many, many engineers can relate, but caching has been both a nightmare to maintain and a blessing to the client experience (but maybe not always at the same moment in time).</p>
+
+<p>As an aside, a much smarter individual<sup><a href="#asides-and-references">9</a></sup> than me said: “There are only two hard things in Computer Science: cache invalidation and naming things”, and yet we still use caching because it’s useful. This speaks to a journey I often see in my more junior peers where they oscillate in the beginning from wanting to create complex and elegant solutions, to hyper simplified solutions that are really maintainable, before finally finding peace in the balance. But I digress…</p>
+
+<p>In pseudo-mathematical fashion:</p>
+
+\[efficiency = k*complexity\]
+
+<h2 id="theory---efficiency-vs-maintainability-coming-full-circle">Theory - Efficiency vs Maintainability (coming full circle)</h2>
+
+<p>From Relationship A and Relationship D we get a theory:</p>
+
+<blockquote>
+  <p>If we hold that efficiency is proportionate to complexity and maintainability is inversely proportionate to complexity, then efficiency is inversely proportional to maintainability.</p>
+</blockquote>
+
+<p>Remember that this works under the assumption that efficiency leads to complexity. Which I believe in, but you may not. Even so, however, the relationships above might prove useful for other things while this theory itself is not really that useful for much<sup><a href="#asides-and-references">4</a></sup>.</p>
+
+<h1 id="enter-pseudo-geometry---rishis-ideal-cone-of-software3">Enter Pseudo-Geometry - Rishi’s Ideal Cone of Software<sup><a href="#asides-and-references">3</a></sup></h1>
+
+<p>A cone is this:</p>
+
+<p><img src="https://dictionary.cambridge.org/images/thumb/cone_noun_002_08089.jpg?version=6.0.31" alt="Cone" /></p>
+
+<p>Now that we’ve gotten that out of the way. I combine all these pseudo-formulas above into a delightful<sup><a href="#asides-and-references">4</a></sup> little ice-cream cone that helps you make otherwise hard decisions<sup><a href="#asides-and-references">5</a></sup>.</p>
+
+<p><img src="http://localhost:4000/public/assets/rishis-ideal-cone-of-software.drawio.png" alt="Rishi's Ideal Cone of Software" /></p>
+
+<p>Following this mechanism, we get the following rules of thumb:</p>
+<ul>
+  <li>More frequently changing software should probably be implemented in a less complex way</li>
+  <li>Having less complex units probably means that you will be having more of them, which means you’d probably have more segmented or “distant” units the closer you get to your front-office. (This feeds in nicely to a different rule of thumb I use (for better or for worse) that frontends should be as dumb as possible, but I digress)</li>
+  <li>You’d want more efficiency at your core, which likely means you have leeway to draft more complex solutions in your back-office to keep your operation (in the mid-office) running smoothly and efficiently</li>
+</ul>
+
+<h1 id="tldr">TL;DR</h1>
+
+<p>Using the mechanism of the “Ideal cone of software” could help provide rules of thumb when making decisions on how much to invest in making things efficient while allowing the right things in your software stack to be maintainable for the next engineer/team after you/yours moves on to the next stack.</p>
+
+<p><strong>- FIN -</strong></p>
+
+<hr />
+
+<h3 id="asides-and-references">Asides and References</h3>
+
+<ol>
+  <li>a ‘rule-of-thumb’ is defined as “a <a href="https://dictionary.cambridge.org/dictionary/english/practical" title="practical">practical</a> and <a href="https://dictionary.cambridge.org/dictionary/english/approximate" title="approximate">approximate</a> way of doing or <a href="https://dictionary.cambridge.org/dictionary/english/measure" title="measuring">measuring</a> something” by Cambridge Dictionary.</li>
+  <li>hopefully I am maturing, but is there really ever any way of knowing that are?</li>
+  <li>no, you’re thinking of <a href="https://parksandrecreation.fandom.com/wiki/The_Cones_of_Dunshire_(game)">“cones of dunshire”</a>…</li>
+  <li>in my opinion…</li>
+  <li>because everything is better with dessert…</li>
+  <li>look at me channeling my inner project manager…lol</li>
+  <li>I wonder if this is wisdom or trauma.</li>
+  <li>This is “pseudo” because I don’t claim to be a mathematician and I don’t want people that do to come after me. They happen to be pretty smart so they’d probably find a way</li>
+  <li>Phil Karlton</li>
+</ol>
+
+  </div>
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/2025/08/17/science-and-value/">
+          The Scientific Method and Value-based Software Engineering - A novice take
+          <small>17 Aug 2025</small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2025/08/10/simplify-mundane-for-value/">
+          Simplify mundane thing A if you want to do valuable thing B
+          <small>10 Aug 2025</small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2025/08/04/igloos-and-sculpts/">
+          Of Igloos and Ice-sculptures
+          <small>04 Aug 2025</small>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+
+  </body>
+
+
+</html>

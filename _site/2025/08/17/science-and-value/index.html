@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<script type="text/javascript" async 
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?
+config=TeX-AMS-MML_HTMLorMML"></script>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTB3VMREDK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RTB3VMREDK');
+  </script>
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      The Scientific Method and Value-based Software Engineering - A novice take &middot; Ushir (Rishi) Raval
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <script src="https://kit.fontawesome.com/943e35d59f.js" crossorigin="anonymous"></script>
+
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/unalome.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-dark.min.css" integrity="sha512-Njdz7T/p6Ud1FiTMqH87bzDxaZBsVNebOWmacBjMdgWyeIhUSFU4V52oGwo3sT+ud+lyIE98sS291/zxBfozKw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <link rel="stylesheet" href="/public/css/atom-dark.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-bash.min.js" integrity="sha512-/xr8BBHgclic5pEsdspPqQS8ne+X8QbYRK22c1WRDj8zERTBJDH+Ic/3o8vnrdz5yeGzlzMfp8k33tGgDaAh6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-ycl7dIZ0VJ5535/dzskAMTwOI6OoTNZ3PeD+tfckvYqMmAzaEwQfJHqJTSqcV2iQeJnp5XxnFy5jKotibstp7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/toolbar/prism-toolbar.min.js" integrity="sha512-YrvgEHAi5/3o2OT+/vh1z19oJXk/Kk0qdVKbjEFl9VRmcLTaWRYzVziZCvoGpJ2TrnV7rB8pnJcz1ioVJjgw2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha512-pUNGXbOrc+Y3dm5z2ZN7JYQ/2Tq0jppMDOUsN4sQHVJ9AUQpaeERCUfYYBAnaRB9r8d4gtPKMWICNhm3tRr4Fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <style>
+    @font-face {
+      font-family: 'Victor Mono';
+      src: url("/public/assets/VictorMono/WOFF/VictorMono-Medium.woff?raw=true");
+    }
+
+    code {
+      font-family: 'Victor Mono', monospace !important;
+    }
+  </style>
+<style>.markdown-alert{padding:.5rem 1rem;margin-bottom:1rem;color:inherit;border-left:.25em solid #30363d}.markdown-alert>:first-child{margin-top:0}.markdown-alert>:last-child{margin-bottom:0}.markdown-alert .markdown-alert-title{display:flex;font-weight:500;align-items:center;line-height:1}.markdown-alert svg{margin-right:.5rem!important}.markdown-alert svg path{fill:currentColor}.markdown-alert.markdown-alert-note{border-left-color:#4493f8}.markdown-alert.markdown-alert-note .markdown-alert-title{color:#4493f8}.markdown-alert.markdown-alert-important{border-left-color:#ab7df8}.markdown-alert.markdown-alert-important .markdown-alert-title{color:#ab7df8}.markdown-alert.markdown-alert-warning{border-left-color:#9e6a03}.markdown-alert.markdown-alert-warning .markdown-alert-title{color:#d29922}.markdown-alert.markdown-alert-tip{border-left-color:#238636}.markdown-alert.markdown-alert-tip .markdown-alert-title{color:#3fb950}.markdown-alert.markdown-alert-caution{border-left-color:#da3633}.markdown-alert.markdown-alert-caution .markdown-alert-title{color:#f85149}</style></head>
+
+
+  <body class="layout-reverse">
+
+    <style>
+  .sidebar {
+    /* border-left: 0.3rem solid rgb(255, 77, 0); */
+    /* border-left: 0.4rem solid; */
+    /* border-image: linear-gradient(to bottom, rgb(156, 95, 178) 90%, rgb(255, 77, 0) 10%) 1; */
+  }
+
+  .my-2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .mr-2 {
+    margin-right: 0.35rem;
+  }
+</style>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          Ushir (Rishi) Raval
+        </a>
+      </h1>
+      <p class="lead">Computer Scientist</p>
+    </div>
+
+    <div class="my-2">
+      <a class="mr-2" target="_blank" href="https://github.com/urishiraval"><i class="fab fa-sm fa-github"></i></a>
+      <a class="mr-2" target="_blank" href="https://www.linkedin.com/in/unraval/"><i class="fab fa-sm fa-linkedin-in"></i></a>
+      <a class="" target="_blank" href="https://www.instagram.com/rishi_raval7/"><i class="fab fa-sm fa-instagram"></i></a>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/">Home</a>
+          
+        
+      
+        
+          
+        
+      
+
+      <a class="sidebar-nav-item" href="/blog">Blog</a>
+
+    </nav>
+
+  </div>
+</div>
+
+<script lang="js">
+  //Random border color split every time the page loads
+  let random1 = Math.floor(Math.random() * 100) + 1;
+  let first = random1;
+  let second = 100-random1;
+
+  console.log(`Border color split: ${first}% - ${second}%`);
+
+  const sidebar = document.querySelectorAll('.sidebar');
+  sidebar.forEach(sb => {
+    sb.style.borderRight = "0.4rem solid";
+    sb.style.borderImage = `linear-gradient(to bottom, rgb(156, 95, 178) ${first}%, rgb(255, 77, 0) ${second}%) 1`;
+  });
+</script>
+
+
+    <div class="content container">
+      <style>
+  ::selection {
+    background: rgba(156, 95, 178, 0.7);
+    color: #fff;
+  }
+</style>
+
+<div class="post">
+  <h1 class="post-title">The Scientific Method and Value-based Software Engineering - A novice take</h1>
+  <span class="post-date">17 Aug 2025</span>
+  <div class="post-tags">
+    
+      <small><code>#Opinion</code></small>
+    
+  </div>
+  <small>
+    <b>Table of Contents</b>
+    <ul><li><a href="#a-reductive-explanation-of-the-scientific-method">A reductive explanation of the Scientific Method</a></li><li><a href="#the-software-development-life-cycle-sdlc">The Software Development Life-cycle (SDLC)</a><ul><li><a href="#1-what-is-the-sdlc">1. What Is the SDLC?</a></li><li><a href="#2-common-phases-of-sdlc">2. Common Phases of SDLC</a><ul><li><a href="#planning--requirements-analysis">Planning &amp; Requirements Analysis</a></li><li><a href="#design">Design</a></li><li><a href="#implementation--coding--construction">Implementation / Coding / Construction</a></li><li><a href="#testing-acceptance">Testing (Acceptance)</a></li><li><a href="#deployment">Deployment</a></li><li><a href="#maintenance--support">Maintenance / Support</a></li><li><a href="#optional-decommission">(Optional) Decommission</a></li></ul></li></ul></li><li><a href="#scientific-method-vs-sdlc">Scientific Method vs SDLC</a></li><li><a href="#why-being-excellent-seems-harder">Why being excellent seems harder</a></li><li><a href="#lets-communicate-value-better---so-we-can-innovate-more-easily">Let’s communicate value better - so we can innovate more easily</a></li><li><a href="#references-and-asides">References and Asides</a></li></ul>
+
+  </small>
+  <div>
+    <p>Why do we struggle to be excellent engineers in corporate? From my view, talking to quite a few people in the same space as me, I get the impression that, although ‘Corporate’ is where many innovative solutions come from, a large majority of individuals that I’ve spoken to have complained and ranted about the amount of friction they’ve experienced getting something through and out of this machine. This article will attempt to break it down within my immediate and limited context based on my observations (be warned though, this might not be as objective as the title might suggest).</p>
+
+<h1 id="a-reductive-explanation-of-the-scientific-method">A reductive explanation of the Scientific Method</h1>
+
+<p>This has been around for ages - arguably made popular by someone named <a href="https://en.wikipedia.org/wiki/John_Dewey">John Dewey</a>[1] who coined the term, though he did not invent the actual method. I personally think the scientific method is so fundamental and intrinsic to establishing a rough understanding of what is real, that it’s one of those things that would pop up in any civilization independently (which it has by all indications) in some way or form.</p>
+
+<p>The method is simple, it contains a series of steps that form a loop that can be recursive:</p>
+
+<ol>
+  <li>Question or Observation</li>
+  <li>Research</li>
+  <li>Hypothesis</li>
+  <li>Testing and Experimentation</li>
+  <li>Analysis of outcome data</li>
+  <li>Interpretation</li>
+  <li>Critique, Review and Refinement</li>
+</ol>
+
+<p>These are pretty straightforward but when done iteratively/recursively they provide a consistent framework that is reliable and simple enough to implement.</p>
+
+<h1 id="the-software-development-life-cycle-sdlc">The Software Development Life-cycle (SDLC)</h1>
+
+<p>In the spirit of living my 2025 AI enabled life - I took a bunch of articles from various different sources, including major needle movers for how corporate software is build like Amazon, Microsoft and the like, and shoved it into Chat GPT. The prompt I used was this:</p>
+
+<pre><code class="language-prompt">Analyse the following articles: 
+
+1. https://aws.amazon.com/what-is/sdlc/ 
+2. https://github.com/resources/articles/software-development/what-is-sdlc 
+3. https://www.microsoft.com/en-us/power-platform/topics/phases-of-the-software-development-lifecycle 
+4. https://www.ibm.com/think/topics/sdlc 
+5. https://www.atlassian.com/agile/software-development/sdlc 
+6. https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/ 
+7. https://en.wikipedia.org/wiki/Systems_development_life_cycle 
+
+Create a summary of the SDLC based on all of these articles - add references to everything you write
+</code></pre>
+
+<p>Herewith - the AI generated content:</p>
+
+<div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg> AI Generated Content here</p><h2 id="1-what-is-the-sdlc">1. What Is the SDLC?</h2>
+<p>The <strong>SDLC</strong> is a structured, systematic process used by development teams to design, build, deliver, and maintain software efficiently, balancing cost, time, and quality. Its goal is to ensure software meets customer and stakeholder expectations while minimizing risk.<br />
+(<a href="https://aws.amazon.com/what-is/sdlc/">aws.amazon.com</a>, <a href="https://github.com/resources/articles/software-development/what-is-sdlc">github.com</a>, <a href="https://www.ibm.com/think/topics/sdlc">ibm.com</a>, <a href="https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/">geeksforgeeks.org</a>, <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">en.wikipedia.org</a>)</p>
+<h2 id="2-common-phases-of-sdlc">2. Common Phases of SDLC</h2>
+<p>Most sources identify these core phases, though names and counts may vary:</p>
+<h3 id="planning--requirements-analysis">Planning &amp; Requirements Analysis</h3>
+<ul>
+  <li>Includes <strong>feasibility study</strong>, stakeholder interviews, cost-benefit analysis, requirement gathering, and documentation (e.g., SRS).<br />
+(<a href="https://aws.amazon.com/what-is/sdlc/">aws.amazon.com</a>, <a href="https://github.com/resources/articles/software-development/what-is-sdlc">github.com</a>, <a href="https://www.ibm.com/think/topics/sdlc">ibm.com</a>, <a href="https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/">geeksforgeeks.org</a>, <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">en.wikipedia.org</a>)
+    <h3 id="design">Design</h3>
+  </li>
+  <li>Involves choosing architecture, tools, modularization, UML, data flow diagrams, prototyping, threat modeling. Produces design documentation like SDD or architectural blueprints.<br />
+(<a href="https://www.ibm.com/think/topics/sdlc?utm_source=chatgpt.com">ibm.com</a>)
+    <h3 id="implementation--coding--construction">Implementation / Coding / Construction</h3>
+  </li>
+  <li>Developers write code following the design specs. Best practices include version control, code reviews, refactoring, and using IDEs or AI tools.<br />
+(<a href="https://aws.amazon.com/what-is/sdlc/">aws.amazon.com</a>, <a href="https://github.com/resources/articles/software-development/what-is-sdlc">github.com</a>, <a href="https://www.ibm.com/think/topics/sdlc">ibm.com</a>, <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">en.wikipedia.org</a>)
+    <h3 id="testing-acceptance">Testing (Acceptance)</h3>
+  </li>
+  <li>Conducts unit, integration, system, and user acceptance testing to uncover defects. Increasingly combined with automation and continuous testing, including security checks (DevSecOps).<br />
+(<a href="https://aws.amazon.com/what-is/sdlc/?utm_source=chatgpt.com">aws.amazon.com</a>)
+    <h3 id="deployment">Deployment</h3>
+  </li>
+  <li>Moves software into production through packaging, configuration, release management, and user training or transition planning.<br />
+(<a href="https://aws.amazon.com/what-is/sdlc/">aws.amazon.com</a>, <a href="https://github.com/resources/articles/software-development/what-is-sdlc">github.com</a>, <a href="https://www.ibm.com/think/topics/sdlc">ibm.com</a>, <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">en.wikipedia.org</a>)
+    <h3 id="maintenance--support">Maintenance / Support</h3>
+  </li>
+  <li>Post-deployment phase: fixing bugs, updates, performance and security monitoring, ongoing improvements. May loop back to earlier phases.<br />
+(<a href="https://aws.amazon.com/what-is/sdlc/">aws.amazon.com</a>, <a href="https://github.com/resources/articles/software-development/what-is-sdlc">github.com</a>, <a href="https://www.ibm.com/think/topics/sdlc">ibm.com</a>, <a href="https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/">geeksforgeeks.org</a>, <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">en.wikipedia.org</a>)
+    <h3 id="optional-decommission">(Optional) Decommission</h3>
+  </li>
+  <li>The system is retired when it reaches end of life.<br />
+(<a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle?utm_source=chatgpt.com">en.wikipedia.org</a>)</li>
+</ul>
+</div>
+
+<p>Say what you will about AI, it’s not too shabby at doing time consuming summaries for meaningless blogs with no purpose except to satisfy an obnoxious engineer’s need to spew opinions, lest he explode from holding it in.</p>
+
+<p>I digress.</p>
+
+<h1 id="scientific-method-vs-sdlc">Scientific Method vs SDLC</h1>
+
+<p>Looking at the common phases of the SDLC that our handy AI tools have given us - these have abstract elements of the scientific method albeit for different goals.</p>
+
+<p>We do <code>planning and analysis</code> in the beginning - akin to the <code>research</code> stage in the scientific method. We do <code>design</code> which has elements of <code>hypothesis</code> in it - because we never really can know for certain that the architectural picture we’re drawing will match the end implementation. We deal with unknown unknowns and by every good definition of software development - we know that the most useful solutions are the ones that are allowed to deviate from the initial plan for the purposes of making the solution more useful.</p>
+
+<p>Our <code>implementation/coding/construction</code> involves a bunch of testing and experimentation when we write code. Granted, the more you write code and become experienced the less you as an individual need to fundamentally test - which is why I believe that there is a point in your engineering career where you unconsciously write less unit tests until you ‘re-discover’ unit testing and how it can be used to accelerate you, but this is a topic for a different rant. Then we reach <code>acceptance testing</code> stages when our Business Analysts do verification on whether the implementation meets the acceptance criteria - which is similar to the <code>analysis of outcome data</code> step in the scientific method. Lastly, we have <code>critique, review and refinement</code> of the artefact when we <code>maintain and support</code> our software based on bug reports, enhancement requests etc from our users.</p>
+
+<p>From this vague mapping of these steps - is it any wonder that Agile as a practice, despite being prone to bastardization, is a good thing for software delivery? Again, this is a conversation for a different article maybe [2].</p>
+
+<h1 id="why-being-excellent-seems-harder">Why being excellent seems harder</h1>
+
+<p>I believe it’s primarily because we don’t communicate in a conducive way. As soon as you start on the journey to innovate or ‘do the right thing’ or prevent technical debt, your world becomes ‘science based’ rather than ‘value based’. Don’t get me wrong. There’s immense value in all these things we want to do like innovation, optimization and just purely taking more time to not have to cut some corners, it’s just much much harder for us to communicate this in so called ‘corporate-ese’. When we so these things as software engineers, we back-fill the <code>question or observation</code> part in the Scientific method, but we rarely map it to the business case, which is (supposed to be) value based. Corporations don’t primarily deal with the Scientific Method, they primarily deal with the Software Product. In this world of ROI and ROE, a person that talks about things in terms of anything else makes themselves susceptible to being left out of the equation. Harsh but I’ve seen it happen and I don’t really blame them - we all work to add value to clients of some form but to the other functions of business, we kind of make it seem that we as Engineers value the software more. To be honest, sometimes we do.</p>
+
+<p>I’ll give you a prime example. Try explaining why you need to research using ‘Graph Databases’ to a non-technical product owner of a law firm to see if you can store related documents in a better way[3]. If you say that graph databases deal with traversals better and are more efficient blah blah blah, you’ll oftentimes get nowhere - I can put money on this. If you say you would like to explore ways of storing data so that we can more more quickly, accurately and obviously see what documents might be related, and then go on to explain the business case - this is an easier conversation for your stakeholder to have (note, I’m not saying that it will be easier to get buy-in, I don’t really know how to do this yet). The problem here is - it’s not an easier conversation for the engineer[4], because business value is something that historically was never a thing ‘basement engineers’[5] needed to care about.</p>
+
+<h1 id="lets-communicate-value-better---so-we-can-innovate-more-easily">Let’s communicate value better - so we can innovate more easily</h1>
+
+<p>A lot of us wish we didn’t have to think in terms of business. “Just let me code!” or “This new design is so cool! What do you mean you don’t see the value in refactoring?!”. Unfortunately, it is a necessary evil that we have to learn how to define things in ‘business value’ terms. The way I think of it is that we tend to communicate in a more smart-casual way then semi-formal and corporate can only deal with semi-formal and higher.</p>
+
+<p>I always hear complaints about business not ‘coming to the party’ and I feel my community’s frustration but we need to also do better and meet non-technical people half-way. I have a personal belief that you can only complain when you’ve done everything you possibly can. To be completely honest - I don’t think we’ve done everything we can as software engineers when it comes to communicating the value of software and technical things. I know I haven’t at least. Until we get this right - it will always be an us vs them attitude, on both sides, and realistically there aren’t any sides to begin with. The only side is the stakeholder/client at the end of the day because that’s what determines value and success in corporate.</p>
+
+<p>The reality is, software engineers are no longer ‘IT’ and product owners and stakeholders are no longer ‘Business’. We are one and the same, we just don’t always act like it. Yes, there is a definite case to be made that ‘Business’ needs to give us a ‘seat at the table’[6] but there is also a case to be made that ‘IT’ isn’t open to or frankly even prepared to take that seat. We are a large part of the business now, but we have yet to act like it.</p>
+
+<p>This is something that, on a grander scheme, I don’t know how to change - I don’t have the people skills necessary[7] to maneuver or even understand the complexity of this, but what I can do is attempt to grow and adjust how I personally communicate so that I can make things easier for me and my team. It’s stupid difficult - but I can already see the benefits of it.</p>
+
+<p>Hopefully I survive the process but if I don’t, there’s always my backup plan[8].</p>
+
+<p><strong>-FIN-</strong></p>
+
+<h1 id="references-and-asides">References and Asides</h1>
+
+<p>[1] Not to be confused with <a href="https://en.wikipedia.org/wiki/Melvil_Dewey">Melvil Dewey</a>, who is probably the one you’re thinking about that invented the Dewey Decimal System.</p>
+
+<p>[2] Sheesh, this text is opening a can of worms for me.</p>
+
+<p>[3] I’ve never had to do this - it’s just an example that came to my head, but probably because I’ve worked with lawyers as an engineer before.</p>
+
+<p>[4] If you’re reading this and you’re an engineer that disagrees with that statement, well done, I’m genuinely happy for you, but f off, this article isn’t for you. Go back to being a rock-star engineer! Shoo!</p>
+
+<p>[5] See the hit British show <a href="https://en.wikipedia.org/wiki/The_IT_Crowd">The IT Crowd</a></p>
+
+<p>[6] The best book I’ve read so far is called ‘A Seat at the Table’ by Mark Schwartz. It was 1 of 3 books that changed my perception so fundamentally that I felt like a new person after reading it. Highly recommend.</p>
+
+<p>[7] Yes. Hopefully.</p>
+
+<p>[8] For those that don’t know me, I have a backup plan for 1 - if AI takes my job, 2 - my software engineering career goes to shit, 3 - I say the wrong thing to the wrong person and I get fired or 4 - some malicious party has a grudge against me and frames me for something irrecoverable. I’ll retire early in disgrace and find work making delicious coffee in some obscure part of South Africa. It won’t pay much but I can guarantee I’ll be so much happier!</p>
+
+  </div>
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/2025/08/10/simplify-mundane-for-value/">
+          Simplify mundane thing A if you want to do valuable thing B
+          <small>10 Aug 2025</small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2025/08/04/igloos-and-sculpts/">
+          Of Igloos and Ice-sculptures
+          <small>04 Aug 2025</small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2025/07/15/team-reality-dragons-die/">
+          A team grounded in reality is where dragons go to die.
+          <small>15 Jul 2025</small>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+
+  </body>
+
+
+</html>

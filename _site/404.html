@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<script type="text/javascript" async 
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?
+config=TeX-AMS-MML_HTMLorMML"></script>
 <html lang="en-us">
 
   <head>
@@ -6,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTB3VMREDK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -62,14 +65,16 @@
       font-family: 'Victor Mono', monospace !important;
     }
   </style>
-</head>
+<style>.markdown-alert{padding:.5rem 1rem;margin-bottom:1rem;color:inherit;border-left:.25em solid #30363d}.markdown-alert>:first-child{margin-top:0}.markdown-alert>:last-child{margin-bottom:0}.markdown-alert .markdown-alert-title{display:flex;font-weight:500;align-items:center;line-height:1}.markdown-alert svg{margin-right:.5rem!important}.markdown-alert svg path{fill:currentColor}.markdown-alert.markdown-alert-note{border-left-color:#4493f8}.markdown-alert.markdown-alert-note .markdown-alert-title{color:#4493f8}.markdown-alert.markdown-alert-important{border-left-color:#ab7df8}.markdown-alert.markdown-alert-important .markdown-alert-title{color:#ab7df8}.markdown-alert.markdown-alert-warning{border-left-color:#9e6a03}.markdown-alert.markdown-alert-warning .markdown-alert-title{color:#d29922}.markdown-alert.markdown-alert-tip{border-left-color:#238636}.markdown-alert.markdown-alert-tip .markdown-alert-title{color:#3fb950}.markdown-alert.markdown-alert-caution{border-left-color:#da3633}.markdown-alert.markdown-alert-caution .markdown-alert-title{color:#f85149}</style></head>
 
 
   <body class="layout-reverse">
 
     <style>
   .sidebar {
-    border-left: 0.3rem solid rgb(255, 77, 0);
+    /* border-left: 0.3rem solid rgb(255, 77, 0); */
+    /* border-left: 0.4rem solid; */
+    /* border-image: linear-gradient(to bottom, rgb(156, 95, 178) 90%, rgb(255, 77, 0) 10%) 1; */
   }
 
   .my-2 {
@@ -121,6 +126,10 @@
           
         
       
+        
+          
+        
+      
 
       <a class="sidebar-nav-item" href="/blog">Blog</a>
 
@@ -129,12 +138,29 @@
   </div>
 </div>
 
+<script lang="js">
+  //Random border color split every time the page loads
+  let random1 = Math.floor(Math.random() * 100) + 1;
+  let first = random1;
+  let second = 100-random1;
+
+  console.log(`Border color split: ${first}% - ${second}%`);
+
+  const sidebar = document.querySelectorAll('.sidebar');
+  sidebar.forEach(sb => {
+    sb.style.borderRight = "0.4rem solid";
+    sb.style.borderImage = `linear-gradient(to bottom, rgb(156, 95, 178) ${first}%, rgb(255, 77, 0) ${second}%) 1`;
+  });
+</script>
+
 
     <div class="content container">
       <div class="page">
   <h1 class="page-title">404: Page not found</h1>
   <p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href="/">Head back home</a> to try finding it again.</p>
 </div>
+
+
 
     </div>
 

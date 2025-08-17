@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<script type="text/javascript" async 
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?
+config=TeX-AMS-MML_HTMLorMML"></script>
 <html lang="en-us">
 
   <head>
@@ -6,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTB3VMREDK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -62,14 +65,16 @@
       font-family: 'Victor Mono', monospace !important;
     }
   </style>
-</head>
+<style>.markdown-alert{padding:.5rem 1rem;margin-bottom:1rem;color:inherit;border-left:.25em solid #30363d}.markdown-alert>:first-child{margin-top:0}.markdown-alert>:last-child{margin-bottom:0}.markdown-alert .markdown-alert-title{display:flex;font-weight:500;align-items:center;line-height:1}.markdown-alert svg{margin-right:.5rem!important}.markdown-alert svg path{fill:currentColor}.markdown-alert.markdown-alert-note{border-left-color:#4493f8}.markdown-alert.markdown-alert-note .markdown-alert-title{color:#4493f8}.markdown-alert.markdown-alert-important{border-left-color:#ab7df8}.markdown-alert.markdown-alert-important .markdown-alert-title{color:#ab7df8}.markdown-alert.markdown-alert-warning{border-left-color:#9e6a03}.markdown-alert.markdown-alert-warning .markdown-alert-title{color:#d29922}.markdown-alert.markdown-alert-tip{border-left-color:#238636}.markdown-alert.markdown-alert-tip .markdown-alert-title{color:#3fb950}.markdown-alert.markdown-alert-caution{border-left-color:#da3633}.markdown-alert.markdown-alert-caution .markdown-alert-title{color:#f85149}</style></head>
 
 
   <body class="layout-reverse">
 
     <style>
   .sidebar {
-    border-left: 0.3rem solid rgb(255, 77, 0);
+    /* border-left: 0.3rem solid rgb(255, 77, 0); */
+    /* border-left: 0.4rem solid; */
+    /* border-image: linear-gradient(to bottom, rgb(156, 95, 178) 90%, rgb(255, 77, 0) 10%) 1; */
   }
 
   .my-2 {
@@ -121,6 +126,10 @@
           
         
       
+        
+          
+        
+      
 
       <a class="sidebar-nav-item active" href="/blog">Blog</a>
 
@@ -128,6 +137,21 @@
 
   </div>
 </div>
+
+<script lang="js">
+  //Random border color split every time the page loads
+  let random1 = Math.floor(Math.random() * 100) + 1;
+  let first = random1;
+  let second = 100-random1;
+
+  console.log(`Border color split: ${first}% - ${second}%`);
+
+  const sidebar = document.querySelectorAll('.sidebar');
+  sidebar.forEach(sb => {
+    sb.style.borderRight = "0.4rem solid";
+    sb.style.borderImage = `linear-gradient(to bottom, rgb(156, 95, 178) ${first}%, rgb(255, 77, 0) ${second}%) 1`;
+  });
+</script>
 
 
     <div class="content container">
@@ -141,564 +165,942 @@
 	
 	<div class="post">
 		<h2 class="post-title">
-			<a href="/2021/12/09/deploying-frontends/">ABC’s - Deploying Front Ends (featuring EC2)</a>
+			<a href="/2025/08/17/science-and-value/">The Scientific Method and Value-based Software Engineering - A novice take</a>
 		</h2>
-		<span class="post-date">09 Dec 2021</span>
+		<span class="post-date">17 Aug 2025</span>
 		<div class="post-tags">
 			
-			<small><code>#ABCs</code></small>
-			
-			<small><code>#Devops</code></small>
-			
-			<small><code>#EC2</code></small>
-			
-			<small><code>#FrontEnd</code></small>
+			<small><code>#Opinion</code></small>
 			
 		</div>
-		<p>With Cloud infrastructure becoming ultra-available, deploying apps have become super easy and as such the deployment/devops space (in my opinion) is going to get pretty interesting in the next few years (since I believe that trivializing the basics makes a breeding ground for creativity). I wanted to document how I’ve been deploying my side projects (very basic apps, prototypes and POCs) for posterity.</p>
+
+
+		<p>Why do we struggle to be excellent engineers in corporate? From my view, talking to quite a few people in the same space as me, I get the impression that, although ‘Corporate’ is where many innovative solutions come from, a large majority of individuals that I’ve spoken to have complained and ranted about the amount of friction they’ve experienced getting something through and out of this machine. This article will attempt to break it down within my immediate and limited context based on my observations (be warned though, this might not be as objective as the title might suggest).</p>
 
 
 
 
-		<!-- <p>With Cloud infrastructure becoming ultra-available, deploying apps have become super easy and as such the deployment/devops space (in my opinion) is going to get pretty interesting in the next few years (since I believe that trivializing the basics makes a breeding ground for creativity). I wanted to document how I’ve been deploying my side projects (very basic apps, prototypes and POCs) for posterity.</p>
+		<!-- <p>Why do we struggle to be excellent engineers in corporate? From my view, talking to quite a few people in the same space as me, I get the impression that, although ‘Corporate’ is where many innovative solutions come from, a large majority of individuals that I’ve spoken to have complained and ranted about the amount of friction they’ve experienced getting something through and out of this machine. This article will attempt to break it down within my immediate and limited context based on my observations (be warned though, this might not be as objective as the title might suggest).</p>
 
-<h2 id="step-1-prep-your-server">Step 1: Prep your server</h2>
+<h1 id="a-reductive-explanation-of-the-scientific-method">A reductive explanation of the Scientific Method</h1>
 
-<p>Before you think about deploying your app, you need to configure your server. This means:</p>
+<p>This has been around for ages - arguably made popular by someone named <a href="https://en.wikipedia.org/wiki/John_Dewey">John Dewey</a>[1] who coined the term, though he did not invent the actual method. I personally think the scientific method is so fundamental and intrinsic to establishing a rough understanding of what is real, that it’s one of those things that would pop up in any civilization independently (which it has by all indications) in some way or form.</p>
+
+<p>The method is simple, it contains a series of steps that form a loop that can be recursive:</p>
 
 <ol>
-  <li>Getting Nginx or Apache</li>
-  <li>Configuring your ports</li>
-  <li>If deploying multiple apps, configuring a reverse proxy</li>
-  <li>If you have a domain, configuring your DNS and getting SSL certificates for HTTPS</li>
+  <li>Question or Observation</li>
+  <li>Research</li>
+  <li>Hypothesis</li>
+  <li>Testing and Experimentation</li>
+  <li>Analysis of outcome data</li>
+  <li>Interpretation</li>
+  <li>Critique, Review and Refinement</li>
 </ol>
 
-<p>Points 3 and 4 are out of this scope, but I’ll probably write something about those in the future (tbh, I’m too lazy to get into it now).</p>
+<p>These are pretty straightforward but when done iteratively/recursively they provide a consistent framework that is reliable and simple enough to implement.</p>
 
-<p>I prefer to use Nginx, just because it’s so much simpler to configure, and allows you to do the reverse proxy-ing much quicker. So this article will focus more on that rather than apache, which is also a fine tool, don’t get me wrong.</p>
+<h1 id="the-software-development-life-cycle-sdlc">The Software Development Life-cycle (SDLC)</h1>
 
-<p>If on ubuntu:</p>
+<p>In the spirit of living my 2025 AI enabled life - I took a bunch of articles from various different sources, including major needle movers for how corporate software is build like Amazon, Microsoft and the like, and shoved it into Chat GPT. The prompt I used was this:</p>
 
-<pre><code class="language-bash">sudo apt-install nginx
-</code></pre>
-<p>If on EC2 (which I often am) go to the <code>Security Policy</code> that was configured when you instantiated the server and check out the <code>Outbound</code> tab. From here you can configure any port you want for TCP or UDP and there is plenty of docs to get you straight for that.</p>
+<pre><code class="language-prompt">Analyse the following articles: 
 
-<p>Your Nginx setup will auto-magically configure your HTTP port for your server (Port 88) and will also use the default folder that is used by Apache 2 by default (more on that later).</p>
+1. https://aws.amazon.com/what-is/sdlc/ 
+2. https://github.com/resources/articles/software-development/what-is-sdlc 
+3. https://www.microsoft.com/en-us/power-platform/topics/phases-of-the-software-development-lifecycle 
+4. https://www.ibm.com/think/topics/sdlc 
+5. https://www.atlassian.com/agile/software-development/sdlc 
+6. https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/ 
+7. https://en.wikipedia.org/wiki/Systems_development_life_cycle 
 
-<h2 id="step-2-build-your-project">Step 2: Build your project</h2>
-
-<p>This obviously depends on what framework you use, but most all modern ones use either Webpack, Rollup or something similar under the hood.</p>
-
-<p>Now all you need to know is that these build tools generate a “bundled” version of your code, which in essence are 1 or 2 files (or a similarly small amount of large files) that contain the entirety of your codebase created in a folder with all your assets (such as images or css and the like). In the case of Typescript projects, this will be compiled down to javascript.</p>
-
-<p>This “bundle” or file is what your server is concerned with. It’s the deployable artefact that needs to be “published”.</p>
-
-<p>For Svelte and React:</p>
-<pre><code class="language-bash">npm run build
-</code></pre>
-<p>For Angular 2:</p>
-<pre><code class="language-bash">ng build .
+Create a summary of the SDLC based on all of these articles - add references to everything you write
 </code></pre>
 
-<h2 id="step-3-publishing-your-artifacts">Step 3: Publishing your Artifacts</h2>
+<p>Herewith - the AI generated content:</p>
 
-<p>As the heading suggests, you’re now able to get your app onto the server to be accessible from the public url.</p>
+<div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg> AI Generated Content here</p><h2 id="1-what-is-the-sdlc">1. What Is the SDLC?</h2>
+<p>The <strong>SDLC</strong> is a structured, systematic process used by development teams to design, build, deliver, and maintain software efficiently, balancing cost, time, and quality. Its goal is to ensure software meets customer and stakeholder expectations while minimizing risk.<br />
+(<a href="https://aws.amazon.com/what-is/sdlc/">aws.amazon.com</a>, <a href="https://github.com/resources/articles/software-development/what-is-sdlc">github.com</a>, <a href="https://www.ibm.com/think/topics/sdlc">ibm.com</a>, <a href="https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/">geeksforgeeks.org</a>, <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">en.wikipedia.org</a>)</p>
+<h2 id="2-common-phases-of-sdlc">2. Common Phases of SDLC</h2>
+<p>Most sources identify these core phases, though names and counts may vary:</p>
+<h3 id="planning--requirements-analysis">Planning &amp; Requirements Analysis</h3>
+<ul>
+  <li>Includes <strong>feasibility study</strong>, stakeholder interviews, cost-benefit analysis, requirement gathering, and documentation (e.g., SRS).<br />
+(<a href="https://aws.amazon.com/what-is/sdlc/">aws.amazon.com</a>, <a href="https://github.com/resources/articles/software-development/what-is-sdlc">github.com</a>, <a href="https://www.ibm.com/think/topics/sdlc">ibm.com</a>, <a href="https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/">geeksforgeeks.org</a>, <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">en.wikipedia.org</a>)
+    <h3 id="design">Design</h3>
+  </li>
+  <li>Involves choosing architecture, tools, modularization, UML, data flow diagrams, prototyping, threat modeling. Produces design documentation like SDD or architectural blueprints.<br />
+(<a href="https://www.ibm.com/think/topics/sdlc?utm_source=chatgpt.com">ibm.com</a>)
+    <h3 id="implementation--coding--construction">Implementation / Coding / Construction</h3>
+  </li>
+  <li>Developers write code following the design specs. Best practices include version control, code reviews, refactoring, and using IDEs or AI tools.<br />
+(<a href="https://aws.amazon.com/what-is/sdlc/">aws.amazon.com</a>, <a href="https://github.com/resources/articles/software-development/what-is-sdlc">github.com</a>, <a href="https://www.ibm.com/think/topics/sdlc">ibm.com</a>, <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">en.wikipedia.org</a>)
+    <h3 id="testing-acceptance">Testing (Acceptance)</h3>
+  </li>
+  <li>Conducts unit, integration, system, and user acceptance testing to uncover defects. Increasingly combined with automation and continuous testing, including security checks (DevSecOps).<br />
+(<a href="https://aws.amazon.com/what-is/sdlc/?utm_source=chatgpt.com">aws.amazon.com</a>)
+    <h3 id="deployment">Deployment</h3>
+  </li>
+  <li>Moves software into production through packaging, configuration, release management, and user training or transition planning.<br />
+(<a href="https://aws.amazon.com/what-is/sdlc/">aws.amazon.com</a>, <a href="https://github.com/resources/articles/software-development/what-is-sdlc">github.com</a>, <a href="https://www.ibm.com/think/topics/sdlc">ibm.com</a>, <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">en.wikipedia.org</a>)
+    <h3 id="maintenance--support">Maintenance / Support</h3>
+  </li>
+  <li>Post-deployment phase: fixing bugs, updates, performance and security monitoring, ongoing improvements. May loop back to earlier phases.<br />
+(<a href="https://aws.amazon.com/what-is/sdlc/">aws.amazon.com</a>, <a href="https://github.com/resources/articles/software-development/what-is-sdlc">github.com</a>, <a href="https://www.ibm.com/think/topics/sdlc">ibm.com</a>, <a href="https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/">geeksforgeeks.org</a>, <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">en.wikipedia.org</a>)
+    <h3 id="optional-decommission">(Optional) Decommission</h3>
+  </li>
+  <li>The system is retired when it reaches end of life.<br />
+(<a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle?utm_source=chatgpt.com">en.wikipedia.org</a>)</li>
+</ul>
+</div>
 
-<p>“Publish” in this context (and usually in most situations) just means copying the artefact into a publicly accessible folder, which is the endpoint configured in Apache or Nginx. In linux this is almost always <code>/var/www/html/*</code></p>
+<p>Say what you will about AI, it’s not too shabby at doing time consuming summaries for meaningless blogs with no purpose except to satisfy an obnoxious engineer’s need to spew opinions, lest he explode from holding it in.</p>
 
-<p>The simplest, most basic way to do this (in my opinion) is to just FTP into your server and copy the files. In a production environment ideally you’d use a CI/CD-esque tool like AWS Codestar, GitHub Actions or Azure Devops Pipelines, but when you’re just wanting to deploy a small prototype or POC, §“ain’t nobody got time for that”.</p>
+<p>I digress.</p>
 
-<p>I’ll be using <code>sftp</code> from the terminal. You can use something like Filezilla or other GUI ftp apps, but I’m lazy and I also don’t like installing extra apps if there’s a perfectly fine solution out of the box.</p>
+<h1 id="scientific-method-vs-sdlc">Scientific Method vs SDLC</h1>
 
-<p>If on EC2, change to the directory that contains your <code>public</code> files (or whatever your framework generated from the previous step) and:</p>
-<pre><code class="language-bash">sftp -i &lt;path to your pem key file here&gt; ubuntu@&lt;your EC2 public domain here&gt;:/var/www/html/
-</code></pre>
+<p>Looking at the common phases of the SDLC that our handy AI tools have given us - these have abstract elements of the scientific method albeit for different goals.</p>
 
-<p>If you’re using the Amazon Linux image you can substitute <code>ubuntu</code> for <code>user</code>. If you don’t know how to get your key file, check out the docs on how to connect with SSH. It’s basically the same process and the pem file works for most everything to do with connecting remotely to your instance.</p>
+<p>We do <code>planning and analysis</code> in the beginning - akin to the <code>research</code> stage in the scientific method. We do <code>design</code> which has elements of <code>hypothesis</code> in it - because we never really can know for certain that the architectural picture we’re drawing will match the end implementation. We deal with unknown unknowns and by every good definition of software development - we know that the most useful solutions are the ones that are allowed to deviate from the initial plan for the purposes of making the solution more useful.</p>
 
-<p>Next you want to actually transfer the files:</p>
-<pre><code class="language-bash">put -r public/*
-</code></pre>
+<p>Our <code>implementation/coding/construction</code> involves a bunch of testing and experimentation when we write code. Granted, the more you write code and become experienced the less you as an individual need to fundamentally test - which is why I believe that there is a point in your engineering career where you unconsciously write less unit tests until you ‘re-discover’ unit testing and how it can be used to accelerate you, but this is a topic for a different rant. Then we reach <code>acceptance testing</code> stages when our Business Analysts do verification on whether the implementation meets the acceptance criteria - which is similar to the <code>analysis of outcome data</code> step in the scientific method. Lastly, we have <code>critique, review and refinement</code> of the artefact when we <code>maintain and support</code> our software based on bug reports, enhancement requests etc from our users.</p>
 
-<p>Wait for that to complete and then exit <code>sftp</code> (usually Ctrl-C or <code>exit</code>) and restart nginx for good measure:</p>
-<pre><code class="language-bash">sudo service nginx restart
-</code></pre>
+<p>From this vague mapping of these steps - is it any wonder that Agile as a practice, despite being prone to bastardization, is a good thing for software delivery? Again, this is a conversation for a different article maybe [2].</p>
 
-<p>I’ve found that restarting nginx will invalidate client side caching so that the user doesn’t have to hard-refresh the browser if they log on with an active cache.</p>
+<h1 id="why-being-excellent-seems-harder">Why being excellent seems harder</h1>
 
-<h2 id="closing-remarks">Closing Remarks</h2>
+<p>I believe it’s primarily because we don’t communicate in a conducive way. As soon as you start on the journey to innovate or ‘do the right thing’ or prevent technical debt, your world becomes ‘science based’ rather than ‘value based’. Don’t get me wrong. There’s immense value in all these things we want to do like innovation, optimization and just purely taking more time to not have to cut some corners, it’s just much much harder for us to communicate this in so called ‘corporate-ese’. When we so these things as software engineers, we back-fill the <code>question or observation</code> part in the Scientific method, but we rarely map it to the business case, which is (supposed to be) value based. Corporations don’t primarily deal with the Scientific Method, they primarily deal with the Software Product. In this world of ROI and ROE, a person that talks about things in terms of anything else makes themselves susceptible to being left out of the equation. Harsh but I’ve seen it happen and I don’t really blame them - we all work to add value to clients of some form but to the other functions of business, we kind of make it seem that we as Engineers value the software more. To be honest, sometimes we do.</p>
 
-<p>There you go. You have an admittedly basic but super (and here ‘super’ means ‘relatively’) pain free prototype that is publicly accessible (or as accessible as you configure the EC2 security policy to be) and easy to run and update. If you’re reading this, hope it helped!</p>
+<p>I’ll give you a prime example. Try explaining why you need to research using ‘Graph Databases’ to a non-technical product owner of a law firm to see if you can store related documents in a better way[3]. If you say that graph databases deal with traversals better and are more efficient blah blah blah, you’ll oftentimes get nowhere - I can put money on this. If you say you would like to explore ways of storing data so that we can more more quickly, accurately and obviously see what documents might be related, and then go on to explain the business case - this is an easier conversation for your stakeholder to have (note, I’m not saying that it will be easier to get buy-in, I don’t really know how to do this yet). The problem here is - it’s not an easier conversation for the engineer[4], because business value is something that historically was never a thing ‘basement engineers’[5] needed to care about.</p>
+
+<h1 id="lets-communicate-value-better---so-we-can-innovate-more-easily">Let’s communicate value better - so we can innovate more easily</h1>
+
+<p>A lot of us wish we didn’t have to think in terms of business. “Just let me code!” or “This new design is so cool! What do you mean you don’t see the value in refactoring?!”. Unfortunately, it is a necessary evil that we have to learn how to define things in ‘business value’ terms. The way I think of it is that we tend to communicate in a more smart-casual way then semi-formal and corporate can only deal with semi-formal and higher.</p>
+
+<p>I always hear complaints about business not ‘coming to the party’ and I feel my community’s frustration but we need to also do better and meet non-technical people half-way. I have a personal belief that you can only complain when you’ve done everything you possibly can. To be completely honest - I don’t think we’ve done everything we can as software engineers when it comes to communicating the value of software and technical things. I know I haven’t at least. Until we get this right - it will always be an us vs them attitude, on both sides, and realistically there aren’t any sides to begin with. The only side is the stakeholder/client at the end of the day because that’s what determines value and success in corporate.</p>
+
+<p>The reality is, software engineers are no longer ‘IT’ and product owners and stakeholders are no longer ‘Business’. We are one and the same, we just don’t always act like it. Yes, there is a definite case to be made that ‘Business’ needs to give us a ‘seat at the table’[6] but there is also a case to be made that ‘IT’ isn’t open to or frankly even prepared to take that seat. We are a large part of the business now, but we have yet to act like it.</p>
+
+<p>This is something that, on a grander scheme, I don’t know how to change - I don’t have the people skills necessary[7] to maneuver or even understand the complexity of this, but what I can do is attempt to grow and adjust how I personally communicate so that I can make things easier for me and my team. It’s stupid difficult - but I can already see the benefits of it.</p>
+
+<p>Hopefully I survive the process but if I don’t, there’s always my backup plan[8].</p>
+
+<p><strong>-FIN-</strong></p>
+
+<h1 id="references-and-asides">References and Asides</h1>
+
+<p>[1] Not to be confused with <a href="https://en.wikipedia.org/wiki/Melvil_Dewey">Melvil Dewey</a>, who is probably the one you’re thinking about that invented the Dewey Decimal System.</p>
+
+<p>[2] Sheesh, this text is opening a can of worms for me.</p>
+
+<p>[3] I’ve never had to do this - it’s just an example that came to my head, but probably because I’ve worked with lawyers as an engineer before.</p>
+
+<p>[4] If you’re reading this and you’re an engineer that disagrees with that statement, well done, I’m genuinely happy for you, but f off, this article isn’t for you. Go back to being a rock-star engineer! Shoo!</p>
+
+<p>[5] See the hit British show <a href="https://en.wikipedia.org/wiki/The_IT_Crowd">The IT Crowd</a></p>
+
+<p>[6] The best book I’ve read so far is called ‘A Seat at the Table’ by Mark Schwartz. It was 1 of 3 books that changed my perception so fundamentally that I felt like a new person after reading it. Highly recommend.</p>
+
+<p>[7] Yes. Hopefully.</p>
+
+<p>[8] For those that don’t know me, I have a backup plan for 1 - if AI takes my job, 2 - my software engineering career goes to shit, 3 - I say the wrong thing to the wrong person and I get fired or 4 - some malicious party has a grudge against me and frames me for something irrecoverable. I’ll retire early in disgrace and find work making delicious coffee in some obscure part of South Africa. It won’t pay much but I can guarantee I’ll be so much happier!</p>
  -->
 	</div>
+
+
 	
 	<div class="post">
 		<h2 class="post-title">
-			<a href="/2021/12/02/curriculum-learning/">Novel Techniques - Curriculum Learning</a>
+			<a href="/2025/08/10/simplify-mundane-for-value/">Simplify mundane thing A if you want to do valuable thing B</a>
 		</h2>
-		<span class="post-date">02 Dec 2021</span>
+		<span class="post-date">10 Aug 2025</span>
 		<div class="post-tags">
 			
-			<small><code>#NovelTechniques</code></small>
+			<small><code>#Philosophy</code></small>
+			
+			<small><code>#‘Opinions’</code></small>
+			
+		</div>
+
+
+		<p>TL;DR: Let’s invest in simplifying mundane things to enable us to deliver more valuable things.</p>
+
+
+
+
+		<!-- <p>TL;DR: Let’s invest in simplifying mundane things to enable us to deliver more valuable things.</p>
+
+<p>—-</p>
+
+<p>A god awful number of years ago, I remember doing chemistry im highschool and learning about something called a <a href="https://en.m.wikipedia.org/wiki/Redox">redox</a> [1] reaction. I found it pretty cool at the time - but then break came around (some might now this as “recess”) and it was immediately forgotten (I was but a wee lad). Now a god awful amount of years later - I find myself thinking about the poetry of it. Especially as an engineer.</p>
+
+<h1 id="redox-reactions">Redox Reactions</h1>
+
+<p>Redox stands for “Reduction and Oxidation”. This is more involved but the simple explanation is that - there are 2 things happening simultaneously, such that the overall quantity doesn’t change. A reduction in something with a simultaneous increase in another. The overall thing from the outside might look the same but there is an inherent change within the system and so, there is a completely different end effect.</p>
+
+<h1 id="bringing-it-into-engineering">Bringing it into Engineering</h1>
+
+<p>I’ve found immense success with this philosophy - albeit unintentionally. Reducing the cognitive load required to do mundane thing A which allows you to increase capacity to do valuable thing B. I feel like this is an important tool that we have that we rarely talk about.</p>
+
+<p>Platform teams - at least good ones in my opinion - aim to reduce cognitive load required to implement shared or necessarily imperative  capabilities so that domain teams can increase pace of feature delivery without compromising the entire system.</p>
+
+<p>However, this doesn’t need to exclusively be a platform team function. It feels painfully obvious but I see engineers leaving these optimisations out of their day-to-day and it irks me.</p>
+
+<p>Small things like docs - especially in the world of A.I.- is a silly example. You create documentation for a thing so that others in your team can get better context with their A.I. assistant. Or, you implement feature flags in a reusable way so that your ability to deploy becomes easier.</p>
+
+<p>Or you build a library that takes care of mundane stuff - really invest in it - so that the next engineer is allowed to exclusively focus on the extraordinary.</p>
+
+<p>The options now become endless and the usefulness apparent.</p>
+
+<p>For me at least…</p>
+
+<p>All these examples have a common theme. Invest in simplifying mundane things to enable you to deliver more valuable things.</p>
+
+<h1 id="references-and-asides">References and Asides</h1>
+
+<p>[1] Not to be confused with Redux - which is a js library</p>
+ -->
+	</div>
+
+
+	
+	<div class="post">
+		<h2 class="post-title">
+			<a href="/2025/08/04/igloos-and-sculpts/">Of Igloos and Ice-sculptures</a>
+		</h2>
+		<span class="post-date">04 Aug 2025</span>
+		<div class="post-tags">
+			
+			<small><code>#Personal Growth</code></small>
+			
+			<small><code>#Philosophy</code></small>
+			
+		</div>
+
+
+		<p>TL;DR: (Just this paragraph is generated by ChatGPT - the rest is my shpeel) The author compares the journey of becoming a skilled software engineer to building igloos—practical, experience-based, and essential—and later, to crafting ice-sculptures—elegant, expressive, and technically intricate. After years of chasing deep technical mastery, they shift focus toward a more balanced and fulfilling growth path that values both competence and creativity, while embracing self-awareness, joy, and the human side of development.</p>
+
+
+
+
+		<!-- <p>TL;DR: (Just this paragraph is generated by ChatGPT - the rest is my shpeel) The author compares the journey of becoming a skilled software engineer to building igloos—practical, experience-based, and essential—and later, to crafting ice-sculptures—elegant, expressive, and technically intricate. After years of chasing deep technical mastery, they shift focus toward a more balanced and fulfilling growth path that values both competence and creativity, while embracing self-awareness, joy, and the human side of development.</p>
+
+<hr />
+
+<p>When I was a “wee lad”, my parents came into a second-hand Children’s Encyclopedia set. Boy, I loved those. That book-set fuelled an obsession with reading that I have retained to this day. One of the things that I remember vividly from that was the Inuit [1] and the igloos they’d build. I found it so fascinating that one could build a shelter out of the very thing they were sheltering from - the snow.</p>
+
+<h1 id="building-igloos">Building Igloos</h1>
+
+<p>Building these magnificent structures requires a body of knowledge that would have to be learnt from experts and have to be perfected with years of experience, all to create an intuitive application of such complex geometries, material sciences, and practical knowledge that something as ephemeral as snow could be made into a structure that could hold the weight of a man on its roof and, despite being made of frozen water, can be warmed to 16C by body heat alone (in spite of outside temperatures being in the negative double digits).</p>
+
+<p>I often think that software engineering can be a bit like this.</p>
+
+<p>We struggle to articulate exactly what it is that makes a senior “senior” yet we can often quite easily spot one in a crowd of engineers. This always irked me to no end.</p>
+
+<p>“How can I become that!? How do I get there!? Will I ever get there!? Is this the right path that I’m following!?”</p>
+
+<p>For the longest time, these questions haunted me. I tried and tried and struggled to get to that point where I could intuitively navigate things just like my seniors at the time, who were all so good at these things and were so willing to, and did, teach me so much of the science behind it.</p>
+
+<h1 id="then-i-got-over-it">Then I got over it</h1>
+
+<p>“Fuck it” - I said.</p>
+
+<p>If I do one day get there, great. In the meantime, I’ll aim to do something I have really good chops for— building ice sculptures. Of course, I’m not saying they’re objectively better than igloos, and I’m not saying I was naturally gifted at this. I’m just saying that I subjectively found it cooler and more appealing because I adore elegance and simplicity [2] and my natural inclination was towards more simplistic, methodical, and precise approaches.</p>
+
+<p>So I went about learning all the fanciest things. I made it a personal goal to learn the inner mechanisms of what I deemed to be the most complex ways of doing things. I focused on acquiring deep knowledge of my craft and ways to gain more precision and optimisation. It paid off.</p>
+
+<p>All this had led me to learn how to freeze my water correctly (scoping and solidifying my requirements), identify the right tools (frameworks, languages, design patterns) so that I can craft beautiful things (software that is elegant and functional) in a reproducible way. My experiments had met with success!</p>
+
+<h1 id="but-for-a-while-now-ive-gotten-over-that-too">But for a while now, I’ve gotten over that too….</h1>
+
+<p>“Fuck it” - I said, yet again.</p>
+
+<p>Building ice sculptures is tantamount to creating beauty, and I loved and always will continue to love doing that, but building igloos is so fundamental to survival and so elegant in its own way. I selfishly wanted to learn to do both.</p>
+
+<p>So began a journey of self-doubt, self-awareness, self-acceptance, and, ultimately, a fundamentally different growth from the skills-hoovering I’d been doing for the number of years before this journey began. I’m in no way done with it - this chapter is still very much in progress - but I feel happier, freer, and more inclined to have fun. I’ve learned to both not take it seriously and be the most serious I’ve ever been.</p>
+
+<p>Things have now clicked enough that “things clicking into place” doesn’t feel as exciting anymore. While this was scary at first - I’ve come to terms with it because I’ve realised that it opens up an entirely new world to explore. A world where one needs to gain skills that are more conducive to human-centred growth rather than skill-set-oriented growth. I must admit, this is not my forte, but that makes it so much more exciting for me.</p>
+
+<p>Dear reader, my hope for you is simple - that you find/have found your journey as satisfying as mine is turning out to be.</p>
+
+<h1 id="references-and-asides">References and Asides</h1>
+
+<p>[1] The books (being from the 90s) referred to them as “Eskimos,” but I’m aware that this is an offensive word, and so I use “Inuit” as a placeholder. No disrespect intended on my part.</p>
+
+<p>[2] Who doesn’t, right? What a cliché.</p>
+ -->
+	</div>
+
+
+	
+	<div class="post">
+		<h2 class="post-title">
+			<a href="/2025/07/15/team-reality-dragons-die/">A team grounded in reality is where dragons go to die.</a>
+		</h2>
+		<span class="post-date">15 Jul 2025</span>
+		<div class="post-tags">
+			
+			<small><code>#Opinions</code></small>
+			
+			<small><code>#Teams</code></small>
+			
+			<small><code>#Philosophy</code></small>
+			
+			<small><code>#Software Engineering</code></small>
+			
+			<small><code>#Growth</code></small>
+			
+			<small><code>#Checkpoint</code></small>
+			
+		</div>
+
+
+		<p>TL;DR - Good engineers deal with reality. We bring concrete, practical, and real implementation to precisely architected solutions that solve for value. We need to remember that this doesn’t change no matter what gets thrown our way. We are a sect of craftsman/woman of the reality in our business - and reality is where dragons go to die.</p>
+
+
+
+
+		<!-- <p>TL;DR - Good engineers deal with reality. We bring concrete, practical, and real implementation to precisely architected solutions that solve for value. We need to remember that this doesn’t change no matter what gets thrown our way. We are a sect of craftsman/woman of the reality in our business - and reality is where dragons go to die.</p>
+
+<hr />
+
+<p>Imagine a dragon [2] blowing through a fantasy town. Often times, being a part of an engineering team can feel like you’re one of those houses on fire. The dragon, of course, is not a singular thing - alas, nothing is ever that straightforward - but rather multiple problems stacked on top of each other in such a perfect way that it feels like some sort of dark alchemical conspiracy.</p>
+
+<p><img src="http://localhost:4000/public/assets/2025-07-15/DragonConfrontationVortex.png" alt="Dragon Vortex" /></p>
+
+<p>Really tight deadlines meet misaligned business stakeholders married to a straightforward product. On top of that, the product is only straightforward in the product owners’ heads because in actual fact, the whole state of the union is built on shaky and oftentimes neglected legacy that creates its own magic circle and Bermuda Triangle-like experience where time, focus, and effort disappear into and die. No rhyme or reason necessary or even involved.</p>
+
+<p>In the world of “enterprise” - more often than not - things just happen and no one is around to explain how and why anymore. Those people have been immortalised in stories about bringing down prod or running an entire enterprise application with stored procs on SQL - and if you’re lucky - their glorious names would be forever sung in the git history.</p>
+
+<p>“Here be dragons”.</p>
+
+<p>We’re right as well. This feels like a magical beast that keeps on getting up every time you put it down, and you eventually come to realise that - what you thought of as “slaying the dragon” was actually just “ticking its foot slightly”.</p>
+
+<p>Although….</p>
+
+<h1 id="slay-psht">Slay? Psht…</h1>
+
+<p>We hear stories about “slaying the dragon” - but is “slaying” really a good strategy?</p>
+
+<p>Let’s look at this logically: your entire journey, you would have to have all of these magical things line up in the perfect way for you to accomplish this. You need - for example - a magical blade or weapon, a party of adventurer companions that are each uniquely and coincidentally perfectly gifted for the task at hand, and a good storyline where the protagonist learns a good lesson or moral.</p>
+
+<p><img src="http://localhost:4000/public/assets/2025-07-15/going_on_an_adventure.png" alt="Going on an adventure" /></p>
+
+<p>All of this is bullshit [3].</p>
+
+<p>While this may be an epic pursuit, we are not the heroes in this story of business value and the reality is - we don’t live in a Tolkien novel [4]. The harsh truth in the corporate world is that the lessons we learn are only valuable if we can use them to increase efficiency, efficacy and importantly to enhance the value of the product that the software is servicing. Unless you build OS’s or comparable things where the software itself is the product - the software is not the primary artefact. A bit harsh but it is the modus of business value rather than the value itself.</p>
+
+<p>Alas, you also can’t talk of “slaying” when there is no beast to slay….</p>
+
+<h1 id="is-it-real">Is it real?</h1>
+
+<p>Sorry to bust this fairytale but there’s no such thing as dragons. These mythical beasts in our field, dear reader, are just optical illusions that only appear so at a distance.</p>
+
+<p><img src="http://localhost:4000/public/assets/2025-07-15/the_dragon_is_paper.png" alt="The dragon is paper" /></p>
+
+<p>Don’t get it twisted. I’m not saying that your problems aren’t real - I’m just saying that the reason they seem so insurmountable is possibly because you’re looking at it from too far a distance. Dijkstra once said that “abstraction allows us to converse about things with precision” [5]. I’m a huge believer and fan of this personally - but it does not lend well to situations where you as an engineer or engineering team have to deal with other engineers or engineering teams that may be further behind or ahead on the maturity scale than you and yours for example. What is the use of precision if you can’t even “converse”?</p>
+
+<h1 id="a-scary-solution">A scary solution</h1>
+
+<p>A way to take the dark and sinister magic away from these seemingly large and pervasive issues is to simply get closer to it.</p>
+
+<p><img src="http://localhost:4000/public/assets/2025-07-15/ConfrontingThePaperDragon.png" alt="Confronting the paper dragon" /></p>
+
+<p>This is hard. It’s counterintuitive and feels scary. I’m basically telling you to move closer to something that really looks like a horrible beast of mythology - instead of telling you to stay safe and keep your distance. I can appreciate if that feels like bullshit, but - ye bit of faith. You won’t be able to understand what’s really going on until you lean in and until you really understand what’s going on - and I mean really, truly understand the nuances of the issues and strategies where the business and tech form that chaotic vortex - things will look like indecipherable magic.</p>
+
+<blockquote>
+  <p>Understanding brings with it a clarity and comfort, and these seemingly unsolvable problems start to become opportunities to apply your training and craft as an engineer.</p>
+</blockquote>
+
+<p>Isn’t that all we want as creatives and builders of cool things?</p>
+
+<p>Good engineers deal with reality. We bring concrete, practical, and real implementation to precisely architected solutions that solve for value. We need to remember that this doesn’t change no matter what gets thrown our way.</p>
+
+<p>We are a sect of craftsman/woman of the reality in our business - and reality is where dragons go to die.</p>
+
+<p><img src="http://localhost:4000/public/assets/2025-07-15/dragon_is_not_real.png" alt="Dragon wasn't real after all" /></p>
+
+<h1 id="references-and-asides">References and Asides</h1>
+
+<p>[1] All images generated by ChatGPT (4o).</p>
+
+<p>[2] Can’t be that hard, they’re imaginary.</p>
+
+<p>[3] Except, ironically, for the lessons you learn at the end of the story - that’s the only thing that isn’t fantasy.</p>
+
+<p>[4] …despite one of my deepest desires being so.</p>
+
+<p>[5] What a fucking badass this guy was.</p>
+ -->
+	</div>
+
+
+	
+	<div class="post">
+		<h2 class="post-title">
+			<a href="/2025/06/15/apple-liq-glass-thoughts/">Apple Liquid Glass - I get it but I don’t think it will work - yet</a>
+		</h2>
+		<span class="post-date">15 Jun 2025</span>
+		<div class="post-tags">
+			
+			<small><code>#UX</code></small>
+			
+			<small><code>#Opinions</code></small>
+			
+			<small><code>#Design Philosophy</code></small>
+			
+		</div>
+
+
+		<p>Yet. At least in the short term. This title is slightly click bait, but my thoughts are more scattered and boring here so I need to at least make it seam controversial to hold you through this article. Although, calling it out probably defeated the purpose.</p>
+
+
+
+
+		<!-- <p>Yet. At least in the short term. This title is slightly click bait, but my thoughts are more scattered and boring here so I need to at least make it seam controversial to hold you through this article. Although, calling it out probably defeated the purpose.</p>
+
+<p>Herewith my thoughts.</p>
+
+<h1 id="what-is-apple-liquid-glass">What is Apple Liquid Glass?</h1>
+
+<p>It’s a new design system/CI really. Apple calls it a new “material”. This is their language to describe a fundamental aspect of it, but in reality, it’s a new design system.</p>
+
+<p>In their words it allows engineers to <a href="https://developer.apple.com/documentation/technologyoverviews/liquid-glass">“embrace design principles of Apple platforms to create beautiful interfaces that establish hierarchy, create harmony, and maintain consistency across devices and platforms”</a>.</p>
+
+<p>Apple could have called it “plastic” but I suppose it doesn’t fit the pretension they’re going for. Apple be apple-ing I guess.</p>
+
+<p><img src="http://localhost:4000/public/assets/2025-06-15-generated-image-0.png" alt="Generated Image 0" /></p>
+
+<h1 id="no-but-what-is-it-really">No but, what is it really?</h1>
+
+<p>Apple (and a lot of other companies) is seeing a revolution in how content is being interacted with.</p>
+
+<p>In the good old days, we all had buttons. Physical ones. Buttons everywhere. Blackberry was the epitome of buttons on buttons sporting a 60% keyboard that - especially as someone with stubby fingers - were a nightmare to press until you get weirdly good at pressing the right tiny button on instinct (#UselessSkillAlert).</p>
+
+<p>In the previous world where physical buttons were the only method of interaction, the content was always front and centre. In a word where bigger, better and more powerful screens have killed physical buttons, screen space has to be sacrificed to keep the device usable.</p>
+
+<p><img src="http://localhost:4000/public/assets/2025-06-15-generated-image-1.png" alt="Buttons, buttons everywhere - generated image 1" /></p>
+
+<p>Essentially, Apple Designers are trying to get rid of the need to sacrifice expensive screen real estate by using what we use to prevent the need to have the lights on in the day - adding a clear material to let in the view. This as opposed to increasing the overall size of the screen with which I believe they’ve come to a conclusion that making bigger screens is optimising in the wrong direction. Or over-optimising without much return.</p>
+
+<h1 id="sure-but-will-it-work">Sure, but will it work?</h1>
+
+<p>I don’t think it will be well received in the short term. My empirical evidence is the release of AirPods and removing the headphone jack being super controversial and, in the case of AirPods, outright mocked and people would be ashamed/embarrassed to like it in some cases. This is obviously taking for granted that the execution of “Liquid Glass” is done well and that the ergonomics are not compromised like what happened with the Magic Mouse. I distinctly remember getting that “leek meme” from colleagues when I “rocked” my first AirPods and I daily drive a Magic Mouse and have a deep disdain for it (I can’t find a better left handed mouse and so the touch pad-like features make up for this shitty ergonomics imo - if you know of a good left-handed mouse please contact me, you will change my life forever).</p>
+
+<p><img src="http://localhost:4000/public/assets/2025-06-15-generated-image-2.png" alt="Generated Image 2" /></p>
+
+<p>My experience using Apple products w.r.t. it’s design is that - at it’s best - the product is either such a pleasure to use that all flaws are forgiven or - at it’s worst - the utility of using it outweighs the terrible UX decisions. “Liquid Glass” from that perspective doesn’t feel far off from their philosophies.</p>
+
+<h1 id="but-i-think-it-might-work-later">But I think it might work later</h1>
+
+<p>Because we’ll supposedly have AI.</p>
+
+<p>Yes, seriously.</p>
+
+<p>I’m not just tenuously trying to link something to AI for the sake of it, trust me.</p>
+
+<p>The age of (let’s call it) Natural Interaction with digital content requires content being front and center. I foresee “review” being a more common interaction then “operate”. Lets imagine a world where the kinks in AI are ironed out - what then will be the main thing on the screen? The content. What would be the controls? Natural Interaction mechanisms like voice, gestures and touch (but not in a way that recreates a physical button). We’re already seeing this with Agentic AI and Prompting right? The artifact you’re working with gains “intelligence”[2] in a sense that it can tell you things about itself and can do things you command it to. Asking a “document” questions rather then manually highlighting or copying and pasting text into ChatGPT and asking it to summarize for example. Or telling your image to animate itself. The goal of Apple (and many other companies) is to seamlessly integrate AI into the process. As someone now helping to build AI into our business processes, I can personally agree with this strategy and feel that this is a superior way to do it from a “business value” perspective.</p>
+
+<p>Sounds a bit sci-fi but that seems to be the direction of travel and we’re in a world where machines can more easily have autonomy to execute operations already, they’re just not that good at the big and long stuff in my opinion and experience. In this new world, the company that figures out how to get the content to “live” on the screen in a way that the controls are secondary and unobtrusive would definitely have an easier time with the way the industry is going.</p>
+
+<p><img src="http://localhost:4000/public/assets/2025-06-15-generated-image-3.png" alt="Generated Image 3" /></p>
+
+<p>Maximizing value is tending towards “enriching the interaction with content while simultaneously removing the number of operations a human has to do to achieve the same result” - which was previously a hard tradeoff. Now, AI is making this possible seemingly without compromising either (with varying results imo).</p>
+
+<p>As someone that loves the aesthetics of Apple and has bought into the design language and philosophy - I can only hope they don’t fuck it up.</p>
+
+<p>- FIN -</p>
+
+<h1 id="references-and-asides">References and Asides</h1>
+
+<p>[1] - Images generated by Gemini by giving it a paragraph and asking it to generate an image from that with “Use a manga style and make it dramatic. Avoid creating faces and avoid text generation.”</p>
+
+<p>[2] - “Intelligence” is a strong word, but it’s the word Apple is using so I’m gonna go with it for now. I don’t believe this is the right word personally, but I’m not gonna get into it. I choose peace.</p>
+ -->
+	</div>
+
+
+	
+	<div class="post">
+		<h2 class="post-title">
+			<a href="/2025/06/07/john-ohara-qcon-talk/">John O’Hara’s QCon Keynote - A Growth Checkpoint</a>
+		</h2>
+		<span class="post-date">07 Jun 2025</span>
+		<div class="post-tags">
+			
+			<small><code>#Conference</code></small>
+			
+			<small><code>#Opinion</code></small>
+			
+			<small><code>#Leadership</code></small>
+			
+			<small><code>#Checkpoint</code></small>
+			
+			<small><code>#Personal Growth</code></small>
+			
+		</div>
+
+
+		<p>TL;DR: As a technologist, taking point on projects is dangerous not because you might not be up to the task, but because you have an impact beyond the technology. Anyone can learn to write code and build stuff, and yes, I also believe that over time anyone can learn to build stuff well. However, it requires a deep fundamental change in oneself to take on the mantel of leading humans.</p>
+
+
+
+
+		<!-- <p>TL;DR: As a technologist, taking point on projects is dangerous not because you might not be up to the task, but because you have an impact beyond the technology. Anyone can learn to write code and build stuff, and yes, I also believe that over time anyone can learn to build stuff well. However, it requires a deep fundamental change in oneself to take on the mantel of leading humans.</p>
+
+<h2 id="context">Context</h2>
+
+<p>A few months ago, I had the pleasure of being selected to go to the <a href="https://qconlondon.com/">QCon Developer conference in London</a>. As these conferences go, QCon was done super well with a focus on senior engineers, common industry problems and a distinct segregation of your classical promotional talks and ones with real depth of content.</p>
+
+<p>There were numerous talks with many lessons and epiphanies abound. However, the one that stood out to me, as someone currently aspiring to be more human than robot in my engineering career, was the keynote on day 2 by <a href="https://www.linkedin.com/in/johara/">John O’Hara</a>. Along with holding high positions in various well known companies like J.P. Morgan and Fidelity, the thing that probably earned his place on the docket was him being one of the principle inventors of AMQP, the famous and highly effective “Advanced Message Queuing Protocol” considered the gold standard of it’s kind.</p>
+
+<h2 id="the-talk">The talk</h2>
+
+<p>His talk was titled <a href="https://qconlondon.com/keynote/apr2025/advanced-message-queuing-politics">“Advanced Message Queuing Politics”</a> (which, as a massive appreciator of witty word play, I considered the first indicator of this talk being outstanding). Besides the man oozing wisdom and experience from his very demeanour, his talk left such a lasting impression on me that I had to write this post.</p>
+
+<p>His account of the journey from J.P. Morgan needing a messaging middleware for traders to there being a global consortium consisting of the “who’s who” of the tech industry was such a novel story, however one part of his talk stood out the most to me. In the early days of them opening the movement up to many other organisations and people with many other thoughts and opinions, he had a sit down with himself and defined the mindset that he had started to realise he needed being one of the principle leads on the project that he knew and believed in his bones, had so much potential.</p>
+
+<p>That mindset was 4 main points:</p>
+<ol>
+  <li>It’s likely that my ideas on this won’t survive the process</li>
+  <li>It’s still success if it commoditises without us</li>
+  <li>Contributors should always leave their mark</li>
+  <li>I love technology, but my role is to make it happen</li>
+</ol>
+
+<p>This resonated with me.</p>
+
+<h2 id="my-thoughts">My thoughts</h2>
+
+<p>This put into perspective my junior days and interactions with otherwise amazing engineers being so shitty that at its worst, it made me want to quit. It made me understand that in some cases the times I had been shot down and made to feel inferior, weren’t because I didn’t have the skill (although some of those times, I probably didn’t tbf) but more because the person in that position was grappling with their own conflict against one or more of the 4 points above. The amount of times I had been unhappy and frustrated at being told things by a lead that essentially boiled down to them not having this mindset was staggering. More scarily though, it got me thinking about my own behaviour as someone with significantly more experience and reach now.</p>
+
+<h2 id="the-checkpoint">The Checkpoint</h2>
+
+<p>As a technologist, taking point on projects is dangerous not because you might not be up to the task, but because you have an impact beyond the technology. Anyone can learn to write code and build stuff, and yes, I also believe that over time anyone can learn to build stuff well. However, it takes a deep fundamental change in oneself to take on the mantel of leading humans. As a person who is deeply passionate in what I do, deeply interested in learning how to improve and deeply invested in becoming excellent, I have so so much to learn and grow in this area and I can’t fathom ever perfecting it.</p>
+
+<p>Although - I now know where to start.</p>
+ -->
+	</div>
+
+
+	
+	<div class="post">
+		<h2 class="post-title">
+			<a href="/2025/05/16/nlp-as-nlc-p1-1/">AI/NLP. Evolution of Compilers? - Part 1.1 - Interesting questions and my thoughts</a>
+		</h2>
+		<span class="post-date">16 May 2025</span>
+		<div class="post-tags">
+			
+			<small><code>#Artificial Thoughts</code></small>
 			
 			<small><code>#AI</code></small>
 			
+			<small><code>#NLP</code></small>
+			
+			<small><code>#Compilers</code></small>
+			
 		</div>
-		<p>In Neural Network Optimization, most academics have moved on to more novel methods such as Deep Neural Nets and Cascading Networks. However, some techniques can be used to optimise more basic Simple Neural Networks that fall in line with Occam’s Razor. One of them is Curriculum Learning.</p>
+
+
+		<p>I posted an <a href="https://urishiraval.github.io/2025/04/13/nlp-as-nlc/">article from my blog</a> on my LinkedIn a little while back (see <a href="https://www.linkedin.com/posts/unraval_ainlp-evolution-of-compilers-activity-7325047885618728961-Wea4?utm_source=share&amp;utm_medium=member_ios&amp;rcm=ACoAAB04-pQBG71QN0lBL1-Xc9g0jZiFmpBVbwM">the post here</a>) and I had a colleague ask <a href="https://www.linkedin.com/feed/update/urn:li:activity:7325047885618728961?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7325047885618728961%2C7328871553272561666%29&amp;dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287328871553272561666%2Curn%3Ali%3Aactivity%3A7325047885618728961%29">2 super interesting questions</a>. Herewith my attempt to answer them.</p>
 
 
 
 
-		<!-- <p>In Neural Network Optimization, most academics have moved on to more novel methods such as Deep Neural Nets and Cascading Networks. However, some techniques can be used to optimise more basic Simple Neural Networks that fall in line with Occam’s Razor. One of them is Curriculum Learning.</p>
+		<!-- <p>I posted an <a href="https://urishiraval.github.io/2025/04/13/nlp-as-nlc/">article from my blog</a> on my LinkedIn a little while back (see <a href="https://www.linkedin.com/posts/unraval_ainlp-evolution-of-compilers-activity-7325047885618728961-Wea4?utm_source=share&amp;utm_medium=member_ios&amp;rcm=ACoAAB04-pQBG71QN0lBL1-Xc9g0jZiFmpBVbwM">the post here</a>) and I had a colleague ask <a href="https://www.linkedin.com/feed/update/urn:li:activity:7325047885618728961?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7325047885618728961%2C7328871553272561666%29&amp;dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287328871553272561666%2Curn%3Ali%3Aactivity%3A7325047885618728961%29">2 super interesting questions</a>. Herewith my attempt to answer them.</p>
 
-<h2 id="brief">Brief</h2>
+<h1 id="the-questions">The Questions</h1>
 
 <blockquote>
-  <p>Occam’s razor, Ockham’s razor, Ocham’s razor (Latin: novacula Occami), also known as the principle of parsimony or the law of parsimony (Latin: lex parsimoniae), is the problem-solving principle that “entities should not be multiplied beyond necessity” - Our trusty pal <a href="https://en.wikipedia.org/wiki/Occam's_razor">Wikipedia</a></p>
+  <ol>
+    <li>What does it really mean to “understand” language - and can a machine ever truly do that</li>
+    <li>How do we teach a machine not just to process the structure of our language, but to grasp the intention behind it - when even humans struggle to agree on meaning.</li>
+  </ol>
 </blockquote>
 
-<p>Tl;dr, Occam’s Razor basically says that creating complexity is usually unnecessary and sometimes detrimental to the performance of your system.</p>
+<h1 id="my-thoughts">My Thoughts</h1>
 
-<p>Tl;dr the Tl;dr: Simple is usually best.</p>
+<p>These are super interesting questions and require talking about very dense topics 😂 I’ll try not to ramble. My short answers to this (with no claims of being right) are:</p>
 
-<p>In this case, Curriculum learning aims to improve model performance through a novel training technique that requires an empirical grading of your training data. After all, throwing things at a model and just expecting is to work seems like a very maddening way to get it to perform better (at least to me). This post will by no means be an exhaustive explication of the technique, for that please read one of the papers referenced at the end.</p>
-
-<h2 id="understanding-the-basics">Understanding the Basics</h2>
-
-<p>Training a Neural Network usually involves:</p>
 <ol>
-  <li>Data Preparation</li>
-  <li>Training</li>
-  <li>Evaluation</li>
+  <li>I think so, but not language fully from a human.</li>
+  <li>I’m not actually sure we can because I don’t believe it’s possible to get this 100% right. Although I do think we can get really close.</li>
 </ol>
 
-<p>The latter 2 usually occurring over multiple iterations of the network with different hyperparameters. Curriculum Learning adds a step between 1 and 2 where the data is ‘graded’. There are many formulae that this grading system can use, but I’ll just be mentioning the simplest one here, what I call ‘student’ evaluations, where each set of inputs are graded based on how accurate the model is on it’s first or second pass.</p>
+<p>I’m not qualified enough to give you an academically good answer for them, but I can try to give my thoughts in 2 parts.</p>
 
-<h3 id="the-curriculum">The ‘Curriculum’</h3>
+<h2 id="part-1---language-and-humans">Part 1 - Language and humans</h2>
 
-<p>This excellent conceptual model of a the training process is from Kwon’s ‘Artificial Neural Networks’ book:</p>
+<p>The theory that I love the most (which might very well be outdated by now) for how to describe how and why language has become useful for humans to understand one another is probably those coming out of the <a href="https://en.wikipedia.org/wiki/Minimalist_program">Minimalist Program</a> (Chomsky), though there are many competing and more modern theories. Definitely worth a read if you’re interested in this stuff.</p>
 
-<p><img src="http://localhost:4000/public/assets/kwon-learning-scheme.png" alt="Supervised Learning Scheme" /></p>
+<p>Chomsky and others talk about the difference between communication using “signal encoding” and that which can be classified as using an  “unbound discrete infinity”-based language, so to speak. Another interesting fact is that most of the ‘language mechanism’ is actually used internally by humans to process data more than to externally communicate (but this is more relevant in part 2).</p>
 
-<p>This process flow, while very basic, models the portion of the code that feeds in training data as a <em>professor</em> or teacher and the model is the <em>student</em>.</p>
+<p>Basically, a computer currently uses a sophisticated form of signal coding, and in my mind, there’s not much difference today in how other animals process communication and machines do using NLP (and I’m not suggesting that machines and other animals are the same, merely that the processing mechanism is similar in my opinion).</p>
 
-<p>In Curriculum Learning, the <em>professor</em> simply creates a structured progression of ‘questions’ (essentially just sets of inputs) and ranks these into blocks segregated by difficulty. Difficulty can be determined by how well the model does on each input after a single (or negligibly few) run(s) with over formulae being proposed across various papers. Easy questions are asked first and after the student ‘gets the hang of those’, it moves on to progressively more difficult problems to solve.</p>
+<p>I don’t think a computer would ever be able to fully “understand” language as we humans do. My main reason is because I believe language and thus the cognition of it has as one of its components an inherent biological factor, which computers obviously don’t. For example, if I tell you “I feel like having tiramisu,” you might understand that as a coffee lover I’m probably craving it, whereas a computer might process that and match it to a mechanical thing like me being “hungry” because that’s the best pattern it can match that phrase to.</p>
 
-<p>This is basically a ‘path of least resistance’ and from my experiments, demonstrates a favorable and dramatic increase in performance. For a University Assignment, I had to create a classifier and demonstrate the affects of different training methods on performance, the full report can be seen <a href="https://github.com/urishiraval/cos711-a2/blob/master/report/output/main.pdf">here</a> but long story short,</p>
-<blockquote>
-  <p>performance was boosted from an average a little above <strong>86% to a steady mean of 97%</strong> (with a low standard deviation across runs for both models) <strong>even reaching 99% accuracy</strong> boasting very impressive lack of loss with (what I perceived to be) very little over-fitting.</p>
-</blockquote>
+<h2 id="part-2---cognition-and-how-little-we-actually-know-about-it">Part 2 - Cognition and how little we actually know about it</h2>
 
-<h3 id="downsides">Downsides</h3>
+<p><a href="https://en.wikipedia.org/wiki/Chinese_room">The Chinese room thought experiment</a> gives a clear mental model to avoid being fooled into thinking good answers from an AI equals cognition.</p>
 
-<p>The first issue is the matter of grading. This requires some form of intimacy with the data before training and if the data is graded poorly or not properly split up, or if the training speed is too fast or too slow, it may have no effect. Thus we’ve introduced even more annoying hyperparamters to the mix.</p>
+<p>We don’t fully comprehend how we “comprehend” (which I call out in the article albeit in an attempt to be humorous), so my question to myself would be “how would we even know if a computer comprehends” in the first place. Because of these reasons, I don’t really have an objectively good answer.</p>
 
-<p>The second issue makes the first one even more annoying. This method increases learning time significantly (and here ‘significantly’ is an understatement), which might not be feasible for larger models and make tuning much more tedious.</p>
+<p>To your point, we struggle to understand someone’s communication even while being part of the same species. I truly think we will only see pale imitations of “true cognition” in a computer unless we figure this out, and that’s very much a hard problem that we don’t even know is possible to solve yet.</p>
 
-<h2 id="in-conclusion">In Conclusion</h2>
+<p>Another really hard problem to solve is data entropy when moving through a medium. Think broken telephone game, right? We haven’t found a way to “perfectly” send data from 1 thing to another.</p>
 
-<p>This is a cool way (at least to me) to train NN’s and it has a lot of benefits, especially with smaller models. This might also give you a way to get out of a plateau that you may be facing with your model and we all know how annoying those can be. If you’re reading this, hope it helps!</p>
+<p>Although, deriving 0’s and 1’s from ‘intention’ might be a little easier. If we say semantic meaning is like a complex molecule made up of different parts to the n-th degree, then understanding the semantic meaning might be easier than understanding the component parts, just like how you can see plastic and know it’s plastic without understanding complex organic chemistry.</p>
 
-<h2 id="references">References</h2>
-
-<ul>
-  <li>G. Hacohen and D. Weinshall, “On the power of curriculum learning in
-training deep networks,” 2019.</li>
-  <li>Kwon SJ. Artificial Neural Networks. Nova Science Publishers, Inc; 2011. Accessed December 2, 2021.</li>
-</ul>
+<p>It’s for that reason I sidestep the topic of “how do we grasp intention” in my article. Currently, we can create something that can “compile” natural language into 1’s and 0’s while preserving enough semantic information (intent) that the structure of the machine’s instructions is similar to the intended natural instructions that a human has communicated. We’ve created plastic without knowing what plastic is actually made of, essentially. The “plastic” is low quality and absolute dog sht for the environment, but it’s plastic nevertheless, right?</p>
  -->
 	</div>
+
+
 	
 	<div class="post">
 		<h2 class="post-title">
-			<a href="/2021/08/23/fluent-validation-1/">Starting from Scratch - Fluent Validation</a>
+			<a href="/2025/04/13/nlp-as-nlc/">AI/NLP. Evolution of Compilers?</a>
 		</h2>
-		<span class="post-date">23 Aug 2021</span>
+		<span class="post-date">13 Apr 2025</span>
 		<div class="post-tags">
 			
-			<small><code>#StartingFromScratch</code></small>
+			<small><code>#Artificial Thoughts</code></small>
 			
-			<small><code>#javascript</code></small>
+			<small><code>#AI</code></small>
+			
+			<small><code>#NLP</code></small>
+			
+			<small><code>#Compilers</code></small>
 			
 		</div>
-		<p>In an attempt to further understand how fluent validation works in javascript, I tried to recreate an extremely basic chain-able system from scratch.</p>
+
+
+		<p>Considering recent trends like so-called “vibe-coding” and the amount of tension around these seemingly “hands-off” exercises in creating solutions, I have some naive and simplistic thoughts (as usual). In this article I attempt to break down the wild and complex ways us humans share information and, with many a stretch, compare us humans to computers (hah! what a funny comparison, but bear with me). As a side effect to me very happily nerding out on foundational computer science concepts, hopefully, I can somewhat convince you that we’re seeing an evolution of what we know as a ‘Compiler’.</p>
 
 
 
 
-		<!-- <p>In an attempt to further understand how fluent validation works in javascript, I tried to recreate an extremely basic chain-able system from scratch.</p>
+		<!-- <p>Considering recent trends like so-called “vibe-coding” and the amount of tension around these seemingly “hands-off” exercises in creating solutions, I have some naive and simplistic thoughts (as usual). In this article I attempt to break down the wild and complex ways us humans share information and, with many a stretch, compare us humans to computers (hah! what a funny comparison, but bear with me). As a side effect to me very happily nerding out on foundational computer science concepts, hopefully, I can somewhat convince you that we’re seeing an evolution of what we know as a ‘Compiler’.</p>
 
-<h2 id="brief">Brief</h2>
+<h1 id="how-we-excrete-information-out-of-our-brains-one-of-the-ways-at-least">How we excrete information out of our brains (one of the ways, at least)</h1>
 
-<p>The main goal of fluent validation seems to be the separation of highly conditional branching trees into it’s own layer in very dynamic systems. So far the only system that I’ve worked on where this would be of great benefit are business/financial applications with a ton of business/product rules and while ideally you’d want those rules to be evaluated in the back-end I think that the front-end (especially if it’s a monolithic front end, which is often the case in that environment) can get very dense with dynamic content depending on those rules.</p>
+<p>Let’s start at the root of all our troubles in a sense.</p>
 
-<p>I’m still searching for the “simplest form of this” with the “most substantial outcome” as Liebniz describes it, but I think that fluent validation is the strongest contender so far.</p>
+<p>Language.</p>
 
-<h2 id="understanding-the-basics">Understanding the Basics</h2>
+<p>It’s the way humans send information wirelessly <sup><a href="#remarks">1</a></sup> right?</p>
 
-<p>First, I researched different ways that function chaining was accomplished and ultimately found <a href="https://stackoverflow.com/questions/35026609/chain-custom-javascript-functions">this Stackoverflow post</a> from 2016. In that post I found that there are 2 basic approaches that are pretty much similar in concept but with slightly different executions.</p>
+<p>Language is quite complicated (and bizarre) for a thing that almost everyone everywhere intuitively does. The objective description of a conversation is when a human makes a series of vibrational waves (sound) or hand-signs of a certain type, tone, pitch, cadence and rhythm etc. and another human picks up those waves (sound) or hand-signs through specialized bones and organs (squishy bits) and mostly understands the intention of that first human (we’ll talk about this “understanding” stuff in a later section).</p>
 
-<h3 id="chaining-in-javascript">Chaining in Javascript</h3>
+<p>Even more weird is that if you change one of those variables, like for example the tone, but leave everything else the same, the entire bloody meaning changes.</p>
 
-<p>Before that however, I needed to define what was the minium requirement for a function to be chained. So this:</p>
+<p>Even crazier, is that we have specific symbols that we draw (with sticks and ink on dead trees <sup><a href="#remarks">2</a></sup>) in a specific order that (to a large extent) can convey the same intention as these series of noises and or <del>gang</del> hand-signs.</p>
 
-<pre><code class="language-javascript">function chainableX () {
-    console.log("Executing X");
-    return this;
-}
+<p>F**king bizarre.</p>
 
-function chainableY() {
-    console.log("Executing Y");
-    return this;
-}
-</code></pre>
+<p>Let’s add some reason to this rhyme…</p>
 
-<p>Would allow us to ‘chain’ like this:</p>
+<p>My first personal hero <sup><a href="#remarks">3</a></sup>, <a href="https://chomsky.info/about/">Noam Chomsky</a>, in his seminal body of work on formal language <sup><a href="#remarks">4</a></sup> describes something that would eventually be called the <em>Chomsky hierarchy</em> of formal grammars. A complicated sounding thing, but at it’s core (and this is a super simplistic explanation <sup><a href="#remarks">5</a></sup>) the aspect I’d like to highlight is - you’re limited in the amount of information you can convey depending on how you communicate:</p>
+<ul>
+  <li>A random <strong>unstructured</strong> bunch of letters isn’t necessarily a word (believe me, with my <del>attroucious</del> atrocious spelling, I can attest)</li>
+  <li>Going a level higher once you solve the structure of the letters, is to make words</li>
+  <li>A random <strong>unstructured</strong> series of words doesn’t give you a sentence <em>clause</em> <sup><a href="#remarks">6</a></sup></li>
+  <li>Then a level up, a random <strong>unstructured</strong> series of clauses can’t convey meaning intentionally.</li>
+</ul>
 
-<pre><code class="language-javascript">var context = chainableX().chainableY();
-</code></pre>
+<p>And so on and so forth, up the chain of more and more intentional structure being correlated to the accuracy of conveying meaning or <strong>information</strong> (again, I can’t stress how simplistically reductive this explanation is, but it will serve my purpose for now).</p>
 
-<pre><code>Executing X
-Executing Y
-</code></pre>
+<p><img src="http://localhost:4000/public/assets/Chomsky-hierarchy.svg" alt="By J. Finkelstein - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=9405226" /></p>
 
-<p>Where the resulting <code>context</code> variable would be the global call stack since these functions don’t belong to any object.So, with that, returning <code>this</code> I could now chain functions.</p>
+<h1 id="wth-is-information-anyways">WTH is Information anyways!?</h1>
 
-<h3 id="accumulating-side-effects-within-a-scope">Accumulating Side-effects within a Scope</h3>
+<p>Okay, we’ve spoke about how we excrete information, but what is this information? “Everyone keeps using the bloody word!”</p>
 
-<p>The next task was to allow for side effects to accumulate in a sequential manner. My initial thoughts were that this was very similar to a ‘Builder’ design pattern and indeed, when I glanced at the source code of some common validation packages, that seemed to be a solution that was used. However, in my attempt to keep things as simple as I possibly can, along with trying to use vanilla js and functional-ish concepts as much as I can, I opted for a slightly different approach, (but one that was not necessarily better by any metric).</p>
+<p>Let’s do a very rough thought experiment. I’m going to write something and I need you to keep track of your initial understanding of each.</p>
 
-<p>My first attempt was to create an ‘object’ based solution that would accumulate the side effects on a variable within that context. So I thought that the initial object would somehow resemble this:</p>
+<blockquote>
+  <p>Exhibit A: “the cow was mean”</p>
+</blockquote>
 
-<pre><code class="language-javascript">check = {
-    result: null,
-    not: function() {
-        this.result = !this.result;
-        return this;
-    },
-    or: function() {
-        return this;
-    },
-    and: function() {
-        return this;
-    },
-    t: function() {
-        return this;
-    },
-    f: function() {
-        return this;
-    }
-}
+<p>This would mean very little to you. It would merely describe some cow that may or may not exist somewhere in my world that may or may not have been mean. How would you know with those 4 words?</p>
 
-console.log(check.not().f().and().t().result);
-</code></pre>
-<pre><code>true
-</code></pre>
+<blockquote>
+  <p>Exhibit B: “my Afrikaans teacher was a cow and was mean to me”.</p>
+</blockquote>
 
-<h3 id="chaining-of-boolean-operators">Chaining of Boolean Operators</h3>
+<p>This means something different right? At face value, you get the ‘sense’ that I had a teacher that was mean to me and that they taught me Afrikaans. OR, you could interpret this to mean that the Afrikaans-speaking teacher was mean to me. Notice that the ‘cow’ as an animal has disappeared from your mental modal of what I wrote here and that depending on who’s reading this, the meaning changes.</p>
 
-<p>I quickly realised that I’d have a glaring problem. The operators <code>AND</code> and <code>OR</code> are binary and while this gives the example chain above a ‘space’ to accumulate results, you can’t accumulate a binary operator without ‘embedding’ values similar to <code>check.not().and(&lt;exp&gt;)</code>, which was not what I wanted.</p>
+<p>Let’s go a final step further.</p>
 
-<p>So in order to solve this problem I decided to borrow from my Compiler Construction course in University by adding very basic ‘lookahead’ functionality.</p>
+<blockquote>
+  <p>Exhibit C: “If you knew me, you’d know that I (ironically) was naturally a piss-poor language student and that I gave my Afrikaans teachers a hard time by never doing my homework because maybe deep down, I hated that learning Afrikaans wasn’t intuitive to me, and probably as a result of not doing said homework, I had horrible marks. So it’s probably not fair to say my Afrikaans Teacher was a cow and was mean to me.”</p>
+</blockquote>
 
-<p>Fundamentally, what this lookahead function would do is defer the binary operation until a subsequent unary operation has a result (kind of like the ‘Chain of responsibility’ design pattern). This is a bit of a dodgy solution which, I think, only works because chaining multiple binary operations have no value in a validation, i.e. <code>and().and().t()</code> makes no logical sense in boolean terms and adds no functional value.</p>
+<p>Let’s break this one down in more detail.</p>
 
-<p>So, adding this lookahead function as _la and just concentrating on <code>AND</code>, we get the following:</p>
+<p>Hopefully you’ve picked up that in each of the exhibits above, there were different levels and types of information that could be taken from each scenario, despite there being more or less the same words, and even further, the same letters used.</p>
 
-<pre><code class="language-javascript">check = {
-    _la: null,
-    and: function() {
-        //if a lookahead is already waiting to be executed we can automatically say that the previous operator was binary
-        if (this._la) throw "Chaining multiple binary operators is not allowed";
-        //This is just to allow for closure resolution to ensure that the function will retain the correct value of result
-        let res = this.result;
-        //The Looahead function in question. 'exp' is the result of a subsequent unary operation
-        this._la = function(exp) {
-            return res &amp;&amp; exp;
-        };
-        return this;
-    }
-}
-</code></pre>
+<p>To simplify what I’m trying to get to, there are 2 types of information I’m going to focus on that I feel are the most relevant here. Those are:</p>
+<ol>
+  <li>Syntactic Information</li>
+  <li>Semantic Information</li>
+</ol>
 
-<p>Adding some ‘constants’ like true and false, along with a ‘default lookahead’ function in order to cater for when our lookahead is null we get:</p>
+<p>Without going into detail of this, because trust me it would take all day and I’m not an expert by any stretch of the word anyways, let’s focus on my sob story about my relationship with my Afrikaans teacher an ungodly number of years ago <sup><a href="#remarks">7</a></sup>.</p>
 
-<pre><code class="language-javascript">check = {
-    _la: null,
-    _defaultLa: function(exp) {
-        //Just pass through the value
-        return exp;
-    },
-    and: function() {
-        //if a lookahead is already waiting to be executed we can automatically say that the previous operator was binary
-        if (this._la) throw "Chaining multiple binary operators is not allowed";
-        //This is just to allow for closure resolution to ensure that the function will retain the correct value of result
-        let res = this.result;
-        //The Looahead function in question. 'exp' is the result of a subsequent unary operation
-        this._la = function(exp) {
-            return res &amp;&amp; exp;
-        };
-        return this;
-    },
-    tautology: function() {
-        var eval = (this._la) ? this._la : this._defaultLa;
-        this.result = eval(true);
-        this._la = null;
-        return this;
-    },
-    fallacy: function () {
-        var eval = (this._la) ? this._la : this._defaultLa;
-        this.result = eval(false);
-        this._la = null;
-        return this;
-    }
-}
+<p>Exhibit A has structure but little in the way of context. Exhibit B had structure and a little bit more in the way of objective information, but still barely any more context. Exhibit C had structure, objective information and context.</p>
 
-console.log(check.tautology().and().tautology().result);
-</code></pre>
-<pre><code>true
-</code></pre>
+<p>More importantly, Exhibit C had more <em>meaning</em>. Meaning is a type of information. Information that our human brains have the ability to <em>interpret</em> and <em>understand</em> (to varying degrees).</p>
 
-<p>All that is left to do is to extend this concept to the <code>OR</code> and <code>NOT</code> operators. However the <code>NOT</code> operator, despite being a unary operator, still needs to be implemented as a deferred operation since we’re negating the result of the operation after it, i.e. we need it to look like <code>not().operation()</code>.</p>
+<p>What we most apparently have in Exhibit C that makes it stand out, amongst other things, is <strong>Semantic Information</strong>.</p>
 
-<p>The resulting snippet becomes:</p>
+<p>I’ve given  <em>Syntactic Information</em> - that is, a structured set of letters, words and sentences - information of a form that we call “meaning” or <em>Semantic Information</em>.</p>
 
-<pre><code class="language-javascript">check = {
-    result: null,
-    _la: null,
-    _defaultLa: function(exp) {
-        //Just pass through the value
-        return exp;
-    },
-    not: function() {
-        var eval = (this._la) ? this._la : this._defaultLa;
-        var res = this.result;
-        this._la = function(exp) {
-            //We pass in eval to the function stack by taking advantage of javascript closures
-            return eval(!exp);
-        }
-        return this;
-    },
-    and: function() {
-        //if a lookahead is already waiting to be executed we can automatically say that the previous operator was binary
-        if (this._la) throw "Chaining multiple binary operators is not allowed";
-        //This is just to allow for closure resolution to ensure that the function will retain the correct value of result
-        let res = this.result;
-        //The Looahead function in question. 'exp' is the result of a subsequent unary operation
-        this._la = function(exp) {
-            return res &amp;&amp; exp;
-        };
-        return this;
-    },
-    or: function() {
-        //if a lookahead is already waiting to be executed we can automatically say that the previous operator was binary
-        if (this._la) throw "Chaining multiple binary operators is not allowed";
-        //This is just to allow for closure resolution to ensure that the function will retain the correct value of result
-        let res = this.result;
-        //The Looahead function in question. 'exp' is the result of a subsequent unary operation
-        this._la = function(exp) {
-            return res || exp;
-        };
-        return this;
-    },
-    tautology: function() {
-        var eval = (this._la) ? this._la : this._defaultLa;
-        this.result = eval(true);
-        this._la = null;
-        return this;
-    },
-    fallacy: function () {
-        var eval = (this._la) ? this._la : this._defaultLa;
-        this.result = eval(false);
-        this._la = null;
-        return this;
-    }
-}
+<p><img src="http://localhost:4000/public/assets/syntactic-vs-semantic.drawio.png" alt="Semantic vs Syntactic" /></p>
 
-console.log(check.fallacy().or().not().fallacy().result);
-</code></pre>
-<pre><code>true
-</code></pre>
+<p>(Note: For the sake of simplicity, I’m going to omit things like <a href="https://en.wikipedia.org/wiki/Lexical_semantics">Lexical Information</a> and <a href="https://en.wikipedia.org/wiki/Information_theory">Information Theory</a> merely because it adds nothing useful in this context)</p>
 
-<p>And there you have it. This is a working, chainable, admittedly ultra-basic fluent validator that you can extent by adding more operators and dependant objects etc.</p>
+<h1 id="taking-all-that-sweet-sweet-information-in">Taking all that sweet, sweet information in…</h1>
 
-<h3 id="final-product">Final Product</h3>
+<p>Okay, we can hopefully say that we understand:</p>
+<ol>
+  <li>A way in which we send this thing called “Information” and</li>
+  <li>We know some of the basic components of this “Information” we’re sending</li>
+</ol>
 
-<p>However, to make it a bit more usable and extendable I thought converting this to a context-full, generic-ish object would be better:</p>
+<p>Now what?</p>
 
-<pre><code class="language-javascript">function fcheck() {
-        this.result = null;
-        this._la = null;
-        this._defaultLa = function(exp) {
-            return exp;
-        };
-        this._preval = function (exp) {
-            var eval = (this._la) ? this._la : this._defaultLa;
-            this.result = eval(exp);
-        };
-        this.not = function() {
-            var eval = (this._la) ? this._la : this._defaultLa;
-            this._la = function(exp) {
-                //We pass in eval to the function stack by taking advantage of javascript closures
-                return eval(!exp);
-            }
-            return this;
-        };
-        this.or = function() {
-            if (this._la) throw "Chaining multiple binary operators is not allowed";
-            let res = this.result;
-            this._la = function(exp) {
-                return res || exp;
-            }
-            return this;
-        };
-        this.and = function() {
-            if (this._la) throw "Chaining multiple binary operators is not allowed";
-            let res = this.result;
-            this._la = function(exp) {
-                return res &amp;&amp; exp;
-            };
-            return this;
-        };
-        this.tautology = function() {
-            this._preval(true);
-            this._la = null;
-            return this;
-        };
-        this.fallacy = function() {
-            this._preval(false);
-            this._la = null;
-            return this;
-        }
-}
+<p>Well, now we have to recursively “understand” how we “understand” something<sup><a href="#remarks">8</a></sup> (I did say to bear with me…).</p>
 
-</code></pre>
+<p>Though, understanding how humans “understand” is a subject that people much smarter then me would have to explain and is itself a subject for many an academic paper. So I’m going to shamelessly pivot to something that I understand much better then humans - Computers.</p>
 
-<p>This allows us to dynamically add rules on the fly by adding to the object, this function:</p>
+<p>Specifically, the aspect of computers that allows us geeky engineers to create programs and software that benefits a profitably large group of people. In my opinion, the next biggest game changer in modern computing after the transistor and micro-chips isn’t AI, it’s the Compiler.</p>
 
-<pre><code class="language-javascript">fcheck.prototype.addRule = function (ruleName, rule) {
-    var acc = this;
-    this[ruleName] = function () {
-        this._preval(rule());
-        return acc;
-    }
-    return this;
-}
-</code></pre>
+<h2 id="compilers">Compilers</h2>
 
-<p><strong>So the final version:</strong></p>
+<p>In very simple and high-level terms…a compiler is something that every computing device uses and it has 2 very basic functions:</p>
+<ol>
+  <li>allows a human to write instructions in a language that said human can easily understand</li>
+  <li>Enables the computer to take those instructions and translate (but actually, compile) it to something that itself can easily understand and follow</li>
+</ol>
 
-<pre><code class="language-javascript">
-function fcheck() {
-        this.result = null;
-        this._la = null;
-        this._defaultLa = function(exp) {
-            return exp;
-        };
-        this._preval = function (exp) {
-            var eval = (this._la) ? this._la : this._defaultLa;
-            this._la = null;
-            this.result = eval(exp);
-        };
-        this.not = function() {
-            var eval = (this._la) ? this._la : this._defaultLa;
-            this._la = function(exp) {
-                return eval(!exp);
-            }
-            return this;
-        };
-        this.or = function() {
-            if (this._la) throw "Chaining multiple binary operators is not allowed";
-            let res = this.result;
-            this._la = function(exp) {
-                return res || exp;
-            }
-            return this;
-        };
-        this.and = function() {
-            if (this._la) throw "Chaining multiple binary operators is not allowed";
-            let res = this.result;
-            this._la = function(exp) {
-                return res &amp;&amp; exp;
-            };
-            return this;
-        };
-        this.tautology = function() {
-            this._preval(true);
-            return this;
-        };
-        this.fallacy = function() {
-            this._preval(false);
-            return this;
-        }
-}
+<p><img src="http://localhost:4000/public/assets/compiler.drawio.png" alt="Happy/Unhappy Compiler" /></p>
 
-fcheck.prototype.addRule = function (ruleName, rule) {
-    var acc = this;
-    this[ruleName] = function () {
-        this._preval(rule());
-        return acc;
-    }
-    return this;
-}
-</code></pre>
+<p>Don’t take my word for it though…Merriam-Webster defines a compiler as:</p>
 
-<p>And this object can be used like so:</p>
+<blockquote>
+  <ol>
+    <li>one that compiles</li>
+    <li>a computer program that translates an entire set of instructions written in a higher-level symbolic language (such as C) into machine language before the instructions can be executed</li>
+  </ol>
+</blockquote>
 
-<pre><code class="language-javascript">var scenario = new fcheck();
-scenario.addRule("myFunction", function () {
-    return true;
-});
+<p>Good we checked with dears Merriam and Webster because both definitions are actually relevant here.</p>
 
-scenario.not().myFunction().and().fallacy().result;
-</code></pre>
-<pre><code>false
-</code></pre>
+<h1 id="the-point-of-this-whole-long-af-article">The point of this whole long af article</h1>
 
-<p>This also allows us to compose complex validations, for example:</p>
+<p>Arguably, humans are compilers. We can read words and have thoughts and execute actions based on them.</p>
 
-<pre><code class="language-javascript">
-var flagA = true;
-var flagB = false;
+<p>Similar to a computer right?</p>
 
-var Rule1 = new fcheck().addRule("isScenarioA", function () {
-    return flagA == true;
-});
-var Rule2 = new fcheck().addRule("isScenarioA", function () {
-    return flagB == true;
-});
+<p>Yes, but there has been a huge difference, seemingly until now (apart from, you know, humans being messy bags of flesh and bones and…gag…emotions) <sup><a href="#remarks">9</a></sup>.</p>
 
-var BusinessValidations = new fcheck().addRule('rule1', function () {
-    return Rule1.isScenarioA().result;
-})
-.addRule('rule2', function () {
-    return Rule2.isScenarioA().result;
-});
-</code></pre>
+<p>Computers - with the use of compilers - have been fabulous at understanding <em>Syntactic Information</em>.
+Computers - so far - haven’t been able to understand <em>Semantic Information</em>. <sup><a href="#remarks">10</a></sup></p>
 
-<pre><code class="language-javascript">BusinessValidations.rule1().and().rule2().result;
-</code></pre>
-<pre><code>false
-</code></pre>
+<p>AI, and specifically Natural Language Processing, changes this.</p>
 
-<pre><code class="language-javascript">BusinessValidations.rule1().and().not().rule2().result;
-</code></pre>
-<pre><code>true
-</code></pre>
+<p>Natural Language to a human can convey meaning in the sense we’ve outlined above. Computers can now understand (to a certain extent) <em>Semantic Information</em>.</p>
 
-<p>And that’s it. Thanks for sticking around to this sentence. If you, the reader, has any thoughts on this implementation or a better way to do this (besides just using a library…I do know that I can and that’s not the point here), please do reach out and let me know on my socials found somewhere on this site.</p>
+<p>Don’t get it twisted. I’m not saying that Computers are going to be more like humans. I’m not qualified nor am i confident in my understanding of Computers or Humans to definitively make such a statement.</p>
+
+<p>However, I do believe that we’re seeing an evolution of the Compiler in the sense that I can now tell a computer to write me a Python application that writes a letter that says “I am sorry I was such a difficult Afrikaans student” in an email 100 words long with the primary emotion of “chagrin” and send it to all my old Afrikaans teachers from High-school <sup><a href="#remarks">11</a></sup> and it will more or less do it.</p>
+
+<p>This, in my (possibly naive) view, is a <em>compilation</em> of my natural language (with varying degrees of accuracy) into a <em>higher-level</em> programming language which then already gets compiled down to machine code and eventually that gets compiled to 1’s and 0’s that the chips and chocs within the computer can happily process and execute.</p>
+
+<p>Anxieties and hype-cycles aside (I’ll probably write about those some other time, cause believe me, I am anxious in light of this supposed AI revolution) I find it hard to disagree with the thought that NLP is a natural (pun intended) evolution of the compiler, and I can’t help but wonder if this was how the old guard felt when punch-card systems were starting to become obsolete.</p>
+
+<p>So in summation…</p>
+
+<p>Glory to the Compiler gods. We’re all f***ed either way, so this makes little difference in the grand scheme of things. We’ll probably be okay though when the hype-cycle is done. If we’re not, at least we have our health.</p>
+
+<p><strong>- FIN -</strong></p>
+
+<hr />
+
+<h1 id="remarks">Remarks</h1>
+
+<ol>
+  <li>If you’re curious as to what the non-wireless/point-to-point transfer of information is, the next time you see a person you have beef with, punch them and ask after if they got any information from that interaction <sup><a href="#remarks">1.1</a></sup>
+    <ul>
+      <li>1.1. I don’t condone violence….this is just a thought experiment <sup><a href="#remarks">1.2</a></sup></li>
+      <li>1.2. I don’t condone lying either…</li>
+    </ul>
+  </li>
+  <li>At least I do…I’m still very much what they now call “an analog guy”</li>
+  <li>Second is Edsger Dijkstra. Just google “quotes by dijkstra” to see the absolute badassery this guy got up to.</li>
+  <li>Amongst many many more papers, this is the one I’m most familiar with so I’m just going to point you, dear unhealthily interested reader, to  - Chomsky, N., The Logical Structure of Linguistic Theory</li>
+  <li>As someone who briefly studied this, believe me, this sh*t gets complicated. I’m actually doing its coolness a disservice by simplifying it like this. But alas, abstractions and precision right?<sup><a href="#remarks">5.1</a></sup>
+    <ul>
+      <li>5.1. “The purpose of abstracting is not to be vague, but to create a new semantic level in which one can be absolutely precise.”― Edsger W. Dijkstra (yeah, he was a complete badass)</li>
+    </ul>
+  </li>
+  <li>Remember English Class in primary school with all those definite and indefinite clauses bullshit? Yeah, it finally came in handy!</li>
+  <li>F**k, I’m old now. Oh what a cruel mistress is time.</li>
+  <li>All the programmers/math geeks reading this, for 20 marks, if $Understand(x) = Understanding(x)$ is a function that derives understanding from a topic $x$ prove $Understand(Understanding) = Understanding(Understand)$. I dare you.</li>
+  <li>Relax, I’m not a machine or an AI bot writing this….yet…</li>
+  <li>Things like Fuzzy Logic and such don’t count in my view. Heuristics are approximations and this, for me, doesn’t mean that the computer <em>understands</em> or <em>interprets</em> semantic meaning. Though an argument can be made that even with NLP, the computer doesn’t truly <em>understand</em> and I’d concede the point<sup><a href="#remarks">10.1</a></sup>, but it says nothing of <em>interpretation</em> and compilation of <em>semantic</em> meaning, which is what I’m trying to opine about. Hit me up if you disagree…I’m always up for a nerdatious debate and, more importantly, to learn more.
+    <ul>
+      <li>10.1. Yes, I know about the so called <a href="https://en.wikipedia.org/wiki/Chinese_room">Chinese Room Thought Exercise</a>.</li>
+    </ul>
+  </li>
+  <li>Not the Primary school ones, cause they’ve definitely forgotten about me by now. See <sup><a href="#remarks">7</a></sup></li>
+</ol>
  -->
 	</div>
+
+
+	
+	<div class="post">
+		<h2 class="post-title">
+			<a href="/2025/03/22/a-checkpoint/">Growing Up in Engineering - A checkpoint on the way to being a 'grown-up' engineer</a>
+		</h2>
+		<span class="post-date">22 Mar 2025</span>
+		<div class="post-tags">
+			
+			<small><code>#Thoughts</code></small>
+			
+			<small><code>#Personal Growth</code></small>
+			
+			<small><code>#Checkpoint</code></small>
+			
+		</div>
+
+
+		<p>Tl;dr - It is a necessary condition to be empathetic, the sufficient condition is to ask the right questions and challenge the right things.</p>
+
+
+
+
+		<!-- <p>Tl;dr - It is a necessary condition to be empathetic, the sufficient condition is to ask the right questions and challenge the right things.</p>
+
+<p>Becoming Senior.</p>
+
+<p>One of the Software Engineering proclivity (and I’m sure many other proclivities beyond) forever looks at this path with (albeit many many other emotions, but) great longing and excitement and an additional massive helping of impatience. However, akin to the other fallacies of youth, the path to growing and becoming more senior is one filled with truths un-learnable from the places of youth.</p>
+
+<p>It follows then, that I have inevitably learned a little and with the obnoxious tendencies that make up my personality, I write this article with a force for you, the reader, to choke down with contempt.</p>
+
+<h2 id="before-the-checkpoint">Before the checkpoint</h2>
+
+<p>There have been a series of unfortunate events.</p>
+
+<p>That’s correct. None of this was my doing.</p>
+
+<p>I did not <em>want</em> to learn hard lessons. (who the fuck does?)</p>
+
+<p>Alas, here we are, a sprinkling of poorly worded criticism and a dash of apathetic comments such as:</p>
+<ul>
+  <li>Exhibit A: “Why did you do <X> like this? It doesn't really make sense to me."</X></li>
+  <li>Exhibit B: “What makes what you’ve shown me now <em>a platform</em>?”</li>
+  <li>Exhibit C: “I’m pretty sure the way you’re proposing to do this violates <em>{principle z}</em>”</li>
+</ul>
+
+<p>I promise too, that I said this with a polite tone (mostly, I think). So what makes these seemingly inconspicuous sentences a <em>checkpoint</em>? What do I need to change here?</p>
+
+<p>A good question with a simple answer. which for at least some individuals my age and younger, won’t make a lot of sense (fallacy of youth and all) and some my age (but wiser) and older will look at as a simple obvious fact.</p>
+
+<p>It doesn’t matter how noble your intentions are, how aligned your goals are with other people or how close your relationship is with them. If you say something that they find distasteful or disagree with, they’re going to have a bad taste in their mouth. They simply will not like you.</p>
+
+<p>Or so you will feel.</p>
+
+<p>(Okay, there will be a good few that definitely will not like you, but let’s ignore those).</p>
+
+<p>If you’re anything like me, this won’t sit well with you and you’ll feel really bad. Additionally, if you’re anything like me, you won’t really give a fuck (which will make you feel more horrible). You have a high standard for how things need to be done. You hold yourself to it, so what gives others’ the excuse not to?</p>
+
+<p>I’ll tell you. Nothing.</p>
+
+<p><em>But wait…</em></p>
+
+<p>Why does this sound so petulant, even though I know these are the right questions to ask as an engineer?</p>
+
+<h2 id="the-checkpoint">The checkpoint</h2>
+
+<blockquote>
+  <p>Civility and humbleness, and most importantly, empathy are not things that you need an excuse or reason to have. They should be the starting point. The necessary condition.</p>
+</blockquote>
+
+<p>Humans are not binary. Its an obvious statement but not any less useful because of it. The person you’re dealing with now is not the person you dealt with yesterday, or even a couple of hours ago.</p>
+
+<p>The jokes that worked with your peers might not work with your juniors. Your juniors become other juniors’ seniors. Things evolve. The only thing constant is change. We get caught up in a river paradox where your label of something implies that it’s one thing (like how we can call it a river, but if you look at any point in that river at any time, by definition, the water you’re seeing is not the same as you’ve seen before).</p>
+
+<p>Realizing you need to always adapt when you’ve spent so much time growing is not easy. You do feel a lot more self-assured when you finally get there though.</p>
+
+<h2 id="after-the-checkpoint">After the checkpoint</h2>
+
+<p>My musings and astonishment at seeing people who I consider as being my role-models being so patient with people that I measure to be lacking in skill have finally reached a conclusion.</p>
+
+<blockquote>
+  <p>I might be good, but I’ll never be good enough.</p>
+</blockquote>
+
+<p>I’d like to think that wisdom and patience go hand in hand, and that inherent patience is a sign of wisdom inherited from learnings instantiated by my empathy.</p>
+
+<blockquote>
+  <p>It is a necessary condition to be empathetic, the sufficient condition is to ask the right questions and challenge the right things.</p>
+</blockquote>
+
+<p>So it follows, if my empathy could lead to this much needed growth, what’s stopping it from being utilized in my pursuit to not come across as a dick when asking hard questions?</p>
+
+<p>I’ll tell you. Nothing.</p>
+ -->
+	</div>
+
+
+	
+	<div class="post">
+		<h2 class="post-title">
+			<a href="/2025/02/22/an-acknowledgment-meditation/">An Acknowledgment - Anxiety, my Tumultuous Friend</a>
+		</h2>
+		<span class="post-date">22 Feb 2025</span>
+		<div class="post-tags">
+			
+			<small><code>#Thoughts</code></small>
+			
+			<small><code>#Written Word</code></small>
+			
+		</div>
+
+
+		<p>I acknowledge you, oh one who’s urge keeps my senses sharp. The one that burns my idle being into action. You who keeps me alive in the face of danger.</p>
+
+
+
+
+		<!-- <p>I acknowledge you, oh one who’s urge keeps my senses sharp. The one that burns my idle being into action. You who keeps me alive in the face of danger.</p>
+
+<p>I acknowledge you</p>
+
+<p>Strict I must be however. With you who holds so much power over me. I will not suffer your extremities such that they may be my downfall.</p>
+ -->
+	</div>
+
+
 	
 </div>
 
 <div class="pagination">
 	
-	<span class="pagination-item older">Older</span>
+	<a class="pagination-item older" href="/blog/2">
+		Older
+	</a>
 	 
 	<span class="pagination-item newer">Newer</span>
 	
 </div>
+
+
 
     </div>
 

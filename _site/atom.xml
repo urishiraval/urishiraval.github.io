@@ -4,13 +4,989 @@
  <title>Ushir (Rishi) Raval</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2021-12-10T22:20:28+02:00</updated>
+ <updated>2025-08-17T15:42:56+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rishi Raval</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>The Scientific Method and Value-based Software Engineering - A novice take</title>
+   <link href="http://localhost:4000/2025/08/17/science-and-value/"/>
+   <updated>2025-08-17T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2025/08/17/science-and-value</id>
+   <content type="html">&lt;p&gt;Why do we struggle to be excellent engineers in corporate? From my view, talking to quite a few people in the same space as me, I get the impression that, although ‘Corporate’ is where many innovative solutions come from, a large majority of individuals that I’ve spoken to have complained and ranted about the amount of friction they’ve experienced getting something through and out of this machine. This article will attempt to break it down within my immediate and limited context based on my observations (be warned though, this might not be as objective as the title might suggest).&lt;/p&gt;
+
+&lt;h1 id=&quot;a-reductive-explanation-of-the-scientific-method&quot;&gt;A reductive explanation of the Scientific Method&lt;/h1&gt;
+
+&lt;p&gt;This has been around for ages - arguably made popular by someone named &lt;a href=&quot;https://en.wikipedia.org/wiki/John_Dewey&quot;&gt;John Dewey&lt;/a&gt;[1] who coined the term, though he did not invent the actual method. I personally think the scientific method is so fundamental and intrinsic to establishing a rough understanding of what is real, that it’s one of those things that would pop up in any civilization independently (which it has by all indications) in some way or form.&lt;/p&gt;
+
+&lt;p&gt;The method is simple, it contains a series of steps that form a loop that can be recursive:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Question or Observation&lt;/li&gt;
+  &lt;li&gt;Research&lt;/li&gt;
+  &lt;li&gt;Hypothesis&lt;/li&gt;
+  &lt;li&gt;Testing and Experimentation&lt;/li&gt;
+  &lt;li&gt;Analysis of outcome data&lt;/li&gt;
+  &lt;li&gt;Interpretation&lt;/li&gt;
+  &lt;li&gt;Critique, Review and Refinement&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These are pretty straightforward but when done iteratively/recursively they provide a consistent framework that is reliable and simple enough to implement.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-software-development-life-cycle-sdlc&quot;&gt;The Software Development Life-cycle (SDLC)&lt;/h1&gt;
+
+&lt;p&gt;In the spirit of living my 2025 AI enabled life - I took a bunch of articles from various different sources, including major needle movers for how corporate software is build like Amazon, Microsoft and the like, and shoved it into Chat GPT. The prompt I used was this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-prompt&quot;&gt;Analyse the following articles: 
+
+1. https://aws.amazon.com/what-is/sdlc/ 
+2. https://github.com/resources/articles/software-development/what-is-sdlc 
+3. https://www.microsoft.com/en-us/power-platform/topics/phases-of-the-software-development-lifecycle 
+4. https://www.ibm.com/think/topics/sdlc 
+5. https://www.atlassian.com/agile/software-development/sdlc 
+6. https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/ 
+7. https://en.wikipedia.org/wiki/Systems_development_life_cycle 
+
+Create a summary of the SDLC based on all of these articles - add references to everything you write
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Herewith - the AI generated content:&lt;/p&gt;
+
+&lt;div class=&quot;markdown-alert markdown-alert-warning&quot;&gt;&lt;p class=&quot;markdown-alert-title&quot;&gt;&lt;svg class=&quot;octicon octicon-alert&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt; AI Generated Content here&lt;/p&gt;&lt;h2 id=&quot;1-what-is-the-sdlc&quot;&gt;1. What Is the SDLC?&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;SDLC&lt;/strong&gt; is a structured, systematic process used by development teams to design, build, deliver, and maintain software efficiently, balancing cost, time, and quality. Its goal is to ensure software meets customer and stakeholder expectations while minimizing risk.&lt;br /&gt;
+(&lt;a href=&quot;https://aws.amazon.com/what-is/sdlc/&quot;&gt;aws.amazon.com&lt;/a&gt;, &lt;a href=&quot;https://github.com/resources/articles/software-development/what-is-sdlc&quot;&gt;github.com&lt;/a&gt;, &lt;a href=&quot;https://www.ibm.com/think/topics/sdlc&quot;&gt;ibm.com&lt;/a&gt;, &lt;a href=&quot;https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/&quot;&gt;geeksforgeeks.org&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Systems_development_life_cycle&quot;&gt;en.wikipedia.org&lt;/a&gt;)&lt;/p&gt;
+&lt;h2 id=&quot;2-common-phases-of-sdlc&quot;&gt;2. Common Phases of SDLC&lt;/h2&gt;
+&lt;p&gt;Most sources identify these core phases, though names and counts may vary:&lt;/p&gt;
+&lt;h3 id=&quot;planning--requirements-analysis&quot;&gt;Planning &amp;amp; Requirements Analysis&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Includes &lt;strong&gt;feasibility study&lt;/strong&gt;, stakeholder interviews, cost-benefit analysis, requirement gathering, and documentation (e.g., SRS).&lt;br /&gt;
+(&lt;a href=&quot;https://aws.amazon.com/what-is/sdlc/&quot;&gt;aws.amazon.com&lt;/a&gt;, &lt;a href=&quot;https://github.com/resources/articles/software-development/what-is-sdlc&quot;&gt;github.com&lt;/a&gt;, &lt;a href=&quot;https://www.ibm.com/think/topics/sdlc&quot;&gt;ibm.com&lt;/a&gt;, &lt;a href=&quot;https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/&quot;&gt;geeksforgeeks.org&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Systems_development_life_cycle&quot;&gt;en.wikipedia.org&lt;/a&gt;)
+    &lt;h3 id=&quot;design&quot;&gt;Design&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Involves choosing architecture, tools, modularization, UML, data flow diagrams, prototyping, threat modeling. Produces design documentation like SDD or architectural blueprints.&lt;br /&gt;
+(&lt;a href=&quot;https://www.ibm.com/think/topics/sdlc?utm_source=chatgpt.com&quot;&gt;ibm.com&lt;/a&gt;)
+    &lt;h3 id=&quot;implementation--coding--construction&quot;&gt;Implementation / Coding / Construction&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Developers write code following the design specs. Best practices include version control, code reviews, refactoring, and using IDEs or AI tools.&lt;br /&gt;
+(&lt;a href=&quot;https://aws.amazon.com/what-is/sdlc/&quot;&gt;aws.amazon.com&lt;/a&gt;, &lt;a href=&quot;https://github.com/resources/articles/software-development/what-is-sdlc&quot;&gt;github.com&lt;/a&gt;, &lt;a href=&quot;https://www.ibm.com/think/topics/sdlc&quot;&gt;ibm.com&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Systems_development_life_cycle&quot;&gt;en.wikipedia.org&lt;/a&gt;)
+    &lt;h3 id=&quot;testing-acceptance&quot;&gt;Testing (Acceptance)&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Conducts unit, integration, system, and user acceptance testing to uncover defects. Increasingly combined with automation and continuous testing, including security checks (DevSecOps).&lt;br /&gt;
+(&lt;a href=&quot;https://aws.amazon.com/what-is/sdlc/?utm_source=chatgpt.com&quot;&gt;aws.amazon.com&lt;/a&gt;)
+    &lt;h3 id=&quot;deployment&quot;&gt;Deployment&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Moves software into production through packaging, configuration, release management, and user training or transition planning.&lt;br /&gt;
+(&lt;a href=&quot;https://aws.amazon.com/what-is/sdlc/&quot;&gt;aws.amazon.com&lt;/a&gt;, &lt;a href=&quot;https://github.com/resources/articles/software-development/what-is-sdlc&quot;&gt;github.com&lt;/a&gt;, &lt;a href=&quot;https://www.ibm.com/think/topics/sdlc&quot;&gt;ibm.com&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Systems_development_life_cycle&quot;&gt;en.wikipedia.org&lt;/a&gt;)
+    &lt;h3 id=&quot;maintenance--support&quot;&gt;Maintenance / Support&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Post-deployment phase: fixing bugs, updates, performance and security monitoring, ongoing improvements. May loop back to earlier phases.&lt;br /&gt;
+(&lt;a href=&quot;https://aws.amazon.com/what-is/sdlc/&quot;&gt;aws.amazon.com&lt;/a&gt;, &lt;a href=&quot;https://github.com/resources/articles/software-development/what-is-sdlc&quot;&gt;github.com&lt;/a&gt;, &lt;a href=&quot;https://www.ibm.com/think/topics/sdlc&quot;&gt;ibm.com&lt;/a&gt;, &lt;a href=&quot;https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/&quot;&gt;geeksforgeeks.org&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Systems_development_life_cycle&quot;&gt;en.wikipedia.org&lt;/a&gt;)
+    &lt;h3 id=&quot;optional-decommission&quot;&gt;(Optional) Decommission&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The system is retired when it reaches end of life.&lt;br /&gt;
+(&lt;a href=&quot;https://en.wikipedia.org/wiki/Systems_development_life_cycle?utm_source=chatgpt.com&quot;&gt;en.wikipedia.org&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Say what you will about AI, it’s not too shabby at doing time consuming summaries for meaningless blogs with no purpose except to satisfy an obnoxious engineer’s need to spew opinions, lest he explode from holding it in.&lt;/p&gt;
+
+&lt;p&gt;I digress.&lt;/p&gt;
+
+&lt;h1 id=&quot;scientific-method-vs-sdlc&quot;&gt;Scientific Method vs SDLC&lt;/h1&gt;
+
+&lt;p&gt;Looking at the common phases of the SDLC that our handy AI tools have given us - these have abstract elements of the scientific method albeit for different goals.&lt;/p&gt;
+
+&lt;p&gt;We do &lt;code&gt;planning and analysis&lt;/code&gt; in the beginning - akin to the &lt;code&gt;research&lt;/code&gt; stage in the scientific method. We do &lt;code&gt;design&lt;/code&gt; which has elements of &lt;code&gt;hypothesis&lt;/code&gt; in it - because we never really can know for certain that the architectural picture we’re drawing will match the end implementation. We deal with unknown unknowns and by every good definition of software development - we know that the most useful solutions are the ones that are allowed to deviate from the initial plan for the purposes of making the solution more useful.&lt;/p&gt;
+
+&lt;p&gt;Our &lt;code&gt;implementation/coding/construction&lt;/code&gt; involves a bunch of testing and experimentation when we write code. Granted, the more you write code and become experienced the less you as an individual need to fundamentally test - which is why I believe that there is a point in your engineering career where you unconsciously write less unit tests until you ‘re-discover’ unit testing and how it can be used to accelerate you, but this is a topic for a different rant. Then we reach &lt;code&gt;acceptance testing&lt;/code&gt; stages when our Business Analysts do verification on whether the implementation meets the acceptance criteria - which is similar to the &lt;code&gt;analysis of outcome data&lt;/code&gt; step in the scientific method. Lastly, we have &lt;code&gt;critique, review and refinement&lt;/code&gt; of the artefact when we &lt;code&gt;maintain and support&lt;/code&gt; our software based on bug reports, enhancement requests etc from our users.&lt;/p&gt;
+
+&lt;p&gt;From this vague mapping of these steps - is it any wonder that Agile as a practice, despite being prone to bastardization, is a good thing for software delivery? Again, this is a conversation for a different article maybe [2].&lt;/p&gt;
+
+&lt;h1 id=&quot;why-being-excellent-seems-harder&quot;&gt;Why being excellent seems harder&lt;/h1&gt;
+
+&lt;p&gt;I believe it’s primarily because we don’t communicate in a conducive way. As soon as you start on the journey to innovate or ‘do the right thing’ or prevent technical debt, your world becomes ‘science based’ rather than ‘value based’. Don’t get me wrong. There’s immense value in all these things we want to do like innovation, optimization and just purely taking more time to not have to cut some corners, it’s just much much harder for us to communicate this in so called ‘corporate-ese’. When we so these things as software engineers, we back-fill the &lt;code&gt;question or observation&lt;/code&gt; part in the Scientific method, but we rarely map it to the business case, which is (supposed to be) value based. Corporations don’t primarily deal with the Scientific Method, they primarily deal with the Software Product. In this world of ROI and ROE, a person that talks about things in terms of anything else makes themselves susceptible to being left out of the equation. Harsh but I’ve seen it happen and I don’t really blame them - we all work to add value to clients of some form but to the other functions of business, we kind of make it seem that we as Engineers value the software more. To be honest, sometimes we do.&lt;/p&gt;
+
+&lt;p&gt;I’ll give you a prime example. Try explaining why you need to research using ‘Graph Databases’ to a non-technical product owner of a law firm to see if you can store related documents in a better way[3]. If you say that graph databases deal with traversals better and are more efficient blah blah blah, you’ll oftentimes get nowhere - I can put money on this. If you say you would like to explore ways of storing data so that we can more more quickly, accurately and obviously see what documents might be related, and then go on to explain the business case - this is an easier conversation for your stakeholder to have (note, I’m not saying that it will be easier to get buy-in, I don’t really know how to do this yet). The problem here is - it’s not an easier conversation for the engineer[4], because business value is something that historically was never a thing ‘basement engineers’[5] needed to care about.&lt;/p&gt;
+
+&lt;h1 id=&quot;lets-communicate-value-better---so-we-can-innovate-more-easily&quot;&gt;Let’s communicate value better - so we can innovate more easily&lt;/h1&gt;
+
+&lt;p&gt;A lot of us wish we didn’t have to think in terms of business. “Just let me code!” or “This new design is so cool! What do you mean you don’t see the value in refactoring?!”. Unfortunately, it is a necessary evil that we have to learn how to define things in ‘business value’ terms. The way I think of it is that we tend to communicate in a more smart-casual way then semi-formal and corporate can only deal with semi-formal and higher.&lt;/p&gt;
+
+&lt;p&gt;I always hear complaints about business not ‘coming to the party’ and I feel my community’s frustration but we need to also do better and meet non-technical people half-way. I have a personal belief that you can only complain when you’ve done everything you possibly can. To be completely honest - I don’t think we’ve done everything we can as software engineers when it comes to communicating the value of software and technical things. I know I haven’t at least. Until we get this right - it will always be an us vs them attitude, on both sides, and realistically there aren’t any sides to begin with. The only side is the stakeholder/client at the end of the day because that’s what determines value and success in corporate.&lt;/p&gt;
+
+&lt;p&gt;The reality is, software engineers are no longer ‘IT’ and product owners and stakeholders are no longer ‘Business’. We are one and the same, we just don’t always act like it. Yes, there is a definite case to be made that ‘Business’ needs to give us a ‘seat at the table’[6] but there is also a case to be made that ‘IT’ isn’t open to or frankly even prepared to take that seat. We are a large part of the business now, but we have yet to act like it.&lt;/p&gt;
+
+&lt;p&gt;This is something that, on a grander scheme, I don’t know how to change - I don’t have the people skills necessary[7] to maneuver or even understand the complexity of this, but what I can do is attempt to grow and adjust how I personally communicate so that I can make things easier for me and my team. It’s stupid difficult - but I can already see the benefits of it.&lt;/p&gt;
+
+&lt;p&gt;Hopefully I survive the process but if I don’t, there’s always my backup plan[8].&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-FIN-&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;references-and-asides&quot;&gt;References and Asides&lt;/h1&gt;
+
+&lt;p&gt;[1] Not to be confused with &lt;a href=&quot;https://en.wikipedia.org/wiki/Melvil_Dewey&quot;&gt;Melvil Dewey&lt;/a&gt;, who is probably the one you’re thinking about that invented the Dewey Decimal System.&lt;/p&gt;
+
+&lt;p&gt;[2] Sheesh, this text is opening a can of worms for me.&lt;/p&gt;
+
+&lt;p&gt;[3] I’ve never had to do this - it’s just an example that came to my head, but probably because I’ve worked with lawyers as an engineer before.&lt;/p&gt;
+
+&lt;p&gt;[4] If you’re reading this and you’re an engineer that disagrees with that statement, well done, I’m genuinely happy for you, but f off, this article isn’t for you. Go back to being a rock-star engineer! Shoo!&lt;/p&gt;
+
+&lt;p&gt;[5] See the hit British show &lt;a href=&quot;https://en.wikipedia.org/wiki/The_IT_Crowd&quot;&gt;The IT Crowd&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[6] The best book I’ve read so far is called ‘A Seat at the Table’ by Mark Schwartz. It was 1 of 3 books that changed my perception so fundamentally that I felt like a new person after reading it. Highly recommend.&lt;/p&gt;
+
+&lt;p&gt;[7] Yes. Hopefully.&lt;/p&gt;
+
+&lt;p&gt;[8] For those that don’t know me, I have a backup plan for 1 - if AI takes my job, 2 - my software engineering career goes to shit, 3 - I say the wrong thing to the wrong person and I get fired or 4 - some malicious party has a grudge against me and frames me for something irrecoverable. I’ll retire early in disgrace and find work making delicious coffee in some obscure part of South Africa. It won’t pay much but I can guarantee I’ll be so much happier!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Simplify mundane thing A if you want to do valuable thing B</title>
+   <link href="http://localhost:4000/2025/08/10/simplify-mundane-for-value/"/>
+   <updated>2025-08-10T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2025/08/10/simplify-mundane-for-value</id>
+   <content type="html">&lt;p&gt;TL;DR: Let’s invest in simplifying mundane things to enable us to deliver more valuable things.&lt;/p&gt;
+
+&lt;p&gt;—-&lt;/p&gt;
+
+&lt;p&gt;A god awful number of years ago, I remember doing chemistry im highschool and learning about something called a &lt;a href=&quot;https://en.m.wikipedia.org/wiki/Redox&quot;&gt;redox&lt;/a&gt; [1] reaction. I found it pretty cool at the time - but then break came around (some might now this as “recess”) and it was immediately forgotten (I was but a wee lad). Now a god awful amount of years later - I find myself thinking about the poetry of it. Especially as an engineer.&lt;/p&gt;
+
+&lt;h1 id=&quot;redox-reactions&quot;&gt;Redox Reactions&lt;/h1&gt;
+
+&lt;p&gt;Redox stands for “Reduction and Oxidation”. This is more involved but the simple explanation is that - there are 2 things happening simultaneously, such that the overall quantity doesn’t change. A reduction in something with a simultaneous increase in another. The overall thing from the outside might look the same but there is an inherent change within the system and so, there is a completely different end effect.&lt;/p&gt;
+
+&lt;h1 id=&quot;bringing-it-into-engineering&quot;&gt;Bringing it into Engineering&lt;/h1&gt;
+
+&lt;p&gt;I’ve found immense success with this philosophy - albeit unintentionally. Reducing the cognitive load required to do mundane thing A which allows you to increase capacity to do valuable thing B. I feel like this is an important tool that we have that we rarely talk about.&lt;/p&gt;
+
+&lt;p&gt;Platform teams - at least good ones in my opinion - aim to reduce cognitive load required to implement shared or necessarily imperative  capabilities so that domain teams can increase pace of feature delivery without compromising the entire system.&lt;/p&gt;
+
+&lt;p&gt;However, this doesn’t need to exclusively be a platform team function. It feels painfully obvious but I see engineers leaving these optimisations out of their day-to-day and it irks me.&lt;/p&gt;
+
+&lt;p&gt;Small things like docs - especially in the world of A.I.- is a silly example. You create documentation for a thing so that others in your team can get better context with their A.I. assistant. Or, you implement feature flags in a reusable way so that your ability to deploy becomes easier.&lt;/p&gt;
+
+&lt;p&gt;Or you build a library that takes care of mundane stuff - really invest in it - so that the next engineer is allowed to exclusively focus on the extraordinary.&lt;/p&gt;
+
+&lt;p&gt;The options now become endless and the usefulness apparent.&lt;/p&gt;
+
+&lt;p&gt;For me at least…&lt;/p&gt;
+
+&lt;p&gt;All these examples have a common theme. Invest in simplifying mundane things to enable you to deliver more valuable things.&lt;/p&gt;
+
+&lt;h1 id=&quot;references-and-asides&quot;&gt;References and Asides&lt;/h1&gt;
+
+&lt;p&gt;[1] Not to be confused with Redux - which is a js library&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Of Igloos and Ice-sculptures</title>
+   <link href="http://localhost:4000/2025/08/04/igloos-and-sculpts/"/>
+   <updated>2025-08-04T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2025/08/04/igloos-and-sculpts</id>
+   <content type="html">&lt;p&gt;TL;DR: (Just this paragraph is generated by ChatGPT - the rest is my shpeel) The author compares the journey of becoming a skilled software engineer to building igloos—practical, experience-based, and essential—and later, to crafting ice-sculptures—elegant, expressive, and technically intricate. After years of chasing deep technical mastery, they shift focus toward a more balanced and fulfilling growth path that values both competence and creativity, while embracing self-awareness, joy, and the human side of development.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;When I was a “wee lad”, my parents came into a second-hand Children’s Encyclopedia set. Boy, I loved those. That book-set fuelled an obsession with reading that I have retained to this day. One of the things that I remember vividly from that was the Inuit [1] and the igloos they’d build. I found it so fascinating that one could build a shelter out of the very thing they were sheltering from - the snow.&lt;/p&gt;
+
+&lt;h1 id=&quot;building-igloos&quot;&gt;Building Igloos&lt;/h1&gt;
+
+&lt;p&gt;Building these magnificent structures requires a body of knowledge that would have to be learnt from experts and have to be perfected with years of experience, all to create an intuitive application of such complex geometries, material sciences, and practical knowledge that something as ephemeral as snow could be made into a structure that could hold the weight of a man on its roof and, despite being made of frozen water, can be warmed to 16C by body heat alone (in spite of outside temperatures being in the negative double digits).&lt;/p&gt;
+
+&lt;p&gt;I often think that software engineering can be a bit like this.&lt;/p&gt;
+
+&lt;p&gt;We struggle to articulate exactly what it is that makes a senior “senior” yet we can often quite easily spot one in a crowd of engineers. This always irked me to no end.&lt;/p&gt;
+
+&lt;p&gt;“How can I become that!? How do I get there!? Will I ever get there!? Is this the right path that I’m following!?”&lt;/p&gt;
+
+&lt;p&gt;For the longest time, these questions haunted me. I tried and tried and struggled to get to that point where I could intuitively navigate things just like my seniors at the time, who were all so good at these things and were so willing to, and did, teach me so much of the science behind it.&lt;/p&gt;
+
+&lt;h1 id=&quot;then-i-got-over-it&quot;&gt;Then I got over it&lt;/h1&gt;
+
+&lt;p&gt;“Fuck it” - I said.&lt;/p&gt;
+
+&lt;p&gt;If I do one day get there, great. In the meantime, I’ll aim to do something I have really good chops for— building ice sculptures. Of course, I’m not saying they’re objectively better than igloos, and I’m not saying I was naturally gifted at this. I’m just saying that I subjectively found it cooler and more appealing because I adore elegance and simplicity [2] and my natural inclination was towards more simplistic, methodical, and precise approaches.&lt;/p&gt;
+
+&lt;p&gt;So I went about learning all the fanciest things. I made it a personal goal to learn the inner mechanisms of what I deemed to be the most complex ways of doing things. I focused on acquiring deep knowledge of my craft and ways to gain more precision and optimisation. It paid off.&lt;/p&gt;
+
+&lt;p&gt;All this had led me to learn how to freeze my water correctly (scoping and solidifying my requirements), identify the right tools (frameworks, languages, design patterns) so that I can craft beautiful things (software that is elegant and functional) in a reproducible way. My experiments had met with success!&lt;/p&gt;
+
+&lt;h1 id=&quot;but-for-a-while-now-ive-gotten-over-that-too&quot;&gt;But for a while now, I’ve gotten over that too….&lt;/h1&gt;
+
+&lt;p&gt;“Fuck it” - I said, yet again.&lt;/p&gt;
+
+&lt;p&gt;Building ice sculptures is tantamount to creating beauty, and I loved and always will continue to love doing that, but building igloos is so fundamental to survival and so elegant in its own way. I selfishly wanted to learn to do both.&lt;/p&gt;
+
+&lt;p&gt;So began a journey of self-doubt, self-awareness, self-acceptance, and, ultimately, a fundamentally different growth from the skills-hoovering I’d been doing for the number of years before this journey began. I’m in no way done with it - this chapter is still very much in progress - but I feel happier, freer, and more inclined to have fun. I’ve learned to both not take it seriously and be the most serious I’ve ever been.&lt;/p&gt;
+
+&lt;p&gt;Things have now clicked enough that “things clicking into place” doesn’t feel as exciting anymore. While this was scary at first - I’ve come to terms with it because I’ve realised that it opens up an entirely new world to explore. A world where one needs to gain skills that are more conducive to human-centred growth rather than skill-set-oriented growth. I must admit, this is not my forte, but that makes it so much more exciting for me.&lt;/p&gt;
+
+&lt;p&gt;Dear reader, my hope for you is simple - that you find/have found your journey as satisfying as mine is turning out to be.&lt;/p&gt;
+
+&lt;h1 id=&quot;references-and-asides&quot;&gt;References and Asides&lt;/h1&gt;
+
+&lt;p&gt;[1] The books (being from the 90s) referred to them as “Eskimos,” but I’m aware that this is an offensive word, and so I use “Inuit” as a placeholder. No disrespect intended on my part.&lt;/p&gt;
+
+&lt;p&gt;[2] Who doesn’t, right? What a cliché.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>A team grounded in reality is where dragons go to die.</title>
+   <link href="http://localhost:4000/2025/07/15/team-reality-dragons-die/"/>
+   <updated>2025-07-15T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2025/07/15/team-reality-dragons-die</id>
+   <content type="html">&lt;p&gt;TL;DR - Good engineers deal with reality. We bring concrete, practical, and real implementation to precisely architected solutions that solve for value. We need to remember that this doesn’t change no matter what gets thrown our way. We are a sect of craftsman/woman of the reality in our business - and reality is where dragons go to die.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Imagine a dragon [2] blowing through a fantasy town. Often times, being a part of an engineering team can feel like you’re one of those houses on fire. The dragon, of course, is not a singular thing - alas, nothing is ever that straightforward - but rather multiple problems stacked on top of each other in such a perfect way that it feels like some sort of dark alchemical conspiracy.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/public/assets/2025-07-15/DragonConfrontationVortex.png&quot; alt=&quot;Dragon Vortex&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Really tight deadlines meet misaligned business stakeholders married to a straightforward product. On top of that, the product is only straightforward in the product owners’ heads because in actual fact, the whole state of the union is built on shaky and oftentimes neglected legacy that creates its own magic circle and Bermuda Triangle-like experience where time, focus, and effort disappear into and die. No rhyme or reason necessary or even involved.&lt;/p&gt;
+
+&lt;p&gt;In the world of “enterprise” - more often than not - things just happen and no one is around to explain how and why anymore. Those people have been immortalised in stories about bringing down prod or running an entire enterprise application with stored procs on SQL - and if you’re lucky - their glorious names would be forever sung in the git history.&lt;/p&gt;
+
+&lt;p&gt;“Here be dragons”.&lt;/p&gt;
+
+&lt;p&gt;We’re right as well. This feels like a magical beast that keeps on getting up every time you put it down, and you eventually come to realise that - what you thought of as “slaying the dragon” was actually just “ticking its foot slightly”.&lt;/p&gt;
+
+&lt;p&gt;Although….&lt;/p&gt;
+
+&lt;h1 id=&quot;slay-psht&quot;&gt;Slay? Psht…&lt;/h1&gt;
+
+&lt;p&gt;We hear stories about “slaying the dragon” - but is “slaying” really a good strategy?&lt;/p&gt;
+
+&lt;p&gt;Let’s look at this logically: your entire journey, you would have to have all of these magical things line up in the perfect way for you to accomplish this. You need - for example - a magical blade or weapon, a party of adventurer companions that are each uniquely and coincidentally perfectly gifted for the task at hand, and a good storyline where the protagonist learns a good lesson or moral.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/public/assets/2025-07-15/going_on_an_adventure.png&quot; alt=&quot;Going on an adventure&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All of this is bullshit [3].&lt;/p&gt;
+
+&lt;p&gt;While this may be an epic pursuit, we are not the heroes in this story of business value and the reality is - we don’t live in a Tolkien novel [4]. The harsh truth in the corporate world is that the lessons we learn are only valuable if we can use them to increase efficiency, efficacy and importantly to enhance the value of the product that the software is servicing. Unless you build OS’s or comparable things where the software itself is the product - the software is not the primary artefact. A bit harsh but it is the modus of business value rather than the value itself.&lt;/p&gt;
+
+&lt;p&gt;Alas, you also can’t talk of “slaying” when there is no beast to slay….&lt;/p&gt;
+
+&lt;h1 id=&quot;is-it-real&quot;&gt;Is it real?&lt;/h1&gt;
+
+&lt;p&gt;Sorry to bust this fairytale but there’s no such thing as dragons. These mythical beasts in our field, dear reader, are just optical illusions that only appear so at a distance.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/public/assets/2025-07-15/the_dragon_is_paper.png&quot; alt=&quot;The dragon is paper&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Don’t get it twisted. I’m not saying that your problems aren’t real - I’m just saying that the reason they seem so insurmountable is possibly because you’re looking at it from too far a distance. Dijkstra once said that “abstraction allows us to converse about things with precision” [5]. I’m a huge believer and fan of this personally - but it does not lend well to situations where you as an engineer or engineering team have to deal with other engineers or engineering teams that may be further behind or ahead on the maturity scale than you and yours for example. What is the use of precision if you can’t even “converse”?&lt;/p&gt;
+
+&lt;h1 id=&quot;a-scary-solution&quot;&gt;A scary solution&lt;/h1&gt;
+
+&lt;p&gt;A way to take the dark and sinister magic away from these seemingly large and pervasive issues is to simply get closer to it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/public/assets/2025-07-15/ConfrontingThePaperDragon.png&quot; alt=&quot;Confronting the paper dragon&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is hard. It’s counterintuitive and feels scary. I’m basically telling you to move closer to something that really looks like a horrible beast of mythology - instead of telling you to stay safe and keep your distance. I can appreciate if that feels like bullshit, but - ye bit of faith. You won’t be able to understand what’s really going on until you lean in and until you really understand what’s going on - and I mean really, truly understand the nuances of the issues and strategies where the business and tech form that chaotic vortex - things will look like indecipherable magic.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Understanding brings with it a clarity and comfort, and these seemingly unsolvable problems start to become opportunities to apply your training and craft as an engineer.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Isn’t that all we want as creatives and builders of cool things?&lt;/p&gt;
+
+&lt;p&gt;Good engineers deal with reality. We bring concrete, practical, and real implementation to precisely architected solutions that solve for value. We need to remember that this doesn’t change no matter what gets thrown our way.&lt;/p&gt;
+
+&lt;p&gt;We are a sect of craftsman/woman of the reality in our business - and reality is where dragons go to die.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/public/assets/2025-07-15/dragon_is_not_real.png&quot; alt=&quot;Dragon wasn&apos;t real after all&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;references-and-asides&quot;&gt;References and Asides&lt;/h1&gt;
+
+&lt;p&gt;[1] All images generated by ChatGPT (4o).&lt;/p&gt;
+
+&lt;p&gt;[2] Can’t be that hard, they’re imaginary.&lt;/p&gt;
+
+&lt;p&gt;[3] Except, ironically, for the lessons you learn at the end of the story - that’s the only thing that isn’t fantasy.&lt;/p&gt;
+
+&lt;p&gt;[4] …despite one of my deepest desires being so.&lt;/p&gt;
+
+&lt;p&gt;[5] What a fucking badass this guy was.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Apple Liquid Glass - I get it but I don’t think it will work - yet</title>
+   <link href="http://localhost:4000/2025/06/15/apple-liq-glass-thoughts/"/>
+   <updated>2025-06-15T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2025/06/15/apple-liq-glass-thoughts</id>
+   <content type="html">&lt;p&gt;Yet. At least in the short term. This title is slightly click bait, but my thoughts are more scattered and boring here so I need to at least make it seam controversial to hold you through this article. Although, calling it out probably defeated the purpose.&lt;/p&gt;
+
+&lt;p&gt;Herewith my thoughts.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-is-apple-liquid-glass&quot;&gt;What is Apple Liquid Glass?&lt;/h1&gt;
+
+&lt;p&gt;It’s a new design system/CI really. Apple calls it a new “material”. This is their language to describe a fundamental aspect of it, but in reality, it’s a new design system.&lt;/p&gt;
+
+&lt;p&gt;In their words it allows engineers to &lt;a href=&quot;https://developer.apple.com/documentation/technologyoverviews/liquid-glass&quot;&gt;“embrace design principles of Apple platforms to create beautiful interfaces that establish hierarchy, create harmony, and maintain consistency across devices and platforms”&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Apple could have called it “plastic” but I suppose it doesn’t fit the pretension they’re going for. Apple be apple-ing I guess.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/public/assets/2025-06-15-generated-image-0.png&quot; alt=&quot;Generated Image 0&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;no-but-what-is-it-really&quot;&gt;No but, what is it really?&lt;/h1&gt;
+
+&lt;p&gt;Apple (and a lot of other companies) is seeing a revolution in how content is being interacted with.&lt;/p&gt;
+
+&lt;p&gt;In the good old days, we all had buttons. Physical ones. Buttons everywhere. Blackberry was the epitome of buttons on buttons sporting a 60% keyboard that - especially as someone with stubby fingers - were a nightmare to press until you get weirdly good at pressing the right tiny button on instinct (#UselessSkillAlert).&lt;/p&gt;
+
+&lt;p&gt;In the previous world where physical buttons were the only method of interaction, the content was always front and centre. In a word where bigger, better and more powerful screens have killed physical buttons, screen space has to be sacrificed to keep the device usable.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/public/assets/2025-06-15-generated-image-1.png&quot; alt=&quot;Buttons, buttons everywhere - generated image 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Essentially, Apple Designers are trying to get rid of the need to sacrifice expensive screen real estate by using what we use to prevent the need to have the lights on in the day - adding a clear material to let in the view. This as opposed to increasing the overall size of the screen with which I believe they’ve come to a conclusion that making bigger screens is optimising in the wrong direction. Or over-optimising without much return.&lt;/p&gt;
+
+&lt;h1 id=&quot;sure-but-will-it-work&quot;&gt;Sure, but will it work?&lt;/h1&gt;
+
+&lt;p&gt;I don’t think it will be well received in the short term. My empirical evidence is the release of AirPods and removing the headphone jack being super controversial and, in the case of AirPods, outright mocked and people would be ashamed/embarrassed to like it in some cases. This is obviously taking for granted that the execution of “Liquid Glass” is done well and that the ergonomics are not compromised like what happened with the Magic Mouse. I distinctly remember getting that “leek meme” from colleagues when I “rocked” my first AirPods and I daily drive a Magic Mouse and have a deep disdain for it (I can’t find a better left handed mouse and so the touch pad-like features make up for this shitty ergonomics imo - if you know of a good left-handed mouse please contact me, you will change my life forever).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/public/assets/2025-06-15-generated-image-2.png&quot; alt=&quot;Generated Image 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My experience using Apple products w.r.t. it’s design is that - at it’s best - the product is either such a pleasure to use that all flaws are forgiven or - at it’s worst - the utility of using it outweighs the terrible UX decisions. “Liquid Glass” from that perspective doesn’t feel far off from their philosophies.&lt;/p&gt;
+
+&lt;h1 id=&quot;but-i-think-it-might-work-later&quot;&gt;But I think it might work later&lt;/h1&gt;
+
+&lt;p&gt;Because we’ll supposedly have AI.&lt;/p&gt;
+
+&lt;p&gt;Yes, seriously.&lt;/p&gt;
+
+&lt;p&gt;I’m not just tenuously trying to link something to AI for the sake of it, trust me.&lt;/p&gt;
+
+&lt;p&gt;The age of (let’s call it) Natural Interaction with digital content requires content being front and center. I foresee “review” being a more common interaction then “operate”. Lets imagine a world where the kinks in AI are ironed out - what then will be the main thing on the screen? The content. What would be the controls? Natural Interaction mechanisms like voice, gestures and touch (but not in a way that recreates a physical button). We’re already seeing this with Agentic AI and Prompting right? The artifact you’re working with gains “intelligence”[2] in a sense that it can tell you things about itself and can do things you command it to. Asking a “document” questions rather then manually highlighting or copying and pasting text into ChatGPT and asking it to summarize for example. Or telling your image to animate itself. The goal of Apple (and many other companies) is to seamlessly integrate AI into the process. As someone now helping to build AI into our business processes, I can personally agree with this strategy and feel that this is a superior way to do it from a “business value” perspective.&lt;/p&gt;
+
+&lt;p&gt;Sounds a bit sci-fi but that seems to be the direction of travel and we’re in a world where machines can more easily have autonomy to execute operations already, they’re just not that good at the big and long stuff in my opinion and experience. In this new world, the company that figures out how to get the content to “live” on the screen in a way that the controls are secondary and unobtrusive would definitely have an easier time with the way the industry is going.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/public/assets/2025-06-15-generated-image-3.png&quot; alt=&quot;Generated Image 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maximizing value is tending towards “enriching the interaction with content while simultaneously removing the number of operations a human has to do to achieve the same result” - which was previously a hard tradeoff. Now, AI is making this possible seemingly without compromising either (with varying results imo).&lt;/p&gt;
+
+&lt;p&gt;As someone that loves the aesthetics of Apple and has bought into the design language and philosophy - I can only hope they don’t fuck it up.&lt;/p&gt;
+
+&lt;p&gt;- FIN -&lt;/p&gt;
+
+&lt;h1 id=&quot;references-and-asides&quot;&gt;References and Asides&lt;/h1&gt;
+
+&lt;p&gt;[1] - Images generated by Gemini by giving it a paragraph and asking it to generate an image from that with “Use a manga style and make it dramatic. Avoid creating faces and avoid text generation.”&lt;/p&gt;
+
+&lt;p&gt;[2] - “Intelligence” is a strong word, but it’s the word Apple is using so I’m gonna go with it for now. I don’t believe this is the right word personally, but I’m not gonna get into it. I choose peace.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>John O’Hara’s QCon Keynote - A Growth Checkpoint</title>
+   <link href="http://localhost:4000/2025/06/07/john-ohara-qcon-talk/"/>
+   <updated>2025-06-07T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2025/06/07/john-ohara-qcon-talk</id>
+   <content type="html">&lt;p&gt;TL;DR: As a technologist, taking point on projects is dangerous not because you might not be up to the task, but because you have an impact beyond the technology. Anyone can learn to write code and build stuff, and yes, I also believe that over time anyone can learn to build stuff well. However, it requires a deep fundamental change in oneself to take on the mantel of leading humans.&lt;/p&gt;
+
+&lt;h2 id=&quot;context&quot;&gt;Context&lt;/h2&gt;
+
+&lt;p&gt;A few months ago, I had the pleasure of being selected to go to the &lt;a href=&quot;https://qconlondon.com/&quot;&gt;QCon Developer conference in London&lt;/a&gt;. As these conferences go, QCon was done super well with a focus on senior engineers, common industry problems and a distinct segregation of your classical promotional talks and ones with real depth of content.&lt;/p&gt;
+
+&lt;p&gt;There were numerous talks with many lessons and epiphanies abound. However, the one that stood out to me, as someone currently aspiring to be more human than robot in my engineering career, was the keynote on day 2 by &lt;a href=&quot;https://www.linkedin.com/in/johara/&quot;&gt;John O’Hara&lt;/a&gt;. Along with holding high positions in various well known companies like J.P. Morgan and Fidelity, the thing that probably earned his place on the docket was him being one of the principle inventors of AMQP, the famous and highly effective “Advanced Message Queuing Protocol” considered the gold standard of it’s kind.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-talk&quot;&gt;The talk&lt;/h2&gt;
+
+&lt;p&gt;His talk was titled &lt;a href=&quot;https://qconlondon.com/keynote/apr2025/advanced-message-queuing-politics&quot;&gt;“Advanced Message Queuing Politics”&lt;/a&gt; (which, as a massive appreciator of witty word play, I considered the first indicator of this talk being outstanding). Besides the man oozing wisdom and experience from his very demeanour, his talk left such a lasting impression on me that I had to write this post.&lt;/p&gt;
+
+&lt;p&gt;His account of the journey from J.P. Morgan needing a messaging middleware for traders to there being a global consortium consisting of the “who’s who” of the tech industry was such a novel story, however one part of his talk stood out the most to me. In the early days of them opening the movement up to many other organisations and people with many other thoughts and opinions, he had a sit down with himself and defined the mindset that he had started to realise he needed being one of the principle leads on the project that he knew and believed in his bones, had so much potential.&lt;/p&gt;
+
+&lt;p&gt;That mindset was 4 main points:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;It’s likely that my ideas on this won’t survive the process&lt;/li&gt;
+  &lt;li&gt;It’s still success if it commoditises without us&lt;/li&gt;
+  &lt;li&gt;Contributors should always leave their mark&lt;/li&gt;
+  &lt;li&gt;I love technology, but my role is to make it happen&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This resonated with me.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-thoughts&quot;&gt;My thoughts&lt;/h2&gt;
+
+&lt;p&gt;This put into perspective my junior days and interactions with otherwise amazing engineers being so shitty that at its worst, it made me want to quit. It made me understand that in some cases the times I had been shot down and made to feel inferior, weren’t because I didn’t have the skill (although some of those times, I probably didn’t tbf) but more because the person in that position was grappling with their own conflict against one or more of the 4 points above. The amount of times I had been unhappy and frustrated at being told things by a lead that essentially boiled down to them not having this mindset was staggering. More scarily though, it got me thinking about my own behaviour as someone with significantly more experience and reach now.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-checkpoint&quot;&gt;The Checkpoint&lt;/h2&gt;
+
+&lt;p&gt;As a technologist, taking point on projects is dangerous not because you might not be up to the task, but because you have an impact beyond the technology. Anyone can learn to write code and build stuff, and yes, I also believe that over time anyone can learn to build stuff well. However, it takes a deep fundamental change in oneself to take on the mantel of leading humans. As a person who is deeply passionate in what I do, deeply interested in learning how to improve and deeply invested in becoming excellent, I have so so much to learn and grow in this area and I can’t fathom ever perfecting it.&lt;/p&gt;
+
+&lt;p&gt;Although - I now know where to start.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>AI/NLP. Evolution of Compilers? - Part 1.1 - Interesting questions and my thoughts</title>
+   <link href="http://localhost:4000/2025/05/16/nlp-as-nlc-p1-1/"/>
+   <updated>2025-05-16T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2025/05/16/nlp-as-nlc-p1-1</id>
+   <content type="html">&lt;p&gt;I posted an &lt;a href=&quot;https://urishiraval.github.io/2025/04/13/nlp-as-nlc/&quot;&gt;article from my blog&lt;/a&gt; on my LinkedIn a little while back (see &lt;a href=&quot;https://www.linkedin.com/posts/unraval_ainlp-evolution-of-compilers-activity-7325047885618728961-Wea4?utm_source=share&amp;amp;utm_medium=member_ios&amp;amp;rcm=ACoAAB04-pQBG71QN0lBL1-Xc9g0jZiFmpBVbwM&quot;&gt;the post here&lt;/a&gt;) and I had a colleague ask &lt;a href=&quot;https://www.linkedin.com/feed/update/urn:li:activity:7325047885618728961?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7325047885618728961%2C7328871553272561666%29&amp;amp;dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287328871553272561666%2Curn%3Ali%3Aactivity%3A7325047885618728961%29&quot;&gt;2 super interesting questions&lt;/a&gt;. Herewith my attempt to answer them.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-questions&quot;&gt;The Questions&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;What does it really mean to “understand” language - and can a machine ever truly do that&lt;/li&gt;
+    &lt;li&gt;How do we teach a machine not just to process the structure of our language, but to grasp the intention behind it - when even humans struggle to agree on meaning.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;my-thoughts&quot;&gt;My Thoughts&lt;/h1&gt;
+
+&lt;p&gt;These are super interesting questions and require talking about very dense topics 😂 I’ll try not to ramble. My short answers to this (with no claims of being right) are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;I think so, but not language fully from a human.&lt;/li&gt;
+  &lt;li&gt;I’m not actually sure we can because I don’t believe it’s possible to get this 100% right. Although I do think we can get really close.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I’m not qualified enough to give you an academically good answer for them, but I can try to give my thoughts in 2 parts.&lt;/p&gt;
+
+&lt;h2 id=&quot;part-1---language-and-humans&quot;&gt;Part 1 - Language and humans&lt;/h2&gt;
+
+&lt;p&gt;The theory that I love the most (which might very well be outdated by now) for how to describe how and why language has become useful for humans to understand one another is probably those coming out of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Minimalist_program&quot;&gt;Minimalist Program&lt;/a&gt; (Chomsky), though there are many competing and more modern theories. Definitely worth a read if you’re interested in this stuff.&lt;/p&gt;
+
+&lt;p&gt;Chomsky and others talk about the difference between communication using “signal encoding” and that which can be classified as using an  “unbound discrete infinity”-based language, so to speak. Another interesting fact is that most of the ‘language mechanism’ is actually used internally by humans to process data more than to externally communicate (but this is more relevant in part 2).&lt;/p&gt;
+
+&lt;p&gt;Basically, a computer currently uses a sophisticated form of signal coding, and in my mind, there’s not much difference today in how other animals process communication and machines do using NLP (and I’m not suggesting that machines and other animals are the same, merely that the processing mechanism is similar in my opinion).&lt;/p&gt;
+
+&lt;p&gt;I don’t think a computer would ever be able to fully “understand” language as we humans do. My main reason is because I believe language and thus the cognition of it has as one of its components an inherent biological factor, which computers obviously don’t. For example, if I tell you “I feel like having tiramisu,” you might understand that as a coffee lover I’m probably craving it, whereas a computer might process that and match it to a mechanical thing like me being “hungry” because that’s the best pattern it can match that phrase to.&lt;/p&gt;
+
+&lt;h2 id=&quot;part-2---cognition-and-how-little-we-actually-know-about-it&quot;&gt;Part 2 - Cognition and how little we actually know about it&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Chinese_room&quot;&gt;The Chinese room thought experiment&lt;/a&gt; gives a clear mental model to avoid being fooled into thinking good answers from an AI equals cognition.&lt;/p&gt;
+
+&lt;p&gt;We don’t fully comprehend how we “comprehend” (which I call out in the article albeit in an attempt to be humorous), so my question to myself would be “how would we even know if a computer comprehends” in the first place. Because of these reasons, I don’t really have an objectively good answer.&lt;/p&gt;
+
+&lt;p&gt;To your point, we struggle to understand someone’s communication even while being part of the same species. I truly think we will only see pale imitations of “true cognition” in a computer unless we figure this out, and that’s very much a hard problem that we don’t even know is possible to solve yet.&lt;/p&gt;
+
+&lt;p&gt;Another really hard problem to solve is data entropy when moving through a medium. Think broken telephone game, right? We haven’t found a way to “perfectly” send data from 1 thing to another.&lt;/p&gt;
+
+&lt;p&gt;Although, deriving 0’s and 1’s from ‘intention’ might be a little easier. If we say semantic meaning is like a complex molecule made up of different parts to the n-th degree, then understanding the semantic meaning might be easier than understanding the component parts, just like how you can see plastic and know it’s plastic without understanding complex organic chemistry.&lt;/p&gt;
+
+&lt;p&gt;It’s for that reason I sidestep the topic of “how do we grasp intention” in my article. Currently, we can create something that can “compile” natural language into 1’s and 0’s while preserving enough semantic information (intent) that the structure of the machine’s instructions is similar to the intended natural instructions that a human has communicated. We’ve created plastic without knowing what plastic is actually made of, essentially. The “plastic” is low quality and absolute dog sht for the environment, but it’s plastic nevertheless, right?&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>AI/NLP. Evolution of Compilers?</title>
+   <link href="http://localhost:4000/2025/04/13/nlp-as-nlc/"/>
+   <updated>2025-04-13T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2025/04/13/nlp-as-nlc</id>
+   <content type="html">&lt;p&gt;Considering recent trends like so-called “vibe-coding” and the amount of tension around these seemingly “hands-off” exercises in creating solutions, I have some naive and simplistic thoughts (as usual). In this article I attempt to break down the wild and complex ways us humans share information and, with many a stretch, compare us humans to computers (hah! what a funny comparison, but bear with me). As a side effect to me very happily nerding out on foundational computer science concepts, hopefully, I can somewhat convince you that we’re seeing an evolution of what we know as a ‘Compiler’.&lt;/p&gt;
+
+&lt;h1 id=&quot;how-we-excrete-information-out-of-our-brains-one-of-the-ways-at-least&quot;&gt;How we excrete information out of our brains (one of the ways, at least)&lt;/h1&gt;
+
+&lt;p&gt;Let’s start at the root of all our troubles in a sense.&lt;/p&gt;
+
+&lt;p&gt;Language.&lt;/p&gt;
+
+&lt;p&gt;It’s the way humans send information wirelessly &lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; right?&lt;/p&gt;
+
+&lt;p&gt;Language is quite complicated (and bizarre) for a thing that almost everyone everywhere intuitively does. The objective description of a conversation is when a human makes a series of vibrational waves (sound) or hand-signs of a certain type, tone, pitch, cadence and rhythm etc. and another human picks up those waves (sound) or hand-signs through specialized bones and organs (squishy bits) and mostly understands the intention of that first human (we’ll talk about this “understanding” stuff in a later section).&lt;/p&gt;
+
+&lt;p&gt;Even more weird is that if you change one of those variables, like for example the tone, but leave everything else the same, the entire bloody meaning changes.&lt;/p&gt;
+
+&lt;p&gt;Even crazier, is that we have specific symbols that we draw (with sticks and ink on dead trees &lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;) in a specific order that (to a large extent) can convey the same intention as these series of noises and or &lt;del&gt;gang&lt;/del&gt; hand-signs.&lt;/p&gt;
+
+&lt;p&gt;F**king bizarre.&lt;/p&gt;
+
+&lt;p&gt;Let’s add some reason to this rhyme…&lt;/p&gt;
+
+&lt;p&gt;My first personal hero &lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, &lt;a href=&quot;https://chomsky.info/about/&quot;&gt;Noam Chomsky&lt;/a&gt;, in his seminal body of work on formal language &lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; describes something that would eventually be called the &lt;em&gt;Chomsky hierarchy&lt;/em&gt; of formal grammars. A complicated sounding thing, but at it’s core (and this is a super simplistic explanation &lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;) the aspect I’d like to highlight is - you’re limited in the amount of information you can convey depending on how you communicate:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A random &lt;strong&gt;unstructured&lt;/strong&gt; bunch of letters isn’t necessarily a word (believe me, with my &lt;del&gt;attroucious&lt;/del&gt; atrocious spelling, I can attest)&lt;/li&gt;
+  &lt;li&gt;Going a level higher once you solve the structure of the letters, is to make words&lt;/li&gt;
+  &lt;li&gt;A random &lt;strong&gt;unstructured&lt;/strong&gt; series of words doesn’t give you a sentence &lt;em&gt;clause&lt;/em&gt; &lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;Then a level up, a random &lt;strong&gt;unstructured&lt;/strong&gt; series of clauses can’t convey meaning intentionally.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And so on and so forth, up the chain of more and more intentional structure being correlated to the accuracy of conveying meaning or &lt;strong&gt;information&lt;/strong&gt; (again, I can’t stress how simplistically reductive this explanation is, but it will serve my purpose for now).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/public/assets/Chomsky-hierarchy.svg&quot; alt=&quot;By J. Finkelstein - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=9405226&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;wth-is-information-anyways&quot;&gt;WTH is Information anyways!?&lt;/h1&gt;
+
+&lt;p&gt;Okay, we’ve spoke about how we excrete information, but what is this information? “Everyone keeps using the bloody word!”&lt;/p&gt;
+
+&lt;p&gt;Let’s do a very rough thought experiment. I’m going to write something and I need you to keep track of your initial understanding of each.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Exhibit A: “the cow was mean”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This would mean very little to you. It would merely describe some cow that may or may not exist somewhere in my world that may or may not have been mean. How would you know with those 4 words?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Exhibit B: “my Afrikaans teacher was a cow and was mean to me”.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This means something different right? At face value, you get the ‘sense’ that I had a teacher that was mean to me and that they taught me Afrikaans. OR, you could interpret this to mean that the Afrikaans-speaking teacher was mean to me. Notice that the ‘cow’ as an animal has disappeared from your mental modal of what I wrote here and that depending on who’s reading this, the meaning changes.&lt;/p&gt;
+
+&lt;p&gt;Let’s go a final step further.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Exhibit C: “If you knew me, you’d know that I (ironically) was naturally a piss-poor language student and that I gave my Afrikaans teachers a hard time by never doing my homework because maybe deep down, I hated that learning Afrikaans wasn’t intuitive to me, and probably as a result of not doing said homework, I had horrible marks. So it’s probably not fair to say my Afrikaans Teacher was a cow and was mean to me.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let’s break this one down in more detail.&lt;/p&gt;
+
+&lt;p&gt;Hopefully you’ve picked up that in each of the exhibits above, there were different levels and types of information that could be taken from each scenario, despite there being more or less the same words, and even further, the same letters used.&lt;/p&gt;
+
+&lt;p&gt;To simplify what I’m trying to get to, there are 2 types of information I’m going to focus on that I feel are the most relevant here. Those are:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Syntactic Information&lt;/li&gt;
+  &lt;li&gt;Semantic Information&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Without going into detail of this, because trust me it would take all day and I’m not an expert by any stretch of the word anyways, let’s focus on my sob story about my relationship with my Afrikaans teacher an ungodly number of years ago &lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;Exhibit A has structure but little in the way of context. Exhibit B had structure and a little bit more in the way of objective information, but still barely any more context. Exhibit C had structure, objective information and context.&lt;/p&gt;
+
+&lt;p&gt;More importantly, Exhibit C had more &lt;em&gt;meaning&lt;/em&gt;. Meaning is a type of information. Information that our human brains have the ability to &lt;em&gt;interpret&lt;/em&gt; and &lt;em&gt;understand&lt;/em&gt; (to varying degrees).&lt;/p&gt;
+
+&lt;p&gt;What we most apparently have in Exhibit C that makes it stand out, amongst other things, is &lt;strong&gt;Semantic Information&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’ve given  &lt;em&gt;Syntactic Information&lt;/em&gt; - that is, a structured set of letters, words and sentences - information of a form that we call “meaning” or &lt;em&gt;Semantic Information&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/public/assets/syntactic-vs-semantic.drawio.png&quot; alt=&quot;Semantic vs Syntactic&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Note: For the sake of simplicity, I’m going to omit things like &lt;a href=&quot;https://en.wikipedia.org/wiki/Lexical_semantics&quot;&gt;Lexical Information&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Information_theory&quot;&gt;Information Theory&lt;/a&gt; merely because it adds nothing useful in this context)&lt;/p&gt;
+
+&lt;h1 id=&quot;taking-all-that-sweet-sweet-information-in&quot;&gt;Taking all that sweet, sweet information in…&lt;/h1&gt;
+
+&lt;p&gt;Okay, we can hopefully say that we understand:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;A way in which we send this thing called “Information” and&lt;/li&gt;
+  &lt;li&gt;We know some of the basic components of this “Information” we’re sending&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Now what?&lt;/p&gt;
+
+&lt;p&gt;Well, now we have to recursively “understand” how we “understand” something&lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; (I did say to bear with me…).&lt;/p&gt;
+
+&lt;p&gt;Though, understanding how humans “understand” is a subject that people much smarter then me would have to explain and is itself a subject for many an academic paper. So I’m going to shamelessly pivot to something that I understand much better then humans - Computers.&lt;/p&gt;
+
+&lt;p&gt;Specifically, the aspect of computers that allows us geeky engineers to create programs and software that benefits a profitably large group of people. In my opinion, the next biggest game changer in modern computing after the transistor and micro-chips isn’t AI, it’s the Compiler.&lt;/p&gt;
+
+&lt;h2 id=&quot;compilers&quot;&gt;Compilers&lt;/h2&gt;
+
+&lt;p&gt;In very simple and high-level terms…a compiler is something that every computing device uses and it has 2 very basic functions:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;allows a human to write instructions in a language that said human can easily understand&lt;/li&gt;
+  &lt;li&gt;Enables the computer to take those instructions and translate (but actually, compile) it to something that itself can easily understand and follow&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/public/assets/compiler.drawio.png&quot; alt=&quot;Happy/Unhappy Compiler&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Don’t take my word for it though…Merriam-Webster defines a compiler as:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;one that compiles&lt;/li&gt;
+    &lt;li&gt;a computer program that translates an entire set of instructions written in a higher-level symbolic language (such as C) into machine language before the instructions can be executed&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Good we checked with dears Merriam and Webster because both definitions are actually relevant here.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-point-of-this-whole-long-af-article&quot;&gt;The point of this whole long af article&lt;/h1&gt;
+
+&lt;p&gt;Arguably, humans are compilers. We can read words and have thoughts and execute actions based on them.&lt;/p&gt;
+
+&lt;p&gt;Similar to a computer right?&lt;/p&gt;
+
+&lt;p&gt;Yes, but there has been a huge difference, seemingly until now (apart from, you know, humans being messy bags of flesh and bones and…gag…emotions) &lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;Computers - with the use of compilers - have been fabulous at understanding &lt;em&gt;Syntactic Information&lt;/em&gt;.
+Computers - so far - haven’t been able to understand &lt;em&gt;Semantic Information&lt;/em&gt;. &lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;AI, and specifically Natural Language Processing, changes this.&lt;/p&gt;
+
+&lt;p&gt;Natural Language to a human can convey meaning in the sense we’ve outlined above. Computers can now understand (to a certain extent) &lt;em&gt;Semantic Information&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Don’t get it twisted. I’m not saying that Computers are going to be more like humans. I’m not qualified nor am i confident in my understanding of Computers or Humans to definitively make such a statement.&lt;/p&gt;
+
+&lt;p&gt;However, I do believe that we’re seeing an evolution of the Compiler in the sense that I can now tell a computer to write me a Python application that writes a letter that says “I am sorry I was such a difficult Afrikaans student” in an email 100 words long with the primary emotion of “chagrin” and send it to all my old Afrikaans teachers from High-school &lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; and it will more or less do it.&lt;/p&gt;
+
+&lt;p&gt;This, in my (possibly naive) view, is a &lt;em&gt;compilation&lt;/em&gt; of my natural language (with varying degrees of accuracy) into a &lt;em&gt;higher-level&lt;/em&gt; programming language which then already gets compiled down to machine code and eventually that gets compiled to 1’s and 0’s that the chips and chocs within the computer can happily process and execute.&lt;/p&gt;
+
+&lt;p&gt;Anxieties and hype-cycles aside (I’ll probably write about those some other time, cause believe me, I am anxious in light of this supposed AI revolution) I find it hard to disagree with the thought that NLP is a natural (pun intended) evolution of the compiler, and I can’t help but wonder if this was how the old guard felt when punch-card systems were starting to become obsolete.&lt;/p&gt;
+
+&lt;p&gt;So in summation…&lt;/p&gt;
+
+&lt;p&gt;Glory to the Compiler gods. We’re all f***ed either way, so this makes little difference in the grand scheme of things. We’ll probably be okay though when the hype-cycle is done. If we’re not, at least we have our health.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- FIN -&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;remarks&quot;&gt;Remarks&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;If you’re curious as to what the non-wireless/point-to-point transfer of information is, the next time you see a person you have beef with, punch them and ask after if they got any information from that interaction &lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;1.1&lt;/a&gt;&lt;/sup&gt;
+    &lt;ul&gt;
+      &lt;li&gt;1.1. I don’t condone violence….this is just a thought experiment &lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;1.2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+      &lt;li&gt;1.2. I don’t condone lying either…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;At least I do…I’m still very much what they now call “an analog guy”&lt;/li&gt;
+  &lt;li&gt;Second is Edsger Dijkstra. Just google “quotes by dijkstra” to see the absolute badassery this guy got up to.&lt;/li&gt;
+  &lt;li&gt;Amongst many many more papers, this is the one I’m most familiar with so I’m just going to point you, dear unhealthily interested reader, to  - Chomsky, N., The Logical Structure of Linguistic Theory&lt;/li&gt;
+  &lt;li&gt;As someone who briefly studied this, believe me, this sh*t gets complicated. I’m actually doing its coolness a disservice by simplifying it like this. But alas, abstractions and precision right?&lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;5.1&lt;/a&gt;&lt;/sup&gt;
+    &lt;ul&gt;
+      &lt;li&gt;5.1. “The purpose of abstracting is not to be vague, but to create a new semantic level in which one can be absolutely precise.”― Edsger W. Dijkstra (yeah, he was a complete badass)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Remember English Class in primary school with all those definite and indefinite clauses bullshit? Yeah, it finally came in handy!&lt;/li&gt;
+  &lt;li&gt;F**k, I’m old now. Oh what a cruel mistress is time.&lt;/li&gt;
+  &lt;li&gt;All the programmers/math geeks reading this, for 20 marks, if $Understand(x) = Understanding(x)$ is a function that derives understanding from a topic $x$ prove $Understand(Understanding) = Understanding(Understand)$. I dare you.&lt;/li&gt;
+  &lt;li&gt;Relax, I’m not a machine or an AI bot writing this….yet…&lt;/li&gt;
+  &lt;li&gt;Things like Fuzzy Logic and such don’t count in my view. Heuristics are approximations and this, for me, doesn’t mean that the computer &lt;em&gt;understands&lt;/em&gt; or &lt;em&gt;interprets&lt;/em&gt; semantic meaning. Though an argument can be made that even with NLP, the computer doesn’t truly &lt;em&gt;understand&lt;/em&gt; and I’d concede the point&lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;10.1&lt;/a&gt;&lt;/sup&gt;, but it says nothing of &lt;em&gt;interpretation&lt;/em&gt; and compilation of &lt;em&gt;semantic&lt;/em&gt; meaning, which is what I’m trying to opine about. Hit me up if you disagree…I’m always up for a nerdatious debate and, more importantly, to learn more.
+    &lt;ul&gt;
+      &lt;li&gt;10.1. Yes, I know about the so called &lt;a href=&quot;https://en.wikipedia.org/wiki/Chinese_room&quot;&gt;Chinese Room Thought Exercise&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Not the Primary school ones, cause they’ve definitely forgotten about me by now. See &lt;sup&gt;&lt;a href=&quot;#remarks&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Growing Up in Engineering - A checkpoint on the way to being a 'grown-up' engineer</title>
+   <link href="http://localhost:4000/2025/03/22/a-checkpoint/"/>
+   <updated>2025-03-22T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2025/03/22/a-checkpoint</id>
+   <content type="html">&lt;p&gt;Tl;dr - It is a necessary condition to be empathetic, the sufficient condition is to ask the right questions and challenge the right things.&lt;/p&gt;
+
+&lt;p&gt;Becoming Senior.&lt;/p&gt;
+
+&lt;p&gt;One of the Software Engineering proclivity (and I’m sure many other proclivities beyond) forever looks at this path with (albeit many many other emotions, but) great longing and excitement and an additional massive helping of impatience. However, akin to the other fallacies of youth, the path to growing and becoming more senior is one filled with truths un-learnable from the places of youth.&lt;/p&gt;
+
+&lt;p&gt;It follows then, that I have inevitably learned a little and with the obnoxious tendencies that make up my personality, I write this article with a force for you, the reader, to choke down with contempt.&lt;/p&gt;
+
+&lt;h2 id=&quot;before-the-checkpoint&quot;&gt;Before the checkpoint&lt;/h2&gt;
+
+&lt;p&gt;There have been a series of unfortunate events.&lt;/p&gt;
+
+&lt;p&gt;That’s correct. None of this was my doing.&lt;/p&gt;
+
+&lt;p&gt;I did not &lt;em&gt;want&lt;/em&gt; to learn hard lessons. (who the fuck does?)&lt;/p&gt;
+
+&lt;p&gt;Alas, here we are, a sprinkling of poorly worded criticism and a dash of apathetic comments such as:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Exhibit A: “Why did you do &lt;X&gt; like this? It doesn&apos;t really make sense to me.&quot;&lt;/X&gt;&lt;/li&gt;
+  &lt;li&gt;Exhibit B: “What makes what you’ve shown me now &lt;em&gt;a platform&lt;/em&gt;?”&lt;/li&gt;
+  &lt;li&gt;Exhibit C: “I’m pretty sure the way you’re proposing to do this violates &lt;em&gt;{principle z}&lt;/em&gt;”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I promise too, that I said this with a polite tone (mostly, I think). So what makes these seemingly inconspicuous sentences a &lt;em&gt;checkpoint&lt;/em&gt;? What do I need to change here?&lt;/p&gt;
+
+&lt;p&gt;A good question with a simple answer. which for at least some individuals my age and younger, won’t make a lot of sense (fallacy of youth and all) and some my age (but wiser) and older will look at as a simple obvious fact.&lt;/p&gt;
+
+&lt;p&gt;It doesn’t matter how noble your intentions are, how aligned your goals are with other people or how close your relationship is with them. If you say something that they find distasteful or disagree with, they’re going to have a bad taste in their mouth. They simply will not like you.&lt;/p&gt;
+
+&lt;p&gt;Or so you will feel.&lt;/p&gt;
+
+&lt;p&gt;(Okay, there will be a good few that definitely will not like you, but let’s ignore those).&lt;/p&gt;
+
+&lt;p&gt;If you’re anything like me, this won’t sit well with you and you’ll feel really bad. Additionally, if you’re anything like me, you won’t really give a fuck (which will make you feel more horrible). You have a high standard for how things need to be done. You hold yourself to it, so what gives others’ the excuse not to?&lt;/p&gt;
+
+&lt;p&gt;I’ll tell you. Nothing.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;But wait…&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Why does this sound so petulant, even though I know these are the right questions to ask as an engineer?&lt;/p&gt;
+
+&lt;h2 id=&quot;the-checkpoint&quot;&gt;The checkpoint&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Civility and humbleness, and most importantly, empathy are not things that you need an excuse or reason to have. They should be the starting point. The necessary condition.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Humans are not binary. Its an obvious statement but not any less useful because of it. The person you’re dealing with now is not the person you dealt with yesterday, or even a couple of hours ago.&lt;/p&gt;
+
+&lt;p&gt;The jokes that worked with your peers might not work with your juniors. Your juniors become other juniors’ seniors. Things evolve. The only thing constant is change. We get caught up in a river paradox where your label of something implies that it’s one thing (like how we can call it a river, but if you look at any point in that river at any time, by definition, the water you’re seeing is not the same as you’ve seen before).&lt;/p&gt;
+
+&lt;p&gt;Realizing you need to always adapt when you’ve spent so much time growing is not easy. You do feel a lot more self-assured when you finally get there though.&lt;/p&gt;
+
+&lt;h2 id=&quot;after-the-checkpoint&quot;&gt;After the checkpoint&lt;/h2&gt;
+
+&lt;p&gt;My musings and astonishment at seeing people who I consider as being my role-models being so patient with people that I measure to be lacking in skill have finally reached a conclusion.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I might be good, but I’ll never be good enough.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I’d like to think that wisdom and patience go hand in hand, and that inherent patience is a sign of wisdom inherited from learnings instantiated by my empathy.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It is a necessary condition to be empathetic, the sufficient condition is to ask the right questions and challenge the right things.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So it follows, if my empathy could lead to this much needed growth, what’s stopping it from being utilized in my pursuit to not come across as a dick when asking hard questions?&lt;/p&gt;
+
+&lt;p&gt;I’ll tell you. Nothing.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>An Acknowledgment - Anxiety, my Tumultuous Friend</title>
+   <link href="http://localhost:4000/2025/02/22/an-acknowledgment-meditation/"/>
+   <updated>2025-02-22T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2025/02/22/an-acknowledgment-meditation</id>
+   <content type="html">&lt;p&gt;I acknowledge you, oh one who’s urge keeps my senses sharp. The one that burns my idle being into action. You who keeps me alive in the face of danger.&lt;/p&gt;
+
+&lt;p&gt;I acknowledge you&lt;/p&gt;
+
+&lt;p&gt;Strict I must be however. With you who holds so much power over me. I will not suffer your extremities such that they may be my downfall.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Some Rules of Thumb for Complex Solutions and its' Management - Ideal Cone of Software</title>
+   <link href="http://localhost:4000/2024/09/13/the-cone-of-software/"/>
+   <updated>2024-09-13T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2024/09/13/the-cone-of-software</id>
+   <content type="html">&lt;p&gt;Over my relatively short tenure as a software engineer so far, I’ve had a few thoughts on how to deal with “efficiency” and “maintainability” across multiple facets within my teams’ estate. It’s lead to a useful&lt;sup&gt;&lt;a href=&quot;#asides-and-references&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; rule-of-thumb&lt;sup&gt;&lt;a href=&quot;#asides-and-references&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; when trying to design/make decisions about systems in a way that balances efficiency and maintainability.&lt;/p&gt;
+
+&lt;h1 id=&quot;to-be-or-not-to-becomplex&quot;&gt;To be, or not to be…“complex”&lt;/h1&gt;
+
+&lt;p&gt;The kick here, is that software is a team sport. You want things to be maintainable across the lifespan of the &lt;em&gt;team&lt;/em&gt; not necessarily the individuals that happen to be within the team at the time of a decision.&lt;/p&gt;
+
+&lt;p&gt;Teams change over time. Knowledge gets lost with people. The solution never lies, but you might not be able to speak its language if you’ve lost the meaning of the words.&lt;/p&gt;
+
+&lt;p&gt;This is obviously a tall ask. If an answer to a design question seems apparent, I look at it with the utmost suspicion&lt;sup&gt;&lt;a href=&quot;#asides-and-references&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;. Maturing&lt;sup&gt;&lt;a href=&quot;#asides-and-references&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; as an engineer has given me a couple of questions that I feel I need to consistently ask when thinking/planning the implementation details of the stack. One of them is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What things do we want to be efficient and what are we comfortable compromising for the stack to be maintainable?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Efficiency here speaks to how efficiently the system executes. Maintainability here speaks to the teams ability to keep it running.&lt;/p&gt;
+
+&lt;p&gt;I suspect that efficiency often times (if not always) comes at a cost of less-maintainable solutions by virtue of adding complexity to cater for non-functional things like performance and scalability or solving complex domain problems. Examples on the non-functional side include adding caching to increase speed, or at an even lower level, using something like memoization to reduce a computationally rigorous piece of logic.&lt;/p&gt;
+
+&lt;p&gt;If you agree with the above, the corollary is that designing specifically for maintainability could result in compromised efficiency. If you don’t agree, I’m always open to a socratic debate on it, but I’m going to work under the assumption of the former scenario.&lt;/p&gt;
+
+&lt;p&gt;I am of the opinion that a “maintainable” solution and an “efficient” one are contrasting. Finding the right balance between the two is one of my personal goals when I assist with designing/”solutioning” software.&lt;/p&gt;
+
+&lt;h1 id=&quot;a-personal-glossary-of-theoretical-relationships-around-maintainability-and-efficiency&quot;&gt;A Personal Glossary of Theoretical Relationships around Maintainability and Efficiency&lt;/h1&gt;
+
+&lt;p&gt;I have a few ‘theoretical relationships’ that I like to think about and use when in design conversations but before we get into it, I need to note a few definitions to make my life easier:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Maintainability Factor (m) - a quantitative measure that denotes how maintainable something is.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This can be subjective, or an effort could be made to create an objective measurement of this, but that’s going to be “de-scoped” in this read cause I don’t feel like doing that today&lt;sup&gt;&lt;a href=&quot;#asides-and-references&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;‘Distant’ is used to mean that something is not immediately reachable from wherever you are at that time.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;An example of “distance” is if you have a &lt;a href=&quot;https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends&quot;&gt;BFF service&lt;/a&gt; and a corresponding frontend application, these two units are distant from each other.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/public/assets/rishis-idea-of-distance-in-software.drawio.png&quot; alt=&quot;Rishi&apos;s idea of distance in software&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;theoretical-relationship-a---maintainability-vs-complexity&quot;&gt;Theoretical Relationship A - Maintainability vs Complexity&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The more complex a solution, the less maintainable it is over time.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I feel like this might be obvious, but for the sake of brevity…the more complex a solution is, the more knowledge about its mechanism is required. This could be domain knowledge, knowledge about how a particular technology works or even something as simple as the “why”, i.e. situational knowledge gained by being there when the decision to do something a particular way was made.&lt;/p&gt;
+
+&lt;p&gt;For the more mathematically inclined, this is an inverse relationship and here is the formula using what I like to refer to as my own brand of pseudo-mathematical notation&lt;sup&gt;&lt;a href=&quot;#asides-and-references&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+\[m = \frac{1}{complexity}\]
+
+&lt;h2 id=&quot;theoretical-relationship-b---number-of-units-vs-change-frequency&quot;&gt;Theoretical Relationship B - Number of Units vs Change Frequency&lt;/h2&gt;
+
+&lt;p&gt;This is pretty straight-forward:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The more related units of ‘distant’ software you have, the more complex it becomes to maintain it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If you have related software that necessitates frequent change, the multiplicity of effort to enact that change is inversely proportional to the maintainability factor.&lt;/p&gt;
+
+&lt;p&gt;Basically, having two BFF’s that you need to update is going to be more work then having a monolithic-esque MVC setup. We know that the front-office applications have a relatively higher frequency of change. This is a good example where you might want to compromise on the maintainability factor in favor of the non-functional, i.e. having BFF’s and following that pattern&lt;sup&gt;&lt;a href=&quot;#asides-and-references&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pseudo-mathematically:&lt;/p&gt;
+
+\[m = \frac{1}{\sum units*frequency\ of\ change}\]
+
+&lt;h2 id=&quot;theoretical-relationship-c---complexity-vs-number-of-units&quot;&gt;Theoretical Relationship C - Complexity vs Number of Units&lt;/h2&gt;
+
+&lt;p&gt;This is a bit more abstract. I’ve observed that in my lived-experience:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The more complex each individual unit, the less units you tend to have in total.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Not really sure how to reword this so instead I’m just going to make a haphazard attempt at an example.&lt;/p&gt;
+
+&lt;p&gt;If you design a complex function that caters for multiple scenarios, you have increased the complexity of an individual unit and decreased the need for multiple functions.&lt;/p&gt;
+
+&lt;p&gt;In pseudo-math:&lt;/p&gt;
+
+\[\sum units = \frac{1}{complexity\ per\ unit}\]
+
+&lt;h2 id=&quot;theoretical-relationship-d---efficiency-vs-complexity&quot;&gt;Theoretical Relationship D - Efficiency vs Complexity&lt;/h2&gt;
+
+&lt;p&gt;This is arguably even more abstract:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Efficient solutions tend to be more complex&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Note that this is drastically different from saying that complex solutions are always more efficient. &lt;strong&gt;Which I am not saying.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve just found that the more efficient you make something, the more complex the overall solution. A perfect example is caching from earlier in this read. I’m sure many, many, many engineers can relate, but caching has been both a nightmare to maintain and a blessing to the client experience (but maybe not always at the same moment in time).&lt;/p&gt;
+
+&lt;p&gt;As an aside, a much smarter individual&lt;sup&gt;&lt;a href=&quot;#asides-and-references&quot;&gt;9&lt;/a&gt;&lt;/sup&gt; than me said: “There are only two hard things in Computer Science: cache invalidation and naming things”, and yet we still use caching because it’s useful. This speaks to a journey I often see in my more junior peers where they oscillate in the beginning from wanting to create complex and elegant solutions, to hyper simplified solutions that are really maintainable, before finally finding peace in the balance. But I digress…&lt;/p&gt;
+
+&lt;p&gt;In pseudo-mathematical fashion:&lt;/p&gt;
+
+\[efficiency = k*complexity\]
+
+&lt;h2 id=&quot;theory---efficiency-vs-maintainability-coming-full-circle&quot;&gt;Theory - Efficiency vs Maintainability (coming full circle)&lt;/h2&gt;
+
+&lt;p&gt;From Relationship A and Relationship D we get a theory:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If we hold that efficiency is proportionate to complexity and maintainability is inversely proportionate to complexity, then efficiency is inversely proportional to maintainability.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Remember that this works under the assumption that efficiency leads to complexity. Which I believe in, but you may not. Even so, however, the relationships above might prove useful for other things while this theory itself is not really that useful for much&lt;sup&gt;&lt;a href=&quot;#asides-and-references&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;enter-pseudo-geometry---rishis-ideal-cone-of-software3&quot;&gt;Enter Pseudo-Geometry - Rishi’s Ideal Cone of Software&lt;sup&gt;&lt;a href=&quot;#asides-and-references&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/h1&gt;
+
+&lt;p&gt;A cone is this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dictionary.cambridge.org/images/thumb/cone_noun_002_08089.jpg?version=6.0.31&quot; alt=&quot;Cone&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that we’ve gotten that out of the way. I combine all these pseudo-formulas above into a delightful&lt;sup&gt;&lt;a href=&quot;#asides-and-references&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; little ice-cream cone that helps you make otherwise hard decisions&lt;sup&gt;&lt;a href=&quot;#asides-and-references&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/public/assets/rishis-ideal-cone-of-software.drawio.png&quot; alt=&quot;Rishi&apos;s Ideal Cone of Software&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Following this mechanism, we get the following rules of thumb:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;More frequently changing software should probably be implemented in a less complex way&lt;/li&gt;
+  &lt;li&gt;Having less complex units probably means that you will be having more of them, which means you’d probably have more segmented or “distant” units the closer you get to your front-office. (This feeds in nicely to a different rule of thumb I use (for better or for worse) that frontends should be as dumb as possible, but I digress)&lt;/li&gt;
+  &lt;li&gt;You’d want more efficiency at your core, which likely means you have leeway to draft more complex solutions in your back-office to keep your operation (in the mid-office) running smoothly and efficiently&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;tldr&quot;&gt;TL;DR&lt;/h1&gt;
+
+&lt;p&gt;Using the mechanism of the “Ideal cone of software” could help provide rules of thumb when making decisions on how much to invest in making things efficient while allowing the right things in your software stack to be maintainable for the next engineer/team after you/yours moves on to the next stack.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- FIN -&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;asides-and-references&quot;&gt;Asides and References&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;a ‘rule-of-thumb’ is defined as “a &lt;a href=&quot;https://dictionary.cambridge.org/dictionary/english/practical&quot; title=&quot;practical&quot;&gt;practical&lt;/a&gt; and &lt;a href=&quot;https://dictionary.cambridge.org/dictionary/english/approximate&quot; title=&quot;approximate&quot;&gt;approximate&lt;/a&gt; way of doing or &lt;a href=&quot;https://dictionary.cambridge.org/dictionary/english/measure&quot; title=&quot;measuring&quot;&gt;measuring&lt;/a&gt; something” by Cambridge Dictionary.&lt;/li&gt;
+  &lt;li&gt;hopefully I am maturing, but is there really ever any way of knowing that are?&lt;/li&gt;
+  &lt;li&gt;no, you’re thinking of &lt;a href=&quot;https://parksandrecreation.fandom.com/wiki/The_Cones_of_Dunshire_(game)&quot;&gt;“cones of dunshire”&lt;/a&gt;…&lt;/li&gt;
+  &lt;li&gt;in my opinion…&lt;/li&gt;
+  &lt;li&gt;because everything is better with dessert…&lt;/li&gt;
+  &lt;li&gt;look at me channeling my inner project manager…lol&lt;/li&gt;
+  &lt;li&gt;I wonder if this is wisdom or trauma.&lt;/li&gt;
+  &lt;li&gt;This is “pseudo” because I don’t claim to be a mathematician and I don’t want people that do to come after me. They happen to be pretty smart so they’d probably find a way&lt;/li&gt;
+  &lt;li&gt;Phil Karlton&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Inversion of Control, by any other name...</title>
+   <link href="http://localhost:4000/2024/08/18/inversion-of-control/"/>
+   <updated>2024-08-18T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2024/08/18/inversion-of-control</id>
+   <content type="html">&lt;p&gt;We often hear (at every bloody interview) about the SOLID Principles. It’s regarded by some as the major driving force of good software. But why do so many engineers get (at the very least) 1/5 of the principles wrong at a fairly consistent rate?&lt;/p&gt;
+
+&lt;h1 id=&quot;the-d-in-solid&quot;&gt;The D in SOLID&lt;/h1&gt;
+
+&lt;p&gt;SOLID stands for:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Single Responsibility&lt;/li&gt;
+  &lt;li&gt;Open/Closed Principle&lt;/li&gt;
+  &lt;li&gt;Lisckov Substitution Principle&lt;/li&gt;
+  &lt;li&gt;Interface Segregation&lt;/li&gt;
+  &lt;li&gt;Dependency Inversion&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If I had a coin for every instance an engineer has told me that the last “D” in SOLID stands for Dependency Injection, I’d have 20 coins (I’m young, sue me).&lt;/p&gt;
+
+&lt;h1 id=&quot;by-any-other-name&quot;&gt;By any other name…&lt;/h1&gt;
+
+&lt;p&gt;Enter the other name for Dependency Inversion…Inversion Of Control.&lt;/p&gt;
+
+&lt;p&gt;I lie here a bit. Rather than a synonymic term, Inversion of Control is to Dependency Inversion, what the ocean is to a sea. A bit of history, &lt;a href=&quot;https://martinfowler.com/articles/injection.html&quot;&gt;Martin Fowler popularized the term in his blog&lt;/a&gt; around 2004, along with outlining the &lt;strong&gt;Dependency Injection PATTERN&lt;/strong&gt;. He ‘concretised’ the IoC principle by making it tangible to a real use case - the management of dependencies.&lt;/p&gt;
+
+&lt;p&gt;Re-enter &lt;em&gt;Dependency Inversion&lt;/em&gt;. This became a semi-concrete term for inverting control of dependencies. Since Dependency Management is where the IoC principle is (arguably) the most useful and tangible, the name has become popularized into a synonym for IoC (I suspect to complete the acronym ‘SOLID’, which I actually appreciate tbh. The word ‘SOLII’ sounds a bit flimsy imo).&lt;/p&gt;
+
+&lt;h1 id=&quot;yet-another-explanation-of-ioc&quot;&gt;Yet Another Explanation of IoC&lt;/h1&gt;
+
+&lt;p&gt;The net is ripe with much much much better explanations and definitions of IoC. Here is yet another one:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Inversion of Control outlines where ownership of execution should live within the design of a system. It advises that implementation details be isolated to the implementor and hidden from the driver, with the implementor accepting a command to do something from a driver, rather than exact instructions detailing how to do it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Basically, to quote Jedi Master Fowler, its the “hollywood principle”. “Don’t call us, we’ll call you”.&lt;/p&gt;
+
+&lt;p&gt;Where the term “Dependency Inversion” shines at a software implementation level, the term “Inversion of Control” shines at the “integration between software” level. I’ve personally found the most use (not that other implementations are not useful) in integrations between multiple systems, particularly where these systems are owned by different teams. The principle can help direct questions where there might be 2 good answers.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Opinion - Api's as Dependencies</title>
+   <link href="http://localhost:4000/2023/09/10/api-as-dependency/"/>
+   <updated>2023-09-10T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2023/09/10/api-as-dependency</id>
+   <content type="html">&lt;p&gt;A little while back, I came across a beautiful concept on the &lt;a href=&quot;https://se-radio.net/&quot;&gt;Software Engineering Radio podcast&lt;/a&gt;.
+The topic was &lt;a href=&quot;https://se-radio.net/2023/10/se-radio-587-m-scott-ford-on-managing-dependency-freshness/&quot;&gt;Managing Dependency Freshness&lt;/a&gt; which spoke about how we could better manage dependencies within and beyond our software systems.
+the concept that caught my attention however, was “Api’s as Dependencies”.&lt;/p&gt;
+
+&lt;p&gt;Here are some thoughts.&lt;/p&gt;
+
+&lt;h1 id=&quot;apis&quot;&gt;API’s&lt;/h1&gt;
+
+&lt;p&gt;In the ever-evolving landscape of software development, the reliance on external services and functionalities has become a cornerstone for creating robust and feature-rich applications. At the heart of this interconnected ecosystem are Application Programming Interfaces, commonly known as APIs.
+APIs play a crucial role in software development by enabling communication and interaction between different software systems.&lt;/p&gt;
+
+&lt;h2 id=&quot;as-dependencies&quot;&gt;As dependencies&lt;/h2&gt;
+
+&lt;p&gt;When we talk about APIs as dependencies, it means that a software application relies on APIs to perform certain functions or access specific services. These APIs become dependencies for the application because they are essential for the application to function as intended.
+As a mental model, the management of API’s have the same problem statements as managing a normal library which is to say that inversion of control becomes your biggest assistant to sane maintenance of API dependencies.&lt;/p&gt;
+
+&lt;p&gt;A lot of these are somewhat obvious statements - but no less useful because of it.&lt;/p&gt;
+
+&lt;h1 id=&quot;a-possible-avenue-to-implement-this&quot;&gt;A possible avenue to implement this&lt;/h1&gt;
+
+&lt;p&gt;Clients. Clients everywhere!&lt;/p&gt;
+
+&lt;p&gt;An *api client is probably the easiest key to unlocking inversion of control and enabling controlled versioning. I believe I can make life simpler if - for every Api I build - an ‘Api Client’ is built with it. The dependant systems should only ‘speak’ to my api through this Client - which is distributed through a package manager and is well versioned.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Edits as revised on 13 June 2025&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;*When I said ‘api client’ I really meant API SDK. I think at the time the ‘SDK’ connection didn’t click in my head as “API as a Dependency” was a novel (albeit obvious in hindsight) mental model different from what I used to conceptualize at the time.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>ABC’s - Deploying Front Ends (featuring EC2)</title>
@@ -99,7 +1075,7 @@
 &lt;h2 id=&quot;brief&quot;&gt;Brief&lt;/h2&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Occam’s razor, Ockham’s razor, Ocham’s razor (Latin: novacula Occami), also known as the principle of parsimony or the law of parsimony (Latin: lex parsimoniae), is the problem-solving principle that “entities should not be multiplied beyond necessity” - Our trusty pal &lt;a href=&quot;https://en.wikipedia.org/wiki/Occam's_razor&quot;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;Occam’s razor, Ockham’s razor, Ocham’s razor (Latin: novacula Occami), also known as the principle of parsimony or the law of parsimony (Latin: lex parsimoniae), is the problem-solving principle that “entities should not be multiplied beyond necessity” - Our trusty pal &lt;a href=&quot;https://en.wikipedia.org/wiki/Occam&apos;s_razor&quot;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Tl;dr, Occam’s Razor basically says that creating complexity is usually unnecessary and sometimes detrimental to the performance of your system.&lt;/p&gt;
@@ -136,7 +1112,7 @@
 
 &lt;h3 id=&quot;downsides&quot;&gt;Downsides&lt;/h3&gt;
 
-&lt;p&gt;The first issue is the matter of grading. This requires some form of intimacy with the data before training and if the data is graded poorly or not properly split up, or if the training speed is too fast or too slow, it may have no effect. Thus we’ve introduced even more annoying hyperparamters to the mix.&lt;/p&gt;
+&lt;p&gt;The first issue is the matter of grading. This requires some form of intimacy with the data before training and if the data is graded poorly or not properly split up, or if the training speed is too fast or too slow, it may have no effect. Thus we’ve introduced even more annoying hyperparameters to the mix.&lt;/p&gt;
 
 &lt;p&gt;The second issue makes the first one even more annoying. This method increases learning time significantly (and here ‘significantly’ is an understatement), which might not be feasible for larger models and make tuning much more tedious.&lt;/p&gt;
 
@@ -245,7 +1221,7 @@ console.log(check.not().f().and().t().result);
         if (this._la) throw &quot;Chaining multiple binary operators is not allowed&quot;;
         //This is just to allow for closure resolution to ensure that the function will retain the correct value of result
         let res = this.result;
-        //The Looahead function in question. 'exp' is the result of a subsequent unary operation
+        //The Looahead function in question. &apos;exp&apos; is the result of a subsequent unary operation
         this._la = function(exp) {
             return res &amp;amp;&amp;amp; exp;
         };
@@ -267,7 +1243,7 @@ console.log(check.not().f().and().t().result);
         if (this._la) throw &quot;Chaining multiple binary operators is not allowed&quot;;
         //This is just to allow for closure resolution to ensure that the function will retain the correct value of result
         let res = this.result;
-        //The Looahead function in question. 'exp' is the result of a subsequent unary operation
+        //The Looahead function in question. &apos;exp&apos; is the result of a subsequent unary operation
         this._la = function(exp) {
             return res &amp;amp;&amp;amp; exp;
         };
@@ -317,7 +1293,7 @@ console.log(check.tautology().and().tautology().result);
         if (this._la) throw &quot;Chaining multiple binary operators is not allowed&quot;;
         //This is just to allow for closure resolution to ensure that the function will retain the correct value of result
         let res = this.result;
-        //The Looahead function in question. 'exp' is the result of a subsequent unary operation
+        //The Looahead function in question. &apos;exp&apos; is the result of a subsequent unary operation
         this._la = function(exp) {
             return res &amp;amp;&amp;amp; exp;
         };
@@ -328,7 +1304,7 @@ console.log(check.tautology().and().tautology().result);
         if (this._la) throw &quot;Chaining multiple binary operators is not allowed&quot;;
         //This is just to allow for closure resolution to ensure that the function will retain the correct value of result
         let res = this.result;
-        //The Looahead function in question. 'exp' is the result of a subsequent unary operation
+        //The Looahead function in question. &apos;exp&apos; is the result of a subsequent unary operation
         this._la = function(exp) {
             return res || exp;
         };
@@ -501,10 +1477,10 @@ var Rule2 = new fcheck().addRule(&quot;isScenarioA&quot;, function () {
     return flagB == true;
 });
 
-var BusinessValidations = new fcheck().addRule('rule1', function () {
+var BusinessValidations = new fcheck().addRule(&apos;rule1&apos;, function () {
     return Rule1.isScenarioA().result;
 })
-.addRule('rule2', function () {
+.addRule(&apos;rule2&apos;, function () {
     return Rule2.isScenarioA().result;
 });
 &lt;/code&gt;&lt;/pre&gt;
@@ -520,6 +1496,86 @@ var BusinessValidations = new fcheck().addRule('rule1', function () {
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;And that’s it. Thanks for sticking around to this sentence. If you, the reader, has any thoughts on this implementation or a better way to do this (besides just using a library…I do know that I can and that’s not the point here), please do reach out and let me know on my socials found somewhere on this site.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Concept Dictionary - 2021</title>
+   <link href="http://localhost:4000/2021/08/05/dictionary/"/>
+   <updated>2021-08-05T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2021/08/05/dictionary</id>
+   <content type="html">&lt;div class=&quot;markdown-alert markdown-alert-note&quot;&gt;&lt;p class=&quot;markdown-alert-title&quot;&gt;&lt;svg class=&quot;octicon octicon-info&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt; Note&lt;/p&gt;&lt;p&gt;This is more for my own reference then for others to read.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;micro-frontends&quot;&gt;Micro-frontends&lt;/h1&gt;
+&lt;p&gt;A micro-frontend is an abstract encapsulation of a single domain that should have a single responsibility in UI form.
+This mimics the definition of a microservice, however the logistics of a frontend are more involved as the user experience should be immutable over multiple channels if possible.
+This means that if you have a micro-frontend that is used in Platform A, it should provide the same functionality, in the same fashion on Platform B with the same client experience.&lt;/p&gt;
+
+&lt;p&gt;This is, however, not always realistic. Consider the case of mobile vs web channels, where web might not have the same capabilities as it’s counterpart, such as gyroscope/biometrics.
+Here, our &lt;em&gt;most&lt;/em&gt; ideal world would be one where the gaps that exist in various channels are trivial to either fill or ignore due to a correct level of modularity existing within the system design.&lt;/p&gt;
+
+&lt;h1 id=&quot;micro-services&quot;&gt;Micro-services&lt;/h1&gt;
+&lt;p&gt;A microservice is an abstract encapsulation of a single domain that should have a single responsibility in a service form. There are different types of microservices.
+Care must be taken to distinguish between a ‘service’ and a ‘micro’ service, as oftentimes the former is wrongly used interchangeably with the latter.&lt;/p&gt;
+
+&lt;h1 id=&quot;web-components&quot;&gt;Web Components&lt;/h1&gt;
+&lt;p&gt;A browser native protocol that creates a separate, embedded element that holds logic and hides the implementation from the main DOM.
+The embedded element Is given a ‘Shadow DOM’.
+The Shadow DOM is embedded into the main page by the browser which looks for a custom element tag that is registered with the DOM using the built-in functions.&lt;/p&gt;
+
+&lt;h1 id=&quot;unidirectional-data-flow&quot;&gt;Unidirectional Data-flow&lt;/h1&gt;
+&lt;p&gt;Unidirectional data flow restricts the flow of data to flow in one direction with a limited modus operandi for manipulating state.
+For example, only allowing state to change with the use of actions creates a flow that can, in theory, be easily tracked (find the action, find the change in state).&lt;/p&gt;
+
+&lt;p&gt;Data flow is an integral and often overlooked concept. Controlling the flow of data comes with many benefits, namely:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Enhanced logging&lt;/li&gt;
+  &lt;li&gt;Auditing and debugging of internal machinations&lt;/li&gt;
+  &lt;li&gt;Adding enhanced user experience, for example, replay functionality and undo/redo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;backend-for-frontend&quot;&gt;Backend-for-frontend&lt;/h1&gt;
+&lt;p&gt;There is extensive literature for this concept online, most of which describes a BFF as a fully dedicated API with the sole purpose of supporting a singular channel of interaction.
+This inverts control of business logic by decoupling UX concerns from Domain Logic and having singularly responsible services for each.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;[!In my opinion]
+The language that these API’s speak must be consistent. This means that the format and syntax that is used by the data given by the API should be the same that it accepts for commands.
+Practically, this means that if you have an API X with route GET A providing data of type T (where T is a model with some structure), route POST B must accept model of type T as well.
+This eliminates a massive amount of code on the front-end and ensures minimal logic on the frontend side, giving consistency across channels with lightweight implementations in my experience.&lt;/p&gt;
+
+  &lt;p&gt;Remember, the goal of a BFF is to make the frontend as “dumb” as possible w.r.t. Domain Logic so it can be “smart” at user interaction.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;strangler-fig-design-pattern&quot;&gt;Strangler Fig Design Pattern&lt;/h1&gt;
+&lt;p&gt;This is a pattern used to transform or modernize legacy monolithic systems, coined as such by Martin Fowler.
+The basic concept is to:
+Prepare the legacy monolith by wrapping it in regression tests
+Remove all direct instantiations and introduce dependency inversion
+Rewrite logical units in a piecewise fashion and deprecate the old api’s over time
+This pattern is powerful but slightly complex to implement with UI’s, however, micro-frontend architectures alleviate a lot of complexity when done right.&lt;/p&gt;
+
+&lt;h1 id=&quot;modular-frontends&quot;&gt;Modular Frontend’s&lt;/h1&gt;
+
+&lt;p&gt;There are 3 tiers of UI’s that would enable mobility in a distributed multichannel architecture.&lt;/p&gt;
+
+&lt;h2 id=&quot;tier-1-shell&quot;&gt;Tier 1: Shell&lt;/h2&gt;
+&lt;p&gt;This handles the context and should be as ‘dumb’ as possible, only handling Auth and User Profiles at most. The main purpose for this type of UI is to hold a collection of higher-level UI’s to consolidate user journeys.&lt;/p&gt;
+
+&lt;h2 id=&quot;tier-2-micro-frontend&quot;&gt;Tier 2: Micro-frontend&lt;/h2&gt;
+&lt;p&gt;This is a single domain UI that ideally holds only 1 user journey end-to-end. These UI’s would get their context from a lower level UI (like the shell) and orchestrate their own data. Ideally these would match up 1 to 1 with a User Journey Micro-service.&lt;/p&gt;
+
+&lt;h2 id=&quot;tier-3-components&quot;&gt;Tier 3: Components&lt;/h2&gt;
+&lt;p&gt;These are single units of functionality and are ideally context-free pure functions. This is to enable DRY code to distribute functionality across micro-frontends.&lt;/p&gt;
+
+&lt;h2 id=&quot;additional-misc-concepts&quot;&gt;Additional Misc Concepts&lt;/h2&gt;
+
+&lt;h3 id=&quot;ui-context&quot;&gt;UI Context&lt;/h3&gt;
+&lt;p&gt;All modular UI’s will need context to function. This is the smallest piece of data that will allow a modular UI to orchestrate it’s own information. It is important to note that, for better user experience, the UI’s should be static across changing context. This means that if a Shell changes from Context A to Context B, a higher tier UI should be able to handle this change without having to reload, with minimal requests to the backend as possible.&lt;/p&gt;
+
+&lt;h3 id=&quot;inversion-of-control&quot;&gt;Inversion of Control&lt;/h3&gt;
+&lt;p&gt;Inversion of Control is used to increase the modularity of the program and makes it extensible. This is a very important and overlooked concept when bundling modular UI’s into a single application. Since there should only exist a single context across all modules, IoC gives a safe way for these UI’s to gain context from each other. Additionally, event sourcing via an IoC interface is preferable due to the inherent decoupling of this method of inter-process communication.&lt;/p&gt;
 </content>
  </entry>
  

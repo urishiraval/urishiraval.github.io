@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<script type="text/javascript" async 
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?
+config=TeX-AMS-MML_HTMLorMML"></script>
 <html lang="en-us">
 
   <head>
@@ -6,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTB3VMREDK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -69,7 +72,9 @@
 
     <style>
   .sidebar {
-    border-left: 0.3rem solid rgb(255, 77, 0);
+    /* border-left: 0.3rem solid rgb(255, 77, 0); */
+    /* border-left: 0.4rem solid; */
+    /* border-image: linear-gradient(to bottom, rgb(156, 95, 178) 90%, rgb(255, 77, 0) 10%) 1; */
   }
 
   .my-2 {
@@ -121,6 +126,10 @@
           
         
       
+        
+          
+        
+      
 
       <a class="sidebar-nav-item" href="/blog">Blog</a>
 
@@ -129,9 +138,31 @@
   </div>
 </div>
 
+<script lang="js">
+  //Random border color split every time the page loads
+  let random1 = Math.floor(Math.random() * 100) + 1;
+  let first = random1;
+  let second = 100-random1;
+
+  console.log(`Border color split: ${first}% - ${second}%`);
+
+  const sidebar = document.querySelectorAll('.sidebar');
+  sidebar.forEach(sb => {
+    sb.style.borderRight = "0.4rem solid";
+    sb.style.borderImage = `linear-gradient(to bottom, rgb(156, 95, 178) ${first}%, rgb(255, 77, 0) ${second}%) 1`;
+  });
+</script>
+
 
     <div class="content container">
-      <div class="post">
+      <style>
+  ::selection {
+    background: rgba(156, 95, 178, 0.7);
+    color: #fff;
+  }
+</style>
+
+<div class="post">
   <h1 class="post-title">ABC’s - Deploying Front Ends (featuring EC2)</h1>
   <span class="post-date">09 Dec 2021</span>
   <div class="post-tags">
@@ -229,16 +260,23 @@
   <ul class="related-posts">
     
       <li>
-        <a href="/2021/12/02/curriculum-learning/">
-          Novel Techniques - Curriculum Learning
-          <small>02 Dec 2021</small>
+        <a href="/2025/08/17/science-and-value/">
+          The Scientific Method and Value-based Software Engineering - A novice take
+          <small>17 Aug 2025</small>
         </a>
       </li>
     
       <li>
-        <a href="/2021/08/23/fluent-validation-1/">
-          Starting from Scratch - Fluent Validation
-          <small>23 Aug 2021</small>
+        <a href="/2025/08/10/simplify-mundane-for-value/">
+          Simplify mundane thing A if you want to do valuable thing B
+          <small>10 Aug 2025</small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2025/08/04/igloos-and-sculpts/">
+          Of Igloos and Ice-sculptures
+          <small>04 Aug 2025</small>
         </a>
       </li>
     

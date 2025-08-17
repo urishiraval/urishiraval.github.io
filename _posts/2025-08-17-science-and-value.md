@@ -43,51 +43,34 @@ Create a summary of the SDLC based on all of these articles - add references to 
 
 Herewith - the AI generated content:
 
-> [!WARNING] 
-> 
-> AI Generated Content here
-
-
+> [!WARNING] AI Generated Content here
+>
 >## 1. What Is the SDLC?
->
 >The **SDLC** is a structured, systematic process used by development teams to design, build, deliver, and maintain software efficiently, balancing cost, time, and quality. Its goal is to ensure software meets customer and stakeholder expectations while minimizing risk.  
-([aws.amazon.com](https://aws.amazon.com/what-is/sdlc/), [github.com](https://github.com/resources/articles/software-development/what-is-sdlc), [ibm.com](https://www.ibm.com/think/topics/sdlc), [geeksforgeeks.org](https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/), [en.wikipedia.org](https://en.wikipedia.org/wiki/Systems_development_life_cycle))
->
+>([aws.amazon.com](https://aws.amazon.com/what-is/sdlc/), [github.com](https://github.com/resources/articles/software-development/what-is-sdlc), [ibm.com](https://www.ibm.com/think/topics/sdlc), [geeksforgeeks.org](https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/), [en.wikipedia.org](https://en.wikipedia.org/wiki/Systems_development_life_cycle))
 >## 2. Common Phases of SDLC
->
 >Most sources identify these core phases, though names and counts may vary:
->
 >### Planning & Requirements Analysis
 >- Includes **feasibility study**, stakeholder interviews, cost-benefit analysis, requirement gathering, and documentation (e.g., SRS).  
->  ([aws.amazon.com](https://aws.amazon.com/what-is/sdlc/), [github.com](https://github.com/resources/articles/software-development/what-is-sdlc), [ibm.com](https://www.ibm.com/think/topics/sdlc), [geeksforgeeks.org](https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/), [en.wikipedia.org](https://en.wikipedia.org/wiki/Systems_development_life_cycle))
->
+>([aws.amazon.com](https://aws.amazon.com/what-is/sdlc/), [github.com](https://github.com/resources/articles/software-development/what-is-sdlc), [ibm.com](https://www.ibm.com/think/topics/sdlc), [geeksforgeeks.org](https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/), [en.wikipedia.org](https://en.wikipedia.org/wiki/Systems_development_life_cycle))
 >### Design
 >- Involves choosing architecture, tools, modularization, UML, data flow diagrams, prototyping, threat modeling. Produces design documentation like SDD or architectural blueprints.  
->  ([ibm.com](https://www.ibm.com/think/topics/sdlc?utm_source=chatgpt.com))
->
+>([ibm.com](https://www.ibm.com/think/topics/sdlc?utm_source=chatgpt.com))
 >### Implementation / Coding / Construction
 >- Developers write code following the design specs. Best practices include version control, code reviews, refactoring, and using IDEs or AI tools.  
->  ([aws.amazon.com](https://aws.amazon.com/what-is/sdlc/), [github.com](https://github.com/resources/articles/software-development/what-is-sdlc), [ibm.com](https://www.ibm.com/think/topics/sdlc), [en.wikipedia.org](https://en.wikipedia.org/wiki/Systems_development_life_cycle))
->
+>([aws.amazon.com](https://aws.amazon.com/what-is/sdlc/), [github.com](https://github.com/resources/articles/software-development/what-is-sdlc), [ibm.com](https://www.ibm.com/think/topics/sdlc), [en.wikipedia.org](https://en.wikipedia.org/wiki/Systems_development_life_cycle))
 >### Testing (Acceptance)
 >- Conducts unit, integration, system, and user acceptance testing to uncover defects. Increasingly combined with automation and continuous testing, including security checks (DevSecOps).  
->  ([aws.amazon.com](https://aws.amazon.com/what-is/sdlc/?utm_source=chatgpt.com))
->
+>([aws.amazon.com](https://aws.amazon.com/what-is/sdlc/?utm_source=chatgpt.com))
 >### Deployment
 >- Moves software into production through packaging, configuration, release management, and user training or transition planning.  
->  ([aws.amazon.com](https://aws.amazon.com/what-is/sdlc/), [github.com](https://github.com/resources/articles/software-development/what-is-sdlc), [ibm.com](https://www.ibm.com/think/topics/sdlc), [en.wikipedia.org](https://en.wikipedia.org/wiki/Systems_development_life_cycle))
->
+>([aws.amazon.com](https://aws.amazon.com/what-is/sdlc/), [github.com](https://github.com/resources/articles/software-development/what-is-sdlc), [ibm.com](https://www.ibm.com/think/topics/sdlc), [en.wikipedia.org](https://en.wikipedia.org/wiki/Systems_development_life_cycle))
 >### Maintenance / Support
 >- Post-deployment phase: fixing bugs, updates, performance and security monitoring, ongoing improvements. May loop back to earlier phases.  
->  ([aws.amazon.com](https://aws.amazon.com/what-is/sdlc/), [github.com](https://github.com/resources/articles/software-development/what-is-sdlc), [ibm.com](https://www.ibm.com/think/topics/sdlc), [geeksforgeeks.org](https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/), [en.wikipedia.org](https://en.wikipedia.org/wiki/Systems_development_life_cycle))
->
+>([aws.amazon.com](https://aws.amazon.com/what-is/sdlc/), [github.com](https://github.com/resources/articles/software-development/what-is-sdlc), [ibm.com](https://www.ibm.com/think/topics/sdlc), [geeksforgeeks.org](https://www.geeksforgeeks.org/software-engineering/software-development-life-cycle-sdlc/), [en.wikipedia.org](https://en.wikipedia.org/wiki/Systems_development_life_cycle))
 >### (Optional) Decommission
 >- The system is retired when it reaches end of life.  
->  ([en.wikipedia.org](https://en.wikipedia.org/wiki/Systems_development_life_cycle?utm_source=chatgpt.com))
-
-> [!WARNING]
->
-> END OF AI GENERATED CONTENT
+>([en.wikipedia.org](https://en.wikipedia.org/wiki/Systems_development_life_cycle?utm_source=chatgpt.com))
 
 
 Say what you will about AI, it's not too shabby at doing time consuming summaries for meaningless blogs with no purpose except to satisfy an obnoxious engineer's need to spew opinions, lest he explode from holding it in.

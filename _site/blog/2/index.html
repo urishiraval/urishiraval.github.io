@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<script type="text/javascript" async 
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?
+config=TeX-AMS-MML_HTMLorMML"></script>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTB3VMREDK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RTB3VMREDK');
+  </script>
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Blog &middot; Ushir (Rishi) Raval
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <script src="https://kit.fontawesome.com/943e35d59f.js" crossorigin="anonymous"></script>
+
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/unalome.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-dark.min.css" integrity="sha512-Njdz7T/p6Ud1FiTMqH87bzDxaZBsVNebOWmacBjMdgWyeIhUSFU4V52oGwo3sT+ud+lyIE98sS291/zxBfozKw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <link rel="stylesheet" href="/public/css/atom-dark.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-bash.min.js" integrity="sha512-/xr8BBHgclic5pEsdspPqQS8ne+X8QbYRK22c1WRDj8zERTBJDH+Ic/3o8vnrdz5yeGzlzMfp8k33tGgDaAh6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-ycl7dIZ0VJ5535/dzskAMTwOI6OoTNZ3PeD+tfckvYqMmAzaEwQfJHqJTSqcV2iQeJnp5XxnFy5jKotibstp7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/toolbar/prism-toolbar.min.js" integrity="sha512-YrvgEHAi5/3o2OT+/vh1z19oJXk/Kk0qdVKbjEFl9VRmcLTaWRYzVziZCvoGpJ2TrnV7rB8pnJcz1ioVJjgw2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha512-pUNGXbOrc+Y3dm5z2ZN7JYQ/2Tq0jppMDOUsN4sQHVJ9AUQpaeERCUfYYBAnaRB9r8d4gtPKMWICNhm3tRr4Fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <style>
+    @font-face {
+      font-family: 'Victor Mono';
+      src: url("/public/assets/VictorMono/WOFF/VictorMono-Medium.woff?raw=true");
+    }
+
+    code {
+      font-family: 'Victor Mono', monospace !important;
+    }
+  </style>
+<style>.markdown-alert{padding:.5rem 1rem;margin-bottom:1rem;color:inherit;border-left:.25em solid #30363d}.markdown-alert>:first-child{margin-top:0}.markdown-alert>:last-child{margin-bottom:0}.markdown-alert .markdown-alert-title{display:flex;font-weight:500;align-items:center;line-height:1}.markdown-alert svg{margin-right:.5rem!important}.markdown-alert svg path{fill:currentColor}.markdown-alert.markdown-alert-note{border-left-color:#4493f8}.markdown-alert.markdown-alert-note .markdown-alert-title{color:#4493f8}.markdown-alert.markdown-alert-important{border-left-color:#ab7df8}.markdown-alert.markdown-alert-important .markdown-alert-title{color:#ab7df8}.markdown-alert.markdown-alert-warning{border-left-color:#9e6a03}.markdown-alert.markdown-alert-warning .markdown-alert-title{color:#d29922}.markdown-alert.markdown-alert-tip{border-left-color:#238636}.markdown-alert.markdown-alert-tip .markdown-alert-title{color:#3fb950}.markdown-alert.markdown-alert-caution{border-left-color:#da3633}.markdown-alert.markdown-alert-caution .markdown-alert-title{color:#f85149}</style></head>
+
+
+  <body class="layout-reverse">
+
+    <style>
+  .sidebar {
+    /* border-left: 0.3rem solid rgb(255, 77, 0); */
+    /* border-left: 0.4rem solid; */
+    /* border-image: linear-gradient(to bottom, rgb(156, 95, 178) 90%, rgb(255, 77, 0) 10%) 1; */
+  }
+
+  .my-2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .mr-2 {
+    margin-right: 0.35rem;
+  }
+</style>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          Ushir (Rishi) Raval
+        </a>
+      </h1>
+      <p class="lead">Computer Scientist</p>
+    </div>
+
+    <div class="my-2">
+      <a class="mr-2" target="_blank" href="https://github.com/urishiraval"><i class="fab fa-sm fa-github"></i></a>
+      <a class="mr-2" target="_blank" href="https://www.linkedin.com/in/unraval/"><i class="fab fa-sm fa-linkedin-in"></i></a>
+      <a class="" target="_blank" href="https://www.instagram.com/rishi_raval7/"><i class="fab fa-sm fa-instagram"></i></a>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/">Home</a>
+          
+        
+      
+        
+          
+        
+      
+
+      <a class="sidebar-nav-item active" href="/blog">Blog</a>
+
+    </nav>
+
+  </div>
+</div>
+
+<script lang="js">
+  //Random border color split every time the page loads
+  let random1 = Math.floor(Math.random() * 100) + 1;
+  let first = random1;
+  let second = 100-random1;
+
+  console.log(`Border color split: ${first}% - ${second}%`);
+
+  const sidebar = document.querySelectorAll('.sidebar');
+  sidebar.forEach(sb => {
+    sb.style.borderRight = "0.4rem solid";
+    sb.style.borderImage = `linear-gradient(to bottom, rgb(156, 95, 178) ${first}%, rgb(255, 77, 0) ${second}%) 1`;
+  });
+</script>
+
+
+    <div class="content container">
+      <style>
+	.post {
+		margin-bottom: 1em;
+	}
+</style>
+
+<div class="posts">
+	
+	<div class="post">
+		<h2 class="post-title">
+			<a href="/2024/09/13/the-cone-of-software/">Some Rules of Thumb for Complex Solutions and its' Management - Ideal Cone of Software</a>
+		</h2>
+		<span class="post-date">13 Sep 2024</span>
+		<div class="post-tags">
+			
+			<small><code>#SoftwareClassification</code></small>
+			
+			<small><code>#OpEd</code></small>
+			
+			<small><code>#Thoughts</code></small>
+			
+			<small><code>#Complexity</code></small>
+			
+			<small><code>#SoftwareMaintainability</code></small>
+			
+			<small><code>#RuleOfThumb</code></small>
+			
+		</div>
+
+
+		<p>Over my relatively short tenure as a software engineer so far, I’ve had a few thoughts on how to deal with “efficiency” and “maintainability” across multiple facets within my teams’ estate. It’s lead to a useful<sup><a href="#asides-and-references">4</a></sup> rule-of-thumb<sup><a href="#asides-and-references">1</a></sup> when trying to design/make decisions about systems in a way that balances efficiency and maintainability.</p>
+
+
+
+
+		<!-- <p>Over my relatively short tenure as a software engineer so far, I’ve had a few thoughts on how to deal with “efficiency” and “maintainability” across multiple facets within my teams’ estate. It’s lead to a useful<sup><a href="#asides-and-references">4</a></sup> rule-of-thumb<sup><a href="#asides-and-references">1</a></sup> when trying to design/make decisions about systems in a way that balances efficiency and maintainability.</p>
+
+<h1 id="to-be-or-not-to-becomplex">To be, or not to be…“complex”</h1>
+
+<p>The kick here, is that software is a team sport. You want things to be maintainable across the lifespan of the <em>team</em> not necessarily the individuals that happen to be within the team at the time of a decision.</p>
+
+<p>Teams change over time. Knowledge gets lost with people. The solution never lies, but you might not be able to speak its language if you’ve lost the meaning of the words.</p>
+
+<p>This is obviously a tall ask. If an answer to a design question seems apparent, I look at it with the utmost suspicion<sup><a href="#asides-and-references">7</a></sup>. Maturing<sup><a href="#asides-and-references">2</a></sup> as an engineer has given me a couple of questions that I feel I need to consistently ask when thinking/planning the implementation details of the stack. One of them is:</p>
+
+<blockquote>
+  <p>What things do we want to be efficient and what are we comfortable compromising for the stack to be maintainable?</p>
+</blockquote>
+
+<p>Efficiency here speaks to how efficiently the system executes. Maintainability here speaks to the teams ability to keep it running.</p>
+
+<p>I suspect that efficiency often times (if not always) comes at a cost of less-maintainable solutions by virtue of adding complexity to cater for non-functional things like performance and scalability or solving complex domain problems. Examples on the non-functional side include adding caching to increase speed, or at an even lower level, using something like memoization to reduce a computationally rigorous piece of logic.</p>
+
+<p>If you agree with the above, the corollary is that designing specifically for maintainability could result in compromised efficiency. If you don’t agree, I’m always open to a socratic debate on it, but I’m going to work under the assumption of the former scenario.</p>
+
+<p>I am of the opinion that a “maintainable” solution and an “efficient” one are contrasting. Finding the right balance between the two is one of my personal goals when I assist with designing/”solutioning” software.</p>
+
+<h1 id="a-personal-glossary-of-theoretical-relationships-around-maintainability-and-efficiency">A Personal Glossary of Theoretical Relationships around Maintainability and Efficiency</h1>
+
+<p>I have a few ‘theoretical relationships’ that I like to think about and use when in design conversations but before we get into it, I need to note a few definitions to make my life easier:</p>
+
+<blockquote>
+  <p>Maintainability Factor (m) - a quantitative measure that denotes how maintainable something is.</p>
+</blockquote>
+
+<p>This can be subjective, or an effort could be made to create an objective measurement of this, but that’s going to be “de-scoped” in this read cause I don’t feel like doing that today<sup><a href="#asides-and-references">6</a></sup>.</p>
+
+<blockquote>
+  <p>‘Distant’ is used to mean that something is not immediately reachable from wherever you are at that time.</p>
+</blockquote>
+
+<p>An example of “distance” is if you have a <a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends">BFF service</a> and a corresponding frontend application, these two units are distant from each other.</p>
+
+<p><img src="http://localhost:4000/public/assets/rishis-idea-of-distance-in-software.drawio.png" alt="Rishi's idea of distance in software" /></p>
+
+<h2 id="theoretical-relationship-a---maintainability-vs-complexity">Theoretical Relationship A - Maintainability vs Complexity</h2>
+
+<blockquote>
+  <p>The more complex a solution, the less maintainable it is over time.</p>
+</blockquote>
+
+<p>I feel like this might be obvious, but for the sake of brevity…the more complex a solution is, the more knowledge about its mechanism is required. This could be domain knowledge, knowledge about how a particular technology works or even something as simple as the “why”, i.e. situational knowledge gained by being there when the decision to do something a particular way was made.</p>
+
+<p>For the more mathematically inclined, this is an inverse relationship and here is the formula using what I like to refer to as my own brand of pseudo-mathematical notation<sup><a href="#asides-and-references">8</a></sup>:</p>
+
+\[m = \frac{1}{complexity}\]
+
+<h2 id="theoretical-relationship-b---number-of-units-vs-change-frequency">Theoretical Relationship B - Number of Units vs Change Frequency</h2>
+
+<p>This is pretty straight-forward:</p>
+
+<blockquote>
+  <p>The more related units of ‘distant’ software you have, the more complex it becomes to maintain it.</p>
+</blockquote>
+
+<p>If you have related software that necessitates frequent change, the multiplicity of effort to enact that change is inversely proportional to the maintainability factor.</p>
+
+<p>Basically, having two BFF’s that you need to update is going to be more work then having a monolithic-esque MVC setup. We know that the front-office applications have a relatively higher frequency of change. This is a good example where you might want to compromise on the maintainability factor in favor of the non-functional, i.e. having BFF’s and following that pattern<sup><a href="#asides-and-references">4</a></sup>.</p>
+
+<p>Pseudo-mathematically:</p>
+
+\[m = \frac{1}{\sum units*frequency\ of\ change}\]
+
+<h2 id="theoretical-relationship-c---complexity-vs-number-of-units">Theoretical Relationship C - Complexity vs Number of Units</h2>
+
+<p>This is a bit more abstract. I’ve observed that in my lived-experience:</p>
+
+<blockquote>
+  <p>The more complex each individual unit, the less units you tend to have in total.</p>
+</blockquote>
+
+<p>Not really sure how to reword this so instead I’m just going to make a haphazard attempt at an example.</p>
+
+<p>If you design a complex function that caters for multiple scenarios, you have increased the complexity of an individual unit and decreased the need for multiple functions.</p>
+
+<p>In pseudo-math:</p>
+
+\[\sum units = \frac{1}{complexity\ per\ unit}\]
+
+<h2 id="theoretical-relationship-d---efficiency-vs-complexity">Theoretical Relationship D - Efficiency vs Complexity</h2>
+
+<p>This is arguably even more abstract:</p>
+
+<blockquote>
+  <p>Efficient solutions tend to be more complex</p>
+</blockquote>
+
+<p>Note that this is drastically different from saying that complex solutions are always more efficient. <strong>Which I am not saying.</strong></p>
+
+<p>I’ve just found that the more efficient you make something, the more complex the overall solution. A perfect example is caching from earlier in this read. I’m sure many, many, many engineers can relate, but caching has been both a nightmare to maintain and a blessing to the client experience (but maybe not always at the same moment in time).</p>
+
+<p>As an aside, a much smarter individual<sup><a href="#asides-and-references">9</a></sup> than me said: “There are only two hard things in Computer Science: cache invalidation and naming things”, and yet we still use caching because it’s useful. This speaks to a journey I often see in my more junior peers where they oscillate in the beginning from wanting to create complex and elegant solutions, to hyper simplified solutions that are really maintainable, before finally finding peace in the balance. But I digress…</p>
+
+<p>In pseudo-mathematical fashion:</p>
+
+\[efficiency = k*complexity\]
+
+<h2 id="theory---efficiency-vs-maintainability-coming-full-circle">Theory - Efficiency vs Maintainability (coming full circle)</h2>
+
+<p>From Relationship A and Relationship D we get a theory:</p>
+
+<blockquote>
+  <p>If we hold that efficiency is proportionate to complexity and maintainability is inversely proportionate to complexity, then efficiency is inversely proportional to maintainability.</p>
+</blockquote>
+
+<p>Remember that this works under the assumption that efficiency leads to complexity. Which I believe in, but you may not. Even so, however, the relationships above might prove useful for other things while this theory itself is not really that useful for much<sup><a href="#asides-and-references">4</a></sup>.</p>
+
+<h1 id="enter-pseudo-geometry---rishis-ideal-cone-of-software3">Enter Pseudo-Geometry - Rishi’s Ideal Cone of Software<sup><a href="#asides-and-references">3</a></sup></h1>
+
+<p>A cone is this:</p>
+
+<p><img src="https://dictionary.cambridge.org/images/thumb/cone_noun_002_08089.jpg?version=6.0.31" alt="Cone" /></p>
+
+<p>Now that we’ve gotten that out of the way. I combine all these pseudo-formulas above into a delightful<sup><a href="#asides-and-references">4</a></sup> little ice-cream cone that helps you make otherwise hard decisions<sup><a href="#asides-and-references">5</a></sup>.</p>
+
+<p><img src="http://localhost:4000/public/assets/rishis-ideal-cone-of-software.drawio.png" alt="Rishi's Ideal Cone of Software" /></p>
+
+<p>Following this mechanism, we get the following rules of thumb:</p>
+<ul>
+  <li>More frequently changing software should probably be implemented in a less complex way</li>
+  <li>Having less complex units probably means that you will be having more of them, which means you’d probably have more segmented or “distant” units the closer you get to your front-office. (This feeds in nicely to a different rule of thumb I use (for better or for worse) that frontends should be as dumb as possible, but I digress)</li>
+  <li>You’d want more efficiency at your core, which likely means you have leeway to draft more complex solutions in your back-office to keep your operation (in the mid-office) running smoothly and efficiently</li>
+</ul>
+
+<h1 id="tldr">TL;DR</h1>
+
+<p>Using the mechanism of the “Ideal cone of software” could help provide rules of thumb when making decisions on how much to invest in making things efficient while allowing the right things in your software stack to be maintainable for the next engineer/team after you/yours moves on to the next stack.</p>
+
+<p><strong>- FIN -</strong></p>
+
+<hr />
+
+<h3 id="asides-and-references">Asides and References</h3>
+
+<ol>
+  <li>a ‘rule-of-thumb’ is defined as “a <a href="https://dictionary.cambridge.org/dictionary/english/practical" title="practical">practical</a> and <a href="https://dictionary.cambridge.org/dictionary/english/approximate" title="approximate">approximate</a> way of doing or <a href="https://dictionary.cambridge.org/dictionary/english/measure" title="measuring">measuring</a> something” by Cambridge Dictionary.</li>
+  <li>hopefully I am maturing, but is there really ever any way of knowing that are?</li>
+  <li>no, you’re thinking of <a href="https://parksandrecreation.fandom.com/wiki/The_Cones_of_Dunshire_(game)">“cones of dunshire”</a>…</li>
+  <li>in my opinion…</li>
+  <li>because everything is better with dessert…</li>
+  <li>look at me channeling my inner project manager…lol</li>
+  <li>I wonder if this is wisdom or trauma.</li>
+  <li>This is “pseudo” because I don’t claim to be a mathematician and I don’t want people that do to come after me. They happen to be pretty smart so they’d probably find a way</li>
+  <li>Phil Karlton</li>
+</ol>
+ -->
+	</div>
+
+
+	
+	<div class="post">
+		<h2 class="post-title">
+			<a href="/2024/08/18/inversion-of-control/">Inversion of Control, by any other name...</a>
+		</h2>
+		<span class="post-date">18 Aug 2024</span>
+		<div class="post-tags">
+			
+			<small><code>#SOLID</code></small>
+			
+			<small><code>#Software Design</code></small>
+			
+			<small><code>#OpEd</code></small>
+			
+		</div>
+
+
+		<p>We often hear (at every bloody interview) about the SOLID Principles. It’s regarded by some as the major driving force of good software. But why do so many engineers get (at the very least) 1/5 of the principles wrong at a fairly consistent rate?</p>
+
+
+
+
+		<!-- <p>We often hear (at every bloody interview) about the SOLID Principles. It’s regarded by some as the major driving force of good software. But why do so many engineers get (at the very least) 1/5 of the principles wrong at a fairly consistent rate?</p>
+
+<h1 id="the-d-in-solid">The D in SOLID</h1>
+
+<p>SOLID stands for:</p>
+<ul>
+  <li>Single Responsibility</li>
+  <li>Open/Closed Principle</li>
+  <li>Lisckov Substitution Principle</li>
+  <li>Interface Segregation</li>
+  <li>Dependency Inversion</li>
+</ul>
+
+<p>If I had a coin for every instance an engineer has told me that the last “D” in SOLID stands for Dependency Injection, I’d have 20 coins (I’m young, sue me).</p>
+
+<h1 id="by-any-other-name">By any other name…</h1>
+
+<p>Enter the other name for Dependency Inversion…Inversion Of Control.</p>
+
+<p>I lie here a bit. Rather than a synonymic term, Inversion of Control is to Dependency Inversion, what the ocean is to a sea. A bit of history, <a href="https://martinfowler.com/articles/injection.html">Martin Fowler popularized the term in his blog</a> around 2004, along with outlining the <strong>Dependency Injection PATTERN</strong>. He ‘concretised’ the IoC principle by making it tangible to a real use case - the management of dependencies.</p>
+
+<p>Re-enter <em>Dependency Inversion</em>. This became a semi-concrete term for inverting control of dependencies. Since Dependency Management is where the IoC principle is (arguably) the most useful and tangible, the name has become popularized into a synonym for IoC (I suspect to complete the acronym ‘SOLID’, which I actually appreciate tbh. The word ‘SOLII’ sounds a bit flimsy imo).</p>
+
+<h1 id="yet-another-explanation-of-ioc">Yet Another Explanation of IoC</h1>
+
+<p>The net is ripe with much much much better explanations and definitions of IoC. Here is yet another one:</p>
+
+<blockquote>
+  <p>Inversion of Control outlines where ownership of execution should live within the design of a system. It advises that implementation details be isolated to the implementor and hidden from the driver, with the implementor accepting a command to do something from a driver, rather than exact instructions detailing how to do it.</p>
+</blockquote>
+
+<p>Basically, to quote Jedi Master Fowler, its the “hollywood principle”. “Don’t call us, we’ll call you”.</p>
+
+<p>Where the term “Dependency Inversion” shines at a software implementation level, the term “Inversion of Control” shines at the “integration between software” level. I’ve personally found the most use (not that other implementations are not useful) in integrations between multiple systems, particularly where these systems are owned by different teams. The principle can help direct questions where there might be 2 good answers.</p>
+ -->
+	</div>
+
+
+	
+	<div class="post">
+		<h2 class="post-title">
+			<a href="/2023/09/10/api-as-dependency/">Opinion - Api's as Dependencies</a>
+		</h2>
+		<span class="post-date">10 Sep 2023</span>
+		<div class="post-tags">
+			
+			<small><code>#Software Engineering</code></small>
+			
+			<small><code>#System Design</code></small>
+			
+			<small><code>#API</code></small>
+			
+			<small><code>#Dependency Management</code></small>
+			
+		</div>
+
+
+		<p>A little while back, I came across a beautiful concept on the <a href="https://se-radio.net/">Software Engineering Radio podcast</a>.
+The topic was <a href="https://se-radio.net/2023/10/se-radio-587-m-scott-ford-on-managing-dependency-freshness/">Managing Dependency Freshness</a> which spoke about how we could better manage dependencies within and beyond our software systems.
+the concept that caught my attention however, was “Api’s as Dependencies”.</p>
+
+
+
+
+		<!-- <p>A little while back, I came across a beautiful concept on the <a href="https://se-radio.net/">Software Engineering Radio podcast</a>.
+The topic was <a href="https://se-radio.net/2023/10/se-radio-587-m-scott-ford-on-managing-dependency-freshness/">Managing Dependency Freshness</a> which spoke about how we could better manage dependencies within and beyond our software systems.
+the concept that caught my attention however, was “Api’s as Dependencies”.</p>
+
+<p>Here are some thoughts.</p>
+
+<h1 id="apis">API’s</h1>
+
+<p>In the ever-evolving landscape of software development, the reliance on external services and functionalities has become a cornerstone for creating robust and feature-rich applications. At the heart of this interconnected ecosystem are Application Programming Interfaces, commonly known as APIs.
+APIs play a crucial role in software development by enabling communication and interaction between different software systems.</p>
+
+<h2 id="as-dependencies">As dependencies</h2>
+
+<p>When we talk about APIs as dependencies, it means that a software application relies on APIs to perform certain functions or access specific services. These APIs become dependencies for the application because they are essential for the application to function as intended.
+As a mental model, the management of API’s have the same problem statements as managing a normal library which is to say that inversion of control becomes your biggest assistant to sane maintenance of API dependencies.</p>
+
+<p>A lot of these are somewhat obvious statements - but no less useful because of it.</p>
+
+<h1 id="a-possible-avenue-to-implement-this">A possible avenue to implement this</h1>
+
+<p>Clients. Clients everywhere!</p>
+
+<p>An *api client is probably the easiest key to unlocking inversion of control and enabling controlled versioning. I believe I can make life simpler if - for every Api I build - an ‘Api Client’ is built with it. The dependant systems should only ‘speak’ to my api through this Client - which is distributed through a package manager and is well versioned.</p>
+
+<p><strong>Edits as revised on 13 June 2025</strong></p>
+
+<p>*When I said ‘api client’ I really meant API SDK. I think at the time the ‘SDK’ connection didn’t click in my head as “API as a Dependency” was a novel (albeit obvious in hindsight) mental model different from what I used to conceptualize at the time.</p>
+ -->
+	</div>
+
+
+	
+	<div class="post">
+		<h2 class="post-title">
+			<a href="/2021/12/09/deploying-frontends/">ABC’s - Deploying Front Ends (featuring EC2)</a>
+		</h2>
+		<span class="post-date">09 Dec 2021</span>
+		<div class="post-tags">
+			
+			<small><code>#ABCs</code></small>
+			
+			<small><code>#Devops</code></small>
+			
+			<small><code>#EC2</code></small>
+			
+			<small><code>#FrontEnd</code></small>
+			
+		</div>
+
+
+		<p>With Cloud infrastructure becoming ultra-available, deploying apps have become super easy and as such the deployment/devops space (in my opinion) is going to get pretty interesting in the next few years (since I believe that trivializing the basics makes a breeding ground for creativity). I wanted to document how I’ve been deploying my side projects (very basic apps, prototypes and POCs) for posterity.</p>
+
+
+
+
+		<!-- <p>With Cloud infrastructure becoming ultra-available, deploying apps have become super easy and as such the deployment/devops space (in my opinion) is going to get pretty interesting in the next few years (since I believe that trivializing the basics makes a breeding ground for creativity). I wanted to document how I’ve been deploying my side projects (very basic apps, prototypes and POCs) for posterity.</p>
+
+<h2 id="step-1-prep-your-server">Step 1: Prep your server</h2>
+
+<p>Before you think about deploying your app, you need to configure your server. This means:</p>
+
+<ol>
+  <li>Getting Nginx or Apache</li>
+  <li>Configuring your ports</li>
+  <li>If deploying multiple apps, configuring a reverse proxy</li>
+  <li>If you have a domain, configuring your DNS and getting SSL certificates for HTTPS</li>
+</ol>
+
+<p>Points 3 and 4 are out of this scope, but I’ll probably write something about those in the future (tbh, I’m too lazy to get into it now).</p>
+
+<p>I prefer to use Nginx, just because it’s so much simpler to configure, and allows you to do the reverse proxy-ing much quicker. So this article will focus more on that rather than apache, which is also a fine tool, don’t get me wrong.</p>
+
+<p>If on ubuntu:</p>
+
+<pre><code class="language-bash">sudo apt-install nginx
+</code></pre>
+<p>If on EC2 (which I often am) go to the <code>Security Policy</code> that was configured when you instantiated the server and check out the <code>Outbound</code> tab. From here you can configure any port you want for TCP or UDP and there is plenty of docs to get you straight for that.</p>
+
+<p>Your Nginx setup will auto-magically configure your HTTP port for your server (Port 88) and will also use the default folder that is used by Apache 2 by default (more on that later).</p>
+
+<h2 id="step-2-build-your-project">Step 2: Build your project</h2>
+
+<p>This obviously depends on what framework you use, but most all modern ones use either Webpack, Rollup or something similar under the hood.</p>
+
+<p>Now all you need to know is that these build tools generate a “bundled” version of your code, which in essence are 1 or 2 files (or a similarly small amount of large files) that contain the entirety of your codebase created in a folder with all your assets (such as images or css and the like). In the case of Typescript projects, this will be compiled down to javascript.</p>
+
+<p>This “bundle” or file is what your server is concerned with. It’s the deployable artefact that needs to be “published”.</p>
+
+<p>For Svelte and React:</p>
+<pre><code class="language-bash">npm run build
+</code></pre>
+<p>For Angular 2:</p>
+<pre><code class="language-bash">ng build .
+</code></pre>
+
+<h2 id="step-3-publishing-your-artifacts">Step 3: Publishing your Artifacts</h2>
+
+<p>As the heading suggests, you’re now able to get your app onto the server to be accessible from the public url.</p>
+
+<p>“Publish” in this context (and usually in most situations) just means copying the artefact into a publicly accessible folder, which is the endpoint configured in Apache or Nginx. In linux this is almost always <code>/var/www/html/*</code></p>
+
+<p>The simplest, most basic way to do this (in my opinion) is to just FTP into your server and copy the files. In a production environment ideally you’d use a CI/CD-esque tool like AWS Codestar, GitHub Actions or Azure Devops Pipelines, but when you’re just wanting to deploy a small prototype or POC, §“ain’t nobody got time for that”.</p>
+
+<p>I’ll be using <code>sftp</code> from the terminal. You can use something like Filezilla or other GUI ftp apps, but I’m lazy and I also don’t like installing extra apps if there’s a perfectly fine solution out of the box.</p>
+
+<p>If on EC2, change to the directory that contains your <code>public</code> files (or whatever your framework generated from the previous step) and:</p>
+<pre><code class="language-bash">sftp -i &lt;path to your pem key file here&gt; ubuntu@&lt;your EC2 public domain here&gt;:/var/www/html/
+</code></pre>
+
+<p>If you’re using the Amazon Linux image you can substitute <code>ubuntu</code> for <code>user</code>. If you don’t know how to get your key file, check out the docs on how to connect with SSH. It’s basically the same process and the pem file works for most everything to do with connecting remotely to your instance.</p>
+
+<p>Next you want to actually transfer the files:</p>
+<pre><code class="language-bash">put -r public/*
+</code></pre>
+
+<p>Wait for that to complete and then exit <code>sftp</code> (usually Ctrl-C or <code>exit</code>) and restart nginx for good measure:</p>
+<pre><code class="language-bash">sudo service nginx restart
+</code></pre>
+
+<p>I’ve found that restarting nginx will invalidate client side caching so that the user doesn’t have to hard-refresh the browser if they log on with an active cache.</p>
+
+<h2 id="closing-remarks">Closing Remarks</h2>
+
+<p>There you go. You have an admittedly basic but super (and here ‘super’ means ‘relatively’) pain free prototype that is publicly accessible (or as accessible as you configure the EC2 security policy to be) and easy to run and update. If you’re reading this, hope it helped!</p>
+ -->
+	</div>
+
+
+	
+	<div class="post">
+		<h2 class="post-title">
+			<a href="/2021/12/02/curriculum-learning/">Novel Techniques - Curriculum Learning</a>
+		</h2>
+		<span class="post-date">02 Dec 2021</span>
+		<div class="post-tags">
+			
+			<small><code>#NovelTechniques</code></small>
+			
+			<small><code>#AI</code></small>
+			
+		</div>
+
+
+		<p>In Neural Network Optimization, most academics have moved on to more novel methods such as Deep Neural Nets and Cascading Networks. However, some techniques can be used to optimise more basic Simple Neural Networks that fall in line with Occam’s Razor. One of them is Curriculum Learning.</p>
+
+
+
+
+		<!-- <p>In Neural Network Optimization, most academics have moved on to more novel methods such as Deep Neural Nets and Cascading Networks. However, some techniques can be used to optimise more basic Simple Neural Networks that fall in line with Occam’s Razor. One of them is Curriculum Learning.</p>
+
+<h2 id="brief">Brief</h2>
+
+<blockquote>
+  <p>Occam’s razor, Ockham’s razor, Ocham’s razor (Latin: novacula Occami), also known as the principle of parsimony or the law of parsimony (Latin: lex parsimoniae), is the problem-solving principle that “entities should not be multiplied beyond necessity” - Our trusty pal <a href="https://en.wikipedia.org/wiki/Occam's_razor">Wikipedia</a></p>
+</blockquote>
+
+<p>Tl;dr, Occam’s Razor basically says that creating complexity is usually unnecessary and sometimes detrimental to the performance of your system.</p>
+
+<p>Tl;dr the Tl;dr: Simple is usually best.</p>
+
+<p>In this case, Curriculum learning aims to improve model performance through a novel training technique that requires an empirical grading of your training data. After all, throwing things at a model and just expecting is to work seems like a very maddening way to get it to perform better (at least to me). This post will by no means be an exhaustive explication of the technique, for that please read one of the papers referenced at the end.</p>
+
+<h2 id="understanding-the-basics">Understanding the Basics</h2>
+
+<p>Training a Neural Network usually involves:</p>
+<ol>
+  <li>Data Preparation</li>
+  <li>Training</li>
+  <li>Evaluation</li>
+</ol>
+
+<p>The latter 2 usually occurring over multiple iterations of the network with different hyperparameters. Curriculum Learning adds a step between 1 and 2 where the data is ‘graded’. There are many formulae that this grading system can use, but I’ll just be mentioning the simplest one here, what I call ‘student’ evaluations, where each set of inputs are graded based on how accurate the model is on it’s first or second pass.</p>
+
+<h3 id="the-curriculum">The ‘Curriculum’</h3>
+
+<p>This excellent conceptual model of a the training process is from Kwon’s ‘Artificial Neural Networks’ book:</p>
+
+<p><img src="http://localhost:4000/public/assets/kwon-learning-scheme.png" alt="Supervised Learning Scheme" /></p>
+
+<p>This process flow, while very basic, models the portion of the code that feeds in training data as a <em>professor</em> or teacher and the model is the <em>student</em>.</p>
+
+<p>In Curriculum Learning, the <em>professor</em> simply creates a structured progression of ‘questions’ (essentially just sets of inputs) and ranks these into blocks segregated by difficulty. Difficulty can be determined by how well the model does on each input after a single (or negligibly few) run(s) with over formulae being proposed across various papers. Easy questions are asked first and after the student ‘gets the hang of those’, it moves on to progressively more difficult problems to solve.</p>
+
+<p>This is basically a ‘path of least resistance’ and from my experiments, demonstrates a favorable and dramatic increase in performance. For a University Assignment, I had to create a classifier and demonstrate the affects of different training methods on performance, the full report can be seen <a href="https://github.com/urishiraval/cos711-a2/blob/master/report/output/main.pdf">here</a> but long story short,</p>
+<blockquote>
+  <p>performance was boosted from an average a little above <strong>86% to a steady mean of 97%</strong> (with a low standard deviation across runs for both models) <strong>even reaching 99% accuracy</strong> boasting very impressive lack of loss with (what I perceived to be) very little over-fitting.</p>
+</blockquote>
+
+<h3 id="downsides">Downsides</h3>
+
+<p>The first issue is the matter of grading. This requires some form of intimacy with the data before training and if the data is graded poorly or not properly split up, or if the training speed is too fast or too slow, it may have no effect. Thus we’ve introduced even more annoying hyperparameters to the mix.</p>
+
+<p>The second issue makes the first one even more annoying. This method increases learning time significantly (and here ‘significantly’ is an understatement), which might not be feasible for larger models and make tuning much more tedious.</p>
+
+<h2 id="in-conclusion">In Conclusion</h2>
+
+<p>This is a cool way (at least to me) to train NN’s and it has a lot of benefits, especially with smaller models. This might also give you a way to get out of a plateau that you may be facing with your model and we all know how annoying those can be. If you’re reading this, hope it helps!</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>G. Hacohen and D. Weinshall, “On the power of curriculum learning in
+training deep networks,” 2019.</li>
+  <li>Kwon SJ. Artificial Neural Networks. Nova Science Publishers, Inc; 2011. Accessed December 2, 2021.</li>
+</ul>
+ -->
+	</div>
+
+
+	
+	<div class="post">
+		<h2 class="post-title">
+			<a href="/2021/08/23/fluent-validation-1/">Starting from Scratch - Fluent Validation</a>
+		</h2>
+		<span class="post-date">23 Aug 2021</span>
+		<div class="post-tags">
+			
+			<small><code>#StartingFromScratch</code></small>
+			
+			<small><code>#javascript</code></small>
+			
+		</div>
+
+
+		<p>In an attempt to further understand how fluent validation works in javascript, I tried to recreate an extremely basic chain-able system from scratch.</p>
+
+
+
+
+		<!-- <p>In an attempt to further understand how fluent validation works in javascript, I tried to recreate an extremely basic chain-able system from scratch.</p>
+
+<h2 id="brief">Brief</h2>
+
+<p>The main goal of fluent validation seems to be the separation of highly conditional branching trees into it’s own layer in very dynamic systems. So far the only system that I’ve worked on where this would be of great benefit are business/financial applications with a ton of business/product rules and while ideally you’d want those rules to be evaluated in the back-end I think that the front-end (especially if it’s a monolithic front end, which is often the case in that environment) can get very dense with dynamic content depending on those rules.</p>
+
+<p>I’m still searching for the “simplest form of this” with the “most substantial outcome” as Liebniz describes it, but I think that fluent validation is the strongest contender so far.</p>
+
+<h2 id="understanding-the-basics">Understanding the Basics</h2>
+
+<p>First, I researched different ways that function chaining was accomplished and ultimately found <a href="https://stackoverflow.com/questions/35026609/chain-custom-javascript-functions">this Stackoverflow post</a> from 2016. In that post I found that there are 2 basic approaches that are pretty much similar in concept but with slightly different executions.</p>
+
+<h3 id="chaining-in-javascript">Chaining in Javascript</h3>
+
+<p>Before that however, I needed to define what was the minium requirement for a function to be chained. So this:</p>
+
+<pre><code class="language-javascript">function chainableX () {
+    console.log("Executing X");
+    return this;
+}
+
+function chainableY() {
+    console.log("Executing Y");
+    return this;
+}
+</code></pre>
+
+<p>Would allow us to ‘chain’ like this:</p>
+
+<pre><code class="language-javascript">var context = chainableX().chainableY();
+</code></pre>
+
+<pre><code>Executing X
+Executing Y
+</code></pre>
+
+<p>Where the resulting <code>context</code> variable would be the global call stack since these functions don’t belong to any object.So, with that, returning <code>this</code> I could now chain functions.</p>
+
+<h3 id="accumulating-side-effects-within-a-scope">Accumulating Side-effects within a Scope</h3>
+
+<p>The next task was to allow for side effects to accumulate in a sequential manner. My initial thoughts were that this was very similar to a ‘Builder’ design pattern and indeed, when I glanced at the source code of some common validation packages, that seemed to be a solution that was used. However, in my attempt to keep things as simple as I possibly can, along with trying to use vanilla js and functional-ish concepts as much as I can, I opted for a slightly different approach, (but one that was not necessarily better by any metric).</p>
+
+<p>My first attempt was to create an ‘object’ based solution that would accumulate the side effects on a variable within that context. So I thought that the initial object would somehow resemble this:</p>
+
+<pre><code class="language-javascript">check = {
+    result: null,
+    not: function() {
+        this.result = !this.result;
+        return this;
+    },
+    or: function() {
+        return this;
+    },
+    and: function() {
+        return this;
+    },
+    t: function() {
+        return this;
+    },
+    f: function() {
+        return this;
+    }
+}
+
+console.log(check.not().f().and().t().result);
+</code></pre>
+<pre><code>true
+</code></pre>
+
+<h3 id="chaining-of-boolean-operators">Chaining of Boolean Operators</h3>
+
+<p>I quickly realised that I’d have a glaring problem. The operators <code>AND</code> and <code>OR</code> are binary and while this gives the example chain above a ‘space’ to accumulate results, you can’t accumulate a binary operator without ‘embedding’ values similar to <code>check.not().and(&lt;exp&gt;)</code>, which was not what I wanted.</p>
+
+<p>So in order to solve this problem I decided to borrow from my Compiler Construction course in University by adding very basic ‘lookahead’ functionality.</p>
+
+<p>Fundamentally, what this lookahead function would do is defer the binary operation until a subsequent unary operation has a result (kind of like the ‘Chain of responsibility’ design pattern). This is a bit of a dodgy solution which, I think, only works because chaining multiple binary operations have no value in a validation, i.e. <code>and().and().t()</code> makes no logical sense in boolean terms and adds no functional value.</p>
+
+<p>So, adding this lookahead function as _la and just concentrating on <code>AND</code>, we get the following:</p>
+
+<pre><code class="language-javascript">check = {
+    _la: null,
+    and: function() {
+        //if a lookahead is already waiting to be executed we can automatically say that the previous operator was binary
+        if (this._la) throw "Chaining multiple binary operators is not allowed";
+        //This is just to allow for closure resolution to ensure that the function will retain the correct value of result
+        let res = this.result;
+        //The Looahead function in question. 'exp' is the result of a subsequent unary operation
+        this._la = function(exp) {
+            return res &amp;&amp; exp;
+        };
+        return this;
+    }
+}
+</code></pre>
+
+<p>Adding some ‘constants’ like true and false, along with a ‘default lookahead’ function in order to cater for when our lookahead is null we get:</p>
+
+<pre><code class="language-javascript">check = {
+    _la: null,
+    _defaultLa: function(exp) {
+        //Just pass through the value
+        return exp;
+    },
+    and: function() {
+        //if a lookahead is already waiting to be executed we can automatically say that the previous operator was binary
+        if (this._la) throw "Chaining multiple binary operators is not allowed";
+        //This is just to allow for closure resolution to ensure that the function will retain the correct value of result
+        let res = this.result;
+        //The Looahead function in question. 'exp' is the result of a subsequent unary operation
+        this._la = function(exp) {
+            return res &amp;&amp; exp;
+        };
+        return this;
+    },
+    tautology: function() {
+        var eval = (this._la) ? this._la : this._defaultLa;
+        this.result = eval(true);
+        this._la = null;
+        return this;
+    },
+    fallacy: function () {
+        var eval = (this._la) ? this._la : this._defaultLa;
+        this.result = eval(false);
+        this._la = null;
+        return this;
+    }
+}
+
+console.log(check.tautology().and().tautology().result);
+</code></pre>
+<pre><code>true
+</code></pre>
+
+<p>All that is left to do is to extend this concept to the <code>OR</code> and <code>NOT</code> operators. However the <code>NOT</code> operator, despite being a unary operator, still needs to be implemented as a deferred operation since we’re negating the result of the operation after it, i.e. we need it to look like <code>not().operation()</code>.</p>
+
+<p>The resulting snippet becomes:</p>
+
+<pre><code class="language-javascript">check = {
+    result: null,
+    _la: null,
+    _defaultLa: function(exp) {
+        //Just pass through the value
+        return exp;
+    },
+    not: function() {
+        var eval = (this._la) ? this._la : this._defaultLa;
+        var res = this.result;
+        this._la = function(exp) {
+            //We pass in eval to the function stack by taking advantage of javascript closures
+            return eval(!exp);
+        }
+        return this;
+    },
+    and: function() {
+        //if a lookahead is already waiting to be executed we can automatically say that the previous operator was binary
+        if (this._la) throw "Chaining multiple binary operators is not allowed";
+        //This is just to allow for closure resolution to ensure that the function will retain the correct value of result
+        let res = this.result;
+        //The Looahead function in question. 'exp' is the result of a subsequent unary operation
+        this._la = function(exp) {
+            return res &amp;&amp; exp;
+        };
+        return this;
+    },
+    or: function() {
+        //if a lookahead is already waiting to be executed we can automatically say that the previous operator was binary
+        if (this._la) throw "Chaining multiple binary operators is not allowed";
+        //This is just to allow for closure resolution to ensure that the function will retain the correct value of result
+        let res = this.result;
+        //The Looahead function in question. 'exp' is the result of a subsequent unary operation
+        this._la = function(exp) {
+            return res || exp;
+        };
+        return this;
+    },
+    tautology: function() {
+        var eval = (this._la) ? this._la : this._defaultLa;
+        this.result = eval(true);
+        this._la = null;
+        return this;
+    },
+    fallacy: function () {
+        var eval = (this._la) ? this._la : this._defaultLa;
+        this.result = eval(false);
+        this._la = null;
+        return this;
+    }
+}
+
+console.log(check.fallacy().or().not().fallacy().result);
+</code></pre>
+<pre><code>true
+</code></pre>
+
+<p>And there you have it. This is a working, chainable, admittedly ultra-basic fluent validator that you can extent by adding more operators and dependant objects etc.</p>
+
+<h3 id="final-product">Final Product</h3>
+
+<p>However, to make it a bit more usable and extendable I thought converting this to a context-full, generic-ish object would be better:</p>
+
+<pre><code class="language-javascript">function fcheck() {
+        this.result = null;
+        this._la = null;
+        this._defaultLa = function(exp) {
+            return exp;
+        };
+        this._preval = function (exp) {
+            var eval = (this._la) ? this._la : this._defaultLa;
+            this.result = eval(exp);
+        };
+        this.not = function() {
+            var eval = (this._la) ? this._la : this._defaultLa;
+            this._la = function(exp) {
+                //We pass in eval to the function stack by taking advantage of javascript closures
+                return eval(!exp);
+            }
+            return this;
+        };
+        this.or = function() {
+            if (this._la) throw "Chaining multiple binary operators is not allowed";
+            let res = this.result;
+            this._la = function(exp) {
+                return res || exp;
+            }
+            return this;
+        };
+        this.and = function() {
+            if (this._la) throw "Chaining multiple binary operators is not allowed";
+            let res = this.result;
+            this._la = function(exp) {
+                return res &amp;&amp; exp;
+            };
+            return this;
+        };
+        this.tautology = function() {
+            this._preval(true);
+            this._la = null;
+            return this;
+        };
+        this.fallacy = function() {
+            this._preval(false);
+            this._la = null;
+            return this;
+        }
+}
+
+</code></pre>
+
+<p>This allows us to dynamically add rules on the fly by adding to the object, this function:</p>
+
+<pre><code class="language-javascript">fcheck.prototype.addRule = function (ruleName, rule) {
+    var acc = this;
+    this[ruleName] = function () {
+        this._preval(rule());
+        return acc;
+    }
+    return this;
+}
+</code></pre>
+
+<p><strong>So the final version:</strong></p>
+
+<pre><code class="language-javascript">
+function fcheck() {
+        this.result = null;
+        this._la = null;
+        this._defaultLa = function(exp) {
+            return exp;
+        };
+        this._preval = function (exp) {
+            var eval = (this._la) ? this._la : this._defaultLa;
+            this._la = null;
+            this.result = eval(exp);
+        };
+        this.not = function() {
+            var eval = (this._la) ? this._la : this._defaultLa;
+            this._la = function(exp) {
+                return eval(!exp);
+            }
+            return this;
+        };
+        this.or = function() {
+            if (this._la) throw "Chaining multiple binary operators is not allowed";
+            let res = this.result;
+            this._la = function(exp) {
+                return res || exp;
+            }
+            return this;
+        };
+        this.and = function() {
+            if (this._la) throw "Chaining multiple binary operators is not allowed";
+            let res = this.result;
+            this._la = function(exp) {
+                return res &amp;&amp; exp;
+            };
+            return this;
+        };
+        this.tautology = function() {
+            this._preval(true);
+            return this;
+        };
+        this.fallacy = function() {
+            this._preval(false);
+            return this;
+        }
+}
+
+fcheck.prototype.addRule = function (ruleName, rule) {
+    var acc = this;
+    this[ruleName] = function () {
+        this._preval(rule());
+        return acc;
+    }
+    return this;
+}
+</code></pre>
+
+<p>And this object can be used like so:</p>
+
+<pre><code class="language-javascript">var scenario = new fcheck();
+scenario.addRule("myFunction", function () {
+    return true;
+});
+
+scenario.not().myFunction().and().fallacy().result;
+</code></pre>
+<pre><code>false
+</code></pre>
+
+<p>This also allows us to compose complex validations, for example:</p>
+
+<pre><code class="language-javascript">
+var flagA = true;
+var flagB = false;
+
+var Rule1 = new fcheck().addRule("isScenarioA", function () {
+    return flagA == true;
+});
+var Rule2 = new fcheck().addRule("isScenarioA", function () {
+    return flagB == true;
+});
+
+var BusinessValidations = new fcheck().addRule('rule1', function () {
+    return Rule1.isScenarioA().result;
+})
+.addRule('rule2', function () {
+    return Rule2.isScenarioA().result;
+});
+</code></pre>
+
+<pre><code class="language-javascript">BusinessValidations.rule1().and().rule2().result;
+</code></pre>
+<pre><code>false
+</code></pre>
+
+<pre><code class="language-javascript">BusinessValidations.rule1().and().not().rule2().result;
+</code></pre>
+<pre><code>true
+</code></pre>
+
+<p>And that’s it. Thanks for sticking around to this sentence. If you, the reader, has any thoughts on this implementation or a better way to do this (besides just using a library…I do know that I can and that’s not the point here), please do reach out and let me know on my socials found somewhere on this site.</p>
+ -->
+	</div>
+
+
+	
+	<div class="post">
+		<h2 class="post-title">
+			<a href="/2021/08/05/dictionary/">Concept Dictionary - 2021</a>
+		</h2>
+		<span class="post-date">05 Aug 2021</span>
+		<div class="post-tags">
+			
+			<small><code>#Web Components</code></small>
+			
+			<small><code>#Software Design</code></small>
+			
+			<small><code>#Design Thinking</code></small>
+			
+			<small><code>#Micro-services</code></small>
+			
+			<small><code>#Fullstack</code></small>
+			
+			<small><code>#Dictionary</code></small>
+			
+		</div>
+
+
+		<blockquote>
+  <p>[!NOTE]
+This is more for my own reference then for others to read.</p>
+</blockquote>
+
+
+
+
+		<!-- <div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg class="octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg> Note</p><p>This is more for my own reference then for others to read.</p>
+</div>
+
+<h1 id="micro-frontends">Micro-frontends</h1>
+<p>A micro-frontend is an abstract encapsulation of a single domain that should have a single responsibility in UI form.
+This mimics the definition of a microservice, however the logistics of a frontend are more involved as the user experience should be immutable over multiple channels if possible.
+This means that if you have a micro-frontend that is used in Platform A, it should provide the same functionality, in the same fashion on Platform B with the same client experience.</p>
+
+<p>This is, however, not always realistic. Consider the case of mobile vs web channels, where web might not have the same capabilities as it’s counterpart, such as gyroscope/biometrics.
+Here, our <em>most</em> ideal world would be one where the gaps that exist in various channels are trivial to either fill or ignore due to a correct level of modularity existing within the system design.</p>
+
+<h1 id="micro-services">Micro-services</h1>
+<p>A microservice is an abstract encapsulation of a single domain that should have a single responsibility in a service form. There are different types of microservices.
+Care must be taken to distinguish between a ‘service’ and a ‘micro’ service, as oftentimes the former is wrongly used interchangeably with the latter.</p>
+
+<h1 id="web-components">Web Components</h1>
+<p>A browser native protocol that creates a separate, embedded element that holds logic and hides the implementation from the main DOM.
+The embedded element Is given a ‘Shadow DOM’.
+The Shadow DOM is embedded into the main page by the browser which looks for a custom element tag that is registered with the DOM using the built-in functions.</p>
+
+<h1 id="unidirectional-data-flow">Unidirectional Data-flow</h1>
+<p>Unidirectional data flow restricts the flow of data to flow in one direction with a limited modus operandi for manipulating state.
+For example, only allowing state to change with the use of actions creates a flow that can, in theory, be easily tracked (find the action, find the change in state).</p>
+
+<p>Data flow is an integral and often overlooked concept. Controlling the flow of data comes with many benefits, namely:</p>
+<ul>
+  <li>Enhanced logging</li>
+  <li>Auditing and debugging of internal machinations</li>
+  <li>Adding enhanced user experience, for example, replay functionality and undo/redo</li>
+</ul>
+
+<h1 id="backend-for-frontend">Backend-for-frontend</h1>
+<p>There is extensive literature for this concept online, most of which describes a BFF as a fully dedicated API with the sole purpose of supporting a singular channel of interaction.
+This inverts control of business logic by decoupling UX concerns from Domain Logic and having singularly responsible services for each.</p>
+
+<blockquote>
+  <p>[!In my opinion]
+The language that these API’s speak must be consistent. This means that the format and syntax that is used by the data given by the API should be the same that it accepts for commands.
+Practically, this means that if you have an API X with route GET A providing data of type T (where T is a model with some structure), route POST B must accept model of type T as well.
+This eliminates a massive amount of code on the front-end and ensures minimal logic on the frontend side, giving consistency across channels with lightweight implementations in my experience.</p>
+
+  <p>Remember, the goal of a BFF is to make the frontend as “dumb” as possible w.r.t. Domain Logic so it can be “smart” at user interaction.</p>
+</blockquote>
+
+<h1 id="strangler-fig-design-pattern">Strangler Fig Design Pattern</h1>
+<p>This is a pattern used to transform or modernize legacy monolithic systems, coined as such by Martin Fowler.
+The basic concept is to:
+Prepare the legacy monolith by wrapping it in regression tests
+Remove all direct instantiations and introduce dependency inversion
+Rewrite logical units in a piecewise fashion and deprecate the old api’s over time
+This pattern is powerful but slightly complex to implement with UI’s, however, micro-frontend architectures alleviate a lot of complexity when done right.</p>
+
+<h1 id="modular-frontends">Modular Frontend’s</h1>
+
+<p>There are 3 tiers of UI’s that would enable mobility in a distributed multichannel architecture.</p>
+
+<h2 id="tier-1-shell">Tier 1: Shell</h2>
+<p>This handles the context and should be as ‘dumb’ as possible, only handling Auth and User Profiles at most. The main purpose for this type of UI is to hold a collection of higher-level UI’s to consolidate user journeys.</p>
+
+<h2 id="tier-2-micro-frontend">Tier 2: Micro-frontend</h2>
+<p>This is a single domain UI that ideally holds only 1 user journey end-to-end. These UI’s would get their context from a lower level UI (like the shell) and orchestrate their own data. Ideally these would match up 1 to 1 with a User Journey Micro-service.</p>
+
+<h2 id="tier-3-components">Tier 3: Components</h2>
+<p>These are single units of functionality and are ideally context-free pure functions. This is to enable DRY code to distribute functionality across micro-frontends.</p>
+
+<h2 id="additional-misc-concepts">Additional Misc Concepts</h2>
+
+<h3 id="ui-context">UI Context</h3>
+<p>All modular UI’s will need context to function. This is the smallest piece of data that will allow a modular UI to orchestrate it’s own information. It is important to note that, for better user experience, the UI’s should be static across changing context. This means that if a Shell changes from Context A to Context B, a higher tier UI should be able to handle this change without having to reload, with minimal requests to the backend as possible.</p>
+
+<h3 id="inversion-of-control">Inversion of Control</h3>
+<p>Inversion of Control is used to increase the modularity of the program and makes it extensible. This is a very important and overlooked concept when bundling modular UI’s into a single application. Since there should only exist a single context across all modules, IoC gives a safe way for these UI’s to gain context from each other. Additionally, event sourcing via an IoC interface is preferable due to the inherent decoupling of this method of inter-process communication.</p>
+ -->
+	</div>
+
+
+	
+</div>
+
+<div class="pagination">
+	
+	<span class="pagination-item older">Older</span>
+	  
+	<a class="pagination-item newer" href="/blog/">Newer</a>
+	 
+</div>
+
+
+
+    </div>
+
+  </body>
+
+
+</html>

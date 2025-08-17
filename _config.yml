@@ -34,3 +34,4 @@ github:
 
 plugins:
     - jekyll-paginate
+    - jekyll-gfm-admonitions

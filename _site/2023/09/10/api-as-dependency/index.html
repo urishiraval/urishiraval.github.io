@@ -24,7 +24,7 @@ config=TeX-AMS-MML_HTMLorMML"></script>
 
   <title>
     
-      Ushir (Rishi) Raval &middot; Computer Scientist
+      Opinion - Api's as Dependencies &middot; Ushir (Rishi) Raval
     
   </title>
 
@@ -122,7 +122,7 @@ config=TeX-AMS-MML_HTMLorMML"></script>
       
         
           
-            <a class="sidebar-nav-item active" href="/">Home</a>
+            <a class="sidebar-nav-item" href="/">Home</a>
           
         
       
@@ -155,20 +155,90 @@ config=TeX-AMS-MML_HTMLorMML"></script>
 
 
     <div class="content container">
-      <div class="page">
-  <h1 class="page-title">Home</h1>
-  <blockquote class="message">
-  Perfection is the simplest form of something with the most substantial outcome. <br /> <small> - Liebniz</small>
-</blockquote>
+      <style>
+  ::selection {
+    background: rgba(156, 95, 178, 0.7);
+    color: #fff;
+  }
+</style>
 
-<p>A Computer Scientist employed as an Engineer in the Finance sector.</p>
+<div class="post">
+  <h1 class="post-title">Opinion - Api's as Dependencies</h1>
+  <span class="post-date">10 Sep 2023</span>
+  <div class="post-tags">
+    
+      <small><code>#Software Engineering</code></small>
+    
+      <small><code>#System Design</code></small>
+    
+      <small><code>#API</code></small>
+    
+      <small><code>#Dependency Management</code></small>
+    
+  </div>
+  <small>
+    <b>Table of Contents</b>
+    <ul><li><a href="#apis">API’s</a><ul><li><a href="#as-dependencies">As dependencies</a></li></ul></li><li><a href="#a-possible-avenue-to-implement-this">A possible avenue to implement this</a></li></ul>
 
-<p>My approach to my craft is characterized by thoughtful consideration, whether I am working on a minor plugin or contributing to expansive and intricate enterprise software stacks.</p>
+  </small>
+  <div>
+    <p>A little while back, I came across a beautiful concept on the <a href="https://se-radio.net/">Software Engineering Radio podcast</a>.
+The topic was <a href="https://se-radio.net/2023/10/se-radio-587-m-scott-ford-on-managing-dependency-freshness/">Managing Dependency Freshness</a> which spoke about how we could better manage dependencies within and beyond our software systems.
+the concept that caught my attention however, was “Api’s as Dependencies”.</p>
 
-<p>Known for making up stupid metaphors that are, most of the time, only amusing to me, I possess an intense interest in software architecture, design and engineering, deriving satisfaction from actively contributing to, and steering ambitious visions that extend beyond individual pursuits.</p>
+<p>Here are some thoughts.</p>
 
-<p>I also talk and write a bit like I was a nerd in the middle ages, but I attribute that to my immense interest in philosophy and the many books and podcasts I’ve subsequently read and listened to in my short time here on earth (it appears that it will only get worse in the future and for that, I can only apologize).</p>
+<h1 id="apis">API’s</h1>
 
+<p>In the ever-evolving landscape of software development, the reliance on external services and functionalities has become a cornerstone for creating robust and feature-rich applications. At the heart of this interconnected ecosystem are Application Programming Interfaces, commonly known as APIs.
+APIs play a crucial role in software development by enabling communication and interaction between different software systems.</p>
+
+<h2 id="as-dependencies">As dependencies</h2>
+
+<p>When we talk about APIs as dependencies, it means that a software application relies on APIs to perform certain functions or access specific services. These APIs become dependencies for the application because they are essential for the application to function as intended.
+As a mental model, the management of API’s have the same problem statements as managing a normal library which is to say that inversion of control becomes your biggest assistant to sane maintenance of API dependencies.</p>
+
+<p>A lot of these are somewhat obvious statements - but no less useful because of it.</p>
+
+<h1 id="a-possible-avenue-to-implement-this">A possible avenue to implement this</h1>
+
+<p>Clients. Clients everywhere!</p>
+
+<p>An *api client is probably the easiest key to unlocking inversion of control and enabling controlled versioning. I believe I can make life simpler if - for every Api I build - an ‘Api Client’ is built with it. The dependant systems should only ‘speak’ to my api through this Client - which is distributed through a package manager and is well versioned.</p>
+
+<p><strong>Edits as revised on 13 June 2025</strong></p>
+
+<p>*When I said ‘api client’ I really meant API SDK. I think at the time the ‘SDK’ connection didn’t click in my head as “API as a Dependency” was a novel (albeit obvious in hindsight) mental model different from what I used to conceptualize at the time.</p>
+
+  </div>
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/2025/08/17/science-and-value/">
+          The Scientific Method and Value-based Software Engineering - A novice take
+          <small>17 Aug 2025</small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2025/08/10/simplify-mundane-for-value/">
+          Simplify mundane thing A if you want to do valuable thing B
+          <small>10 Aug 2025</small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2025/08/04/igloos-and-sculpts/">
+          Of Igloos and Ice-sculptures
+          <small>04 Aug 2025</small>
+        </a>
+      </li>
+    
+  </ul>
 </div>
 
     </div>
