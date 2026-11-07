@@ -12,7 +12,7 @@ My perspective on this has always been one of capability driven platforms/system
 Analyst type roles typically have their workshops and requirements mining to organise capabilities into features.
 
 
-They go from "the business needs X" to "X = a + b + c".
+They go from "the business needs X" to `X = a + b + c`.
 
 
 Oftentimes the business doesn't even know that it's `X` they need and this whole process of capability breakdown helps uncover the business reality (and [reality is where dragons go to die](https://urishiraval.github.io/2025/07/15/team-reality-dragons-die/)).
@@ -52,7 +52,7 @@ We find things that need to be undone or redone.
 
 # It's all about ballance baby
 
-So it’s a bidirectional flow of data that meets at the middle and most successful teams have drivers from both ends. Unsuccessful ones have an imbalance either way (in the worst case in both directions)
+The team act of building platforms and software is all about optimising the balance between capability understanding and implementation execution, and all successful teams have net passionate and intensive drivers from both ends. Unsuccessful ones have an imbalance either way (and in the worst case, in both directions).
  
 
 Any lack of drive from the capability breakdown side results in an ineffective system/platform but with great tech.
@@ -61,7 +61,7 @@ Any lack of drive from the capability breakdown side results in an ineffective s
 Lack of drive from the implementation side results in shit tech that does what it needs to really badly.
 
 
-Lack of drive from both sides - nothing gets achieved - shit platform that does nothing.
+Lack of drive from both sides and nothing gets achieved - leading to the worst crime of them all - a shit platform that does nothing.
 
 
-(A note on greenfield vs brownfield systems: Most greenfield systems when they get more brownfield have a tendency to oscillate - the key is to ensure that the frequency is low and we stabilise more towards the middle.)
+(A note on greenfield vs brownfield systems: Most greenfield systems when they get more brownfield have a tendency to oscillate - the key is to ensure that the frequency is low and we stabilize more towards the middle.)
