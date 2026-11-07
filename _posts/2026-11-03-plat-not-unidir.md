@@ -7,6 +7,12 @@ published: true
 
 My perspective on this has always been one of capability driven platforms/systems. If you're building platforms in a team, it's crucial to understand that how you build can't be driven from just one side of the team (the ends of the sides being capability drivers and implementation drivers - or classically Business Analysts and Software Engineers).
 
+# TL;DR
+
+Just look at this diagram:
+
+![Platform Balance Diagram]({{ site.url }}/public/assets/platform-team-balance.drawio.png)
+
 # Capability Driver
 
 Analyst type roles typically have their workshops and requirements mining to organise capabilities into features.
