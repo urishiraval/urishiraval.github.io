@@ -63,5 +63,12 @@ Lack of drive from the implementation side results in shit tech that does what i
 
 Lack of drive from both sides and nothing gets achieved - leading to the worst crime of them all - a shit platform that does nothing.
 
+![Platform Balance Diagram]({{ site.url }}/public/assets/platform-team-balance.drawio.png)
+
 
 (A note on greenfield vs brownfield systems: Most greenfield systems when they get more brownfield have a tendency to oscillate - the key is to ensure that the frequency is low and we stabilize more towards the middle.)
+
+
+# Notes
+
+The sole diagram in this article was created using Gemini, because I'm lazy and AI exists - but all the writing is my own.
