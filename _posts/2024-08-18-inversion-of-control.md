@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Inversion of Control, by any other name...
-tags: ["SOLID", "Software Design", "OpEd"]
+tags: ["SOLID", "Software Design", "Opinion"]
 ---
 
 We often hear (at every bloody interview) about the SOLID Principles. It's regarded by some as the major driving force of good software. But why do so many engineers get (at the very least) 1/5 of the principles wrong at a fairly consistent rate?

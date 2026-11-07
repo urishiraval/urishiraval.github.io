@@ -2,7 +2,7 @@
 layout: post
 title: Concept Dictionary - 2021
 tags: ["Web Components", "Software Design", "Design Thinking", "Micro-services", "Fullstack", "Dictionary"]
-published: true
+published: false
 ---
 
 > [!NOTE]

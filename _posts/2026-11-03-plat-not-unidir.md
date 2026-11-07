@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building useful Platforms with a team
-tags: ['Opinion', 'Philosophy', 'Software Engineering', 'SDLC']
+tags: ['Opinion', 'Philosophy', 'Software Engineering', 'SDLC', 'ABCs']
 published: true
 ---
 

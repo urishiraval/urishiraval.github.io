@@ -2,6 +2,7 @@
 layout: post
 title: Starting from Scratch - Fluent Validation
 tags: ["StartingFromScratch", "javascript"]
+published: true
 ---
 In an attempt to further understand how fluent validation works in javascript, I tried to recreate an extremely basic chain-able system from scratch.
 
